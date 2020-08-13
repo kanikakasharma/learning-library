@@ -751,7 +751,7 @@ rules.head()
 
 We arrived to distinguich some rules related to Alaska and Clifornia Market which can be used to make recommendations for our customers, and to better understand their preferences. 
 
-## Step 4:  Segmentation (testing) 
+## Step 4:  Segmentation
 
 1. Import modules
 
