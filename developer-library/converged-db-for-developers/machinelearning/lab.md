@@ -215,7 +215,7 @@ combinedDF.head()
 </copy>
 ````
 
-![](./images/m81.PNG " ")
+![](./images/ml81.PNG " ")
 
 
  
@@ -578,7 +578,10 @@ from mlxtend.frequent_patterns import association_rules
 
 ````
 <copy>
-Load the datasets
+#load the dataset
+CleanDataset = r'../3-Cleaned-Dataset/OnlineRetail_Cleaned_New.csv'
+retail_df = pd.read_csv(CleanDataset)
+retail_df.head()
 </copy>
 ````
 
@@ -600,18 +603,8 @@ retail_df = retail_df[~retail_df['InvoiceNo'].str.contains('C')]
 </copy>
 ````
 
-4. Calling the Custom python function to read XML File and save data as CSV
 
-````
-<copy>
-df_cols = ["INVOICENO", "STOCKCODE", "DESCRIPTION", "QUANTITY", "INVOICEDATE", "UNITPRICE", "CUSTOMERID", "STATE"]
-outDF = parse_XML("New_XML_version.xml",df_cols)
-print(outDF.head())
-outDF.to_csv("data_xml.csv",index=False)
-</copy>
-````
-
-5. Custom function to create statewise marketing baskets
+4. Custom function to create statewise marketing baskets
 
 
 ````
@@ -631,7 +624,7 @@ def create_basket(state_filter):
 </copy>
 ````
 
-6. Creating baskets for Alaska
+5. Creating baskets for Alaska
 
 ````
 <copy>
@@ -648,7 +641,7 @@ basket_sets = basket_alaska.applymap(encode_units)
 </copy>
 ````
 
-7. Creating association rules
+6. Creating association rules
 
 ````
 <copy>
@@ -664,7 +657,7 @@ association_rules_alaska
 According to the results a customer is 7 times more likely to buy a pink alarm clock bakelike than an average customer (lift) if he/she buys ALARM CLOCK BAKELIKE GREEN. This rule is "true" in 72% of the cases (confidence). This can be used as insight to recommend ALARM CLOCK BAKELIKE PINK for tthose who bought the Green one.
 
 
-8. Creating baskets for California
+7. Creating baskets for California
 
 ````
 <copy>
@@ -679,7 +672,7 @@ frequent_itemsets_ca = apriori(basket2_sets, min_support=0.05, use_colnames=True
 </copy>
 ````
 
-9. Association rules for Alaska
+8. Association rules for Alaska
 
 ````
 <copy>
@@ -697,7 +690,7 @@ According to the results a customer is 4 times more likely to buy PLASTERS IN TI
 At this point, you may want to look at how much opportunity there is to use the popularity of one product to drive sales of another.
 
 
-10. Creating baskets for New York
+9. Creating baskets for New York
 
 ````
 <copy>
@@ -705,7 +698,7 @@ basket_ny = create_basket("NEW YORK")
 basket3_sets = basket_ny.applymap(encode_units)
 </copy>
 ````
-11. Association rules for New York
+10. Association rules for New York
 
 ````
 <copy>
@@ -742,7 +735,7 @@ basket4_sets = basket.applymap(encode_units)
 </copy>
 ````
 
-12. Creating rules for New York with the filtered Data
+11. Creating rules for New York with the filtered Data
 
 ````
 <copy>
@@ -758,7 +751,7 @@ rules.head()
 
 We arrived to distinguich some rules related to Alaska and Clifornia Market which can be used to make recommendations for our customers, and to better understand their preferences. 
 
-## Step 4:  Segmentation
+## Step 4:  Segmentation (testing) 
 
 1. Import modules
 
