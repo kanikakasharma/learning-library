@@ -1,0 +1,103 @@
+{
+    "tutorials": [
+        {         
+            "title": "eShop Intro and Converged DB Overview",
+            "description": "Introduction to Converged Database Workshop",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "03/10/2020",
+            "contentid": "12nnnn",
+            "filename": "../intro/intro.md"
+        }, 
+        {         
+            "title": "Lab 1: Login to Oracle Cloud",
+            "description": "Login to Oracle Cloud",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "03/10/2020",
+            "contentid": "12nnnn",
+            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/cloud-login/register-free-tier-account.md"
+        },
+        {         
+            "title": "Lab 2: Generate SSH Key",
+            "description": "Generate SSH Key",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "03/10/2020",
+            "contentid": "12nnnn",
+            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/generate-ssh-key/generate-ssh-keys.md"
+        },
+        {            
+            "title": "Lab 3: Creating Compute Instance",
+            "description": "Setup compute instance running 19c using Terraform script and Resource Manager",
+            "publisheddate": "3/24/2020",
+            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/setup-compute/setup-19c-freetier.md"
+        },
+        {         
+            "title": "Lab 4: Environment Setup",
+            "description": "Connect to Schema",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "03/10/2020",
+            "contentid": "12nnnn",
+            "filename": "../intro/setup.md"
+        },
+        {         
+            "title": "Introduction to Java EE Development using JDeveloper & WebLogic",
+            "description": "Introduction to Java EE Development using JDeveloper & WebLogic",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "03/10/2020",
+            "contentid": "12nnnn",
+            "filename": "../intro/intro-java.md"
+        },
+        {         
+            "title": "Introduction to WebLogic",
+            "description": "Introduction to WebLogic",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "03/10/2020",
+            "contentid": "12nnnn",
+            "filename": "../intro/intro-weblogic.md"
+        },
+        {         
+            "title": "WEBLOGIC Lab 1: Intro and Setup",
+            "description": "Env Setup",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "03/10/2020",
+            "contentid": "12nnnn",
+            "filename": "../weblogic/setup.md"
+        },    
+        {         
+            "title": "WEBLOGIC Lab 2: Handling DataSource for Application Connectivity",
+            "description": "",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "03/10/2020",
+            "contentid": "12nnnn",
+            "filename": "../weblogic/create-datasource.md"
+        },
+        {         
+            "title": "JDeveloper Lab 1: Introduction and Setup",
+            "description": "Introduction to JDeveloper",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "03/10/2020",
+            "contentid": "12nnnn",
+            "filename": "../jdeveloper/setup.md"
+        },
+        {         
+            "title": "JDeveloper Lab 2: Code configuration and deployment",
+            "description": "Introduction to JDeveloper",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "03/10/2020",
+            "contentid": "12nnnn",
+            "filename": "../jdeveloper/lab2.md"
+        },
+        {         
+            "title": "Machine Learning",
+            "description": "Introduction to JDeveloper",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "03/10/2020",
+            "contentid": "12nnnn",
+            "filename": "../machinelearning/lab.md"
+        }
+
+        
+        
+
+
+    ]
+}
