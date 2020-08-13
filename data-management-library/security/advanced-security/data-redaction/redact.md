@@ -1,6 +1,6 @@
-# Redact EMPLOYEESEARCH Data
+## Redact EMPLOYEESEARCH Data
 
----
+
 
 In this lab we will redact data from the `EMPLOYEESEARCH_PROD` schema from being seen by applications other than the Glassfish application.
 

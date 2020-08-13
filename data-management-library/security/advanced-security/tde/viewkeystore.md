@@ -22,13 +22,13 @@ You will also see the contents of the wallet file by using `orapki`
 
             ./01_view_wallet_on_os.sh
 
-      ![](../images/TDE_008.PNG)
+      ![](./images/TDE_008.PNG)
 
     - View the keystore data in the database
 
             ./02_view_wallet_in_db.sh
 
-      ![](../images/TDE_009.PNG)
+      ![](./images/TDE_009.PNG)
 
 ---
 Move up one [directory](../README.md)

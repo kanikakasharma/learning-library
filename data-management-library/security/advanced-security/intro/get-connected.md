@@ -1,6 +1,6 @@
-# How to get connected to the lab environment # 
+# How to get connected to the lab environment 
 
-## Connecting from Windows ##
+## Connecting from Windows 
 
 1.	Launch Putty and enter the IP address you were supplied with.
 2.	Enter a memorable name for this connection into the Saved Sessions field
@@ -25,7 +25,7 @@
 21.	Click OK
 22.	You should now be able to access the desktop of the Lab Workstation
 
-## Connecting from Mac/Linux ##
+## Connecting from Mac/Linux 
 
 1.	Download the id_rsa file for the workshop to your workstation
 2.	Before you use the file you will need to change the permissions of the file. Execute the command “chmod 0600 <path-to-file>”
