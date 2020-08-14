@@ -1090,7 +1090,7 @@ As we can see our RFM table is correct. The first customer bought 192 times, mul
 
 **Segmenting customers with RFM Model**
 
-Pareto\u2019s rule says 80% of the results come from 20% of the causes. Similarly, 20% customers contribute to 80% of your total revenue.
+Pareto's rule says 80% of the results come from 20% of the causes. Similarly, 20% customers contribute to 80% of your total revenue.
 
 **Applying 80-20 rule**
 
