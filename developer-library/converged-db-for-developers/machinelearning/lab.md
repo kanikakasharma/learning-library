@@ -188,13 +188,15 @@ frame.head()
 ![](./images/ml80.PNG " ")
 
 
-7. Check the rows and colums (dimensions) of the data frame.
+7. Check the rows and columns (dimensions) of the data frame.
 
 ````
 <copy>
 frame.shape
 </copy>
 ````
+
+(541909, 8)
 
 8. Renaming columns of the data frame
 
