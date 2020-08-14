@@ -421,7 +421,7 @@ print('Percentage of orders canceled: {}/{} ({:.2f}%) '.format(cancelled_number,
 ````
 ![](./images/ml17.PNG " ")
 
-**Answer:** We have a large percentage of cancelled orders of 35%. Studying these cancelled orders may help in preventing future cancellation.
+**Answer:** We have a large percentage of cancelled orders of 37%. Studying these cancelled orders may help in preventing future cancellation.
 
 **Explore by products per invoice**
 
