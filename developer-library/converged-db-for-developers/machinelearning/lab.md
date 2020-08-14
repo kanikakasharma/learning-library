@@ -47,7 +47,6 @@ You also get synergy across these capabilities. For example, by having support f
 
 ## Step 1: Connect to Database
 
- 
 1. Connecting to Oracle DataBase to read data from table and storing as CSV File
 
 ````
