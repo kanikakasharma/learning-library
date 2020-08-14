@@ -652,13 +652,6 @@ basket_alaska = create_basket("ALASKA")
 basket_sets = basket_alaska.applymap(encode_units)
 </copy>
 ````
-````
-<copy>
-state_filter = "ALASKA"
-basket_alaska = create_basket("ALASKA")
-basket_sets = basket_alaska.applymap(encode_units)
-</copy>
-````
 
 6. Creating association rules
 
