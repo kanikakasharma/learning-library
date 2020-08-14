@@ -2,7 +2,11 @@
 
 ## Introduction
 
-This lab is setup into multiple steps. In the first step, you will setup the environment for Converged DB and data science lab. In this lab, you will use Jupyter notebook to run the python code to connect to the database and run the machine learning codes. The first step is already been completed and has been included for reference. The second step creates the database schema and adds the JSON and XML data to the database tables. This step has also been completed. The third step is to connect to the database and read the data, which resides in multiple formats, and merge and convert them into a single common format. In the fourth step, we inspect the data for useful information using EDA and data visualization.  In fifth step (Market Basket Analysis), we try to find the best association rules and understand which set of products are being bought together. In the last step, we use clustering and RFM analysis for customer segmentation and find customer groups with similar behaviors for further analysis and business strategy planning.
+This lab is setup into multiple steps. In the first step, you will setup the environment for Converged DB and data science lab. In this lab, you will use Jupyter notebook to run the python code to connect to the database and run the machine learning codes. 
+
+The first step is already been completed and has been included for reference. The second step creates the database schema and adds the JSON and XML data to the database tables. This step has also been completed. The third step is to connect to the database and read the data, which resides in multiple formats, and merge and convert them into a single common format. 
+
+In the fourth step, we inspect the data for useful information using EDA and data visualization.  In fifth step (Market Basket Analysis), we try to find the best association rules and understand which set of products are being bought together. In the last step, we use clustering and RFM analysis for customer segmentation and find customer groups with similar behaviors for further analysis and business strategy planning.
 
 Estimated Lab Time: 50 Minutes
 
@@ -10,15 +14,23 @@ Estimated Lab Time: 50 Minutes
 ## Prerequisites 
 
 This lab assumes you have completed the following labs:
-•	Lab: Generate SSH Key
-•	Lab: Setup Compute Instance
-•	Lab: Start Database and Application Note: All scripts for this lab are stored in the /u01/workshop/json folder and are run as the oracle user.
+
+•	Lab2: Generate SSH Key
+
+•	Lab:3 Setup Compute Instance
+
+•	Start Database and Application 
+
 
 
 ## What is Data Science?
 
-Data science is an inter-disciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from many structural and unstructured data. Data science is a "concept to unify statistics, data analysis, machine learning, domain knowledge and their related methods" in order to "understand and analyze actual phenomena" with data. It uses techniques and theories drawn from many fields within the context of mathematics, statistics, computer science, domain knowledge and information science.
+Data science is an inter-disciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from many structural and unstructured data. Data science is a "concept to unify statistics, data analysis, machine learning, domain knowledge and their related methods" in order to "understand and analyze actual phenomena" with data. 
+
+It uses techniques and theories drawn from many fields within the context of mathematics, statistics, computer science, domain knowledge and information science.
 The impact of data science is being felt across a range of industries, and this fact emerges clearer than ever when we consider the technology advancements in the last few years. When we look at the retail industry, most business owners who have been quick at incorporating the emerging technologies agree that it helped them jump to the helm of the marketplace.
+
+
 As the retail sector strives to stay technologically relevant while meeting customer demands, data science has emerged as a lifesaver that can be leveraged to predict trends and make informed decisions. The ability of data science to visualize customer behavior has enabled the retail industry to foresee customer likes and dislikes and has taken the capabilities of retailers beyond mere data collection and analysis. By incorporating the right tools and processes, businesses can now efficiently utilize the insights to influence the decisions of consumers through robust communication.
 
 ## About Oracle Converged Database
@@ -109,6 +121,9 @@ csv_file.close()
 </copy>
 ````
 
+Wall time: 1min 5s
+
+
 4. Query to read data from a JSON table in Oracle Database. JSON table enables the creation of an inline relational view of JSON content
 
 ````
@@ -146,6 +161,8 @@ con.close()
 csv_file.close()
 </copy>
 ````
+
+Wall time: 1min 17s
 
 6. Concatenating the CSV files output from all the 3 tables into a data frame.
 
@@ -204,6 +221,8 @@ frame = frame.rename(columns = {"INVOICENO": "InvoiceNo",
 frame.to_csv(r'../8-CombinedData/combined_rdbms_json_xml.csv',index=False)
 </copy>
 ````
+
+Wall time: 2.24 s
 
 10. Listing the top rows of the combined data (CSV)
 
