@@ -22,7 +22,6 @@ This lab assumes you have completed the following labs:
 •	Start Database and Application 
 
 
-
 ## What is Data Science?
 
 Data science is an inter-disciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from many structural and unstructured data. Data science is a "concept to unify statistics, data analysis, machine learning, domain knowledge and their related methods" in order to "understand and analyze actual phenomena" with data. 
