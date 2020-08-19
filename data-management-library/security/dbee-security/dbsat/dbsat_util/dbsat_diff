@@ -1,0 +1,234 @@
+#!/usr/bin/env python
+
+#
+# dbsat_diff - Compare two DBSAT report files
+#
+# Copyright (c) 2018, Oracle and/or its affiliates. All rights reserved.
+# 14 February 2018
+#
+
+import sys
+import json
+import textwrap
+import getopt
+
+# Severity level names
+sev_labels = ['Pass', 'Evaluate', 'Advisory', 'Low Risk',
+    'Medium Risk', 'High Risk']
+# Text wrapping for Details
+wrap_indent_shift = textwrap.TextWrapper(width=75,
+    initial_indent='    ', subsequent_indent='        ')
+
+# load_json
+#   filename - report filename
+# Returns
+#   rpt - DBSAT report
+#
+# Load a JSON-format report and return the data structure containing
+# the report contents, which is a list of dictionaries (one per report
+# section). Some basic sanity checking is done to ensure that the JSON
+# file has the structure expected for a DBSAT report.
+#
+def load_json(filename):
+    try:
+        fp = open(filename, 'r')
+        rpt = json.load(fp, strict=False)
+        fp.close()
+        if type(rpt) != list:
+            return None
+        else:
+            if type(rpt) != list:
+                return None
+            for sect in rpt:
+                if type(sect) != dict or not ('items' in sect and
+                'title' in sect):
+                    return None
+        return rpt
+    except Exception as e:
+        print(e)
+        return None
+
+# print_header
+#   filename - report filename
+#   rpt - DBSAT report
+#
+# Print a one-line header identifying a DBSAT report by its filename
+# and header information.
+#
+def print_header(filename, rpt, prefix=''):
+    name = ''
+    timestamp = ''
+
+    for item in rpt[0]['items']:
+        if item['title'] == 'Assessment Date & Time':
+            timestamp = item['rows'][1][0]
+        elif item['title'] == 'Database Identity':
+            name = item['rows'][1][0]
+            if item['rows'][0][1].startswith('Container'):
+                name += ' ' + item['rows'][1][1]
+    print(prefix + filename + ': ' + name + ' ' + timestamp)
+
+# print_title
+#   item - dictionary representing a single finding or table
+#
+# Print the id and title for a DBSAT finding or table.
+#
+def print_title(item):
+    heading = item.get('title', '')
+    if item.get('id'):
+        heading = item['id'] + ': ' + heading
+    print(heading)
+
+# print_item
+#   item - dictionary representing a single finding or table
+#   verbose - True to include Details section of DBSAT finding
+#   prefix - prefix to prepend to each line printed
+#
+# Print a single item (finding or table) from a DBSAT report.
+#
+def print_item(item, verbose, prefix=''):
+    if item.get('type') == 'table':
+        lines = fmt_table(item.get('rows', []), item.get('header', False),
+            item.get('alignment'))
+        for l in lines:
+            print(prefix + l)
+    if item.get('type') == 'finding':
+        print(prefix + 'Status: ' + sev_labels[item['severity']])
+        summary = item.get('summary', '')
+        print(prefix + 'Summary:')
+        wrapped = wrap_indent_shift.fill(summary)
+        for subline in wrapped.splitlines():
+            print(prefix + subline)
+        details = item.get('details', '')
+        if details and verbose:
+            print(prefix + 'Details:')
+            for line in details.splitlines():
+                if line:
+                    wrapped = wrap_indent_shift.fill(line)
+                    for subline in wrapped.splitlines():
+                        print(prefix + subline)
+                else:
+                    print(prefix)
+
+# fmt_table
+#   rows - list of table rows
+#   header - True if first row is a table header
+#   alignment - list of left/right/center for each column or None
+# Returns
+#   lines - list of formatted lines
+#
+# Format a plain-text table. Returns a list of constant-width lines.
+# Used for text and spreadsheet reports but not HTML.
+#
+def fmt_table(rows, header, alignment):
+    widths = []
+    lines = []
+    for col in zip(*rows):
+        widths.append(max(map(len, col)))
+    for row in rows:
+        out = []
+        for i in range(len(row)):
+            if alignment is not None and alignment[i] == 'center':
+                out.append(row[i].center(widths[i]))
+            elif alignment is not None and alignment[i] == 'right':
+                out.append(row[i].rjust(widths[i]))
+            else:
+                out.append(row[i].ljust(widths[i]))
+        lines.append(' '.join(out))
+        if header:
+            out = ['-' * w for w in widths]
+            lines.append(' '.join(out))
+            header = False
+    return lines
+
+# diff_section
+#   left - list of items from left file
+#   right - list of items from right file
+#
+# Compare items within a single DBSAT report section. Print insertions,
+# deletions, and items that differ.
+#
+def diff_section(left, right):
+    li = 0
+    ri = 0
+    while li < len(left) and ri < len(right):
+        if left[li].get('title') == right[ri].get('title'):
+            if left[li] != right[ri]:
+                print_title(left[li])
+                print_item(left[li], True, '< ')
+                print('---')
+                print_item(right[ri], True, '> ')
+                print('')
+            li += 1
+            ri += 1
+        else:
+            new_ri = search_items(right, ri, left[li])
+            if new_ri:
+                for i in range(ri, new_ri):
+                    print_title(right[li])
+                    print_item(right[ri], True, '> ')
+                    print('')
+                ri = new_ri
+            else:
+                print_title(left[li])
+                print_item(left[li], True, '< ')
+                print('')
+                li += 1
+    for i in range(li, len(left)):
+        print_title(left[li])
+        print_item(left[i], True, '< ')
+        print('')
+    for i in range(ri, len(right)):
+        print_title(right[li])
+        print_item(right[i], True, '> ')
+        print('')
+
+# search_items
+#   arr - list of items to search
+#   start - starting index
+#   key - element to search for
+# Returns
+#   index of matching item or None if not found
+#
+# Find the index of a matching item in the remainder of a list of items.
+#
+def search_items(arr, start, key):
+    for i in range(start, len(arr)):
+        if arr[i].get('title') == key.get('title'):
+            return i
+    return None
+
+# print_usage
+#   No parameters
+#
+# Print a usage message.
+#
+def print_usage():
+    print("""
+    Usage: dbsat_diff file1 file2
+    """)
+    sys.exit(1)
+
+#
+# Main program
+#
+
+if len(sys.argv) != 3:
+    print_usage()
+
+left = load_json(sys.argv[1])
+if not left:
+    print(sys.argv[1] + ': invalid DBSAT report file')
+right = load_json(sys.argv[2])
+if not right:
+    print(sys.argv[2] + ': invalid DBSAT report file')
+if not left or not right:
+    sys.exit(1)
+
+print_header(sys.argv[1], left, '< ')
+print('---')
+print_header(sys.argv[2], right, '> ')
+print('')
+
+for left_sect, right_sect in zip(left, right):
+    diff_section(left_sect['items'], right_sect['items'])
