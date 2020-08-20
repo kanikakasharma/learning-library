@@ -215,27 +215,57 @@ java weblogic.WLST createAppDataSourceJXL.py
   
 This role has access to all features of JDeveloper.  We need it for accessing different kind of project templates to build the eSHOP application
 
+![](./images/jdev_studio_option.png " ")
 
+3. Click on File menu. Click Import
 
+4. In the Import menu, Select Maven Project and Click OK
 
+![](./images/jdev_import_maven_project.png " ")
 
+5. Use the Search Icon and navigate to /u01/middleware_demo/converge-java folder against the Root Directory .  Leave the Settings File option to default.  Select the checkbox against pom.xml under the Project options. Click OK
 
+![](./images/jdev_select_project.png " ")
 
+6. Provide a proper Application Name like eShopWebApp. Click OK
 
+![](./images/jdev_project_naming.png " ")
 
+7. JDeveloper will take some time to import the application code.  Expand all + signs under Converge beneath the Projects tab on left hand side navigation bar to see different RESOURCES, WEB COMPONENTS and PACKAGES used in the eSHOP code
 
+![](./images/jdev_project_expanded.png " ")
 
+8. Expand Resources.  Double click on pom.xml.  In the Main window of the JDeveloper, Click on Source
 
+We can see the weblogic-maven-plugin which calls the weblogic.deployer tool internally for and execution goal of deploy in a Maven call.
 
+![](./images/jdev_project_pom.png " ")
 
+9. Under Applications Navigation Panel in JDeveloper, Under Projects, right click on converge
 
+10. Select Run Maven, Click Install
 
+![](./images/jdev_project_install.png " ")
+
+11. In the Logs section Apache-Maven-Install-Log observe the text BUILD SUCCESS.
+
+Scroll up the log and observe that the Maven automation has created a deployable war file called converge.war under /u01/middleware_demo/converge-java/target/ folder and using the “weblogic.deployer” tool, has installed it on the configured on AdminServer of WebLogic 14 installed
+
+![](./images/jdev_project_deploy_to_wls.png " ")
+
+## Step 7: Verify eSHOP functionality
+
+1. Open the Firefox browser, access the application by navigating to http://localhost:7101/  or from the bookmarks toolbar, Click ConvergeDB-Workshop, and Click eSpeedShop
+
+2. Navigate through all endpoints and features of the application like Dashboard, shopping cart, search etc.,
+
+![](./images/eShop_application_home.png " ")
 
 
 ## Acknowledgements
 
-- **Authors** - Balasubramanian Ramamoorthy,Pradeep Chandramouli
-- **Contributors** - Kanika Sharma,Nishanth Kaushik,Laxmi
+- **Authors** - Pradeep Chandramouli,Nishanth Kaushik
+- **Contributors** - Kanika Sharma,Laxmi,Balasubramanian Ramamoorthy
 - **Team** - North America AppDev Specialists
 - **Last Updated By** - Kay Malcolm, Director, Database Product Management, June 2021
 - **Expiration Date** - June 2021
