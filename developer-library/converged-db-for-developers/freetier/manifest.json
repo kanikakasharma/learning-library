@@ -39,6 +39,14 @@
             "filename": "../weblogic/lab4.md"
         },
         {         
+            "title": "Lab 9: Cross Datatype ",
+            "description": "Connect to Schema",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "03/10/2020",
+            "contentid": "12nnnn",
+            "filename": "../crossdatatype/lab9.md"
+        },
+        {         
             "title": "Introduction to Java EE Development using JDeveloper & WebLogic",
             "description": "Introduction to Java EE Development using JDeveloper & WebLogic",
             "partnumber": "Ennnnn_01",
