@@ -67,7 +67,7 @@ You will also download VNC Client, setup SSH tunnelling to consume the JDevelope
 - VNC Client, PuTTY tool 
 - An Oracle Cloud account, Free Trial, LiveLabs or a Paid account
 
-Estimated Workshop Time: 4.5 hours
+Estimated Workshop Time: 3 hours
 
 ## About Use Case
 
