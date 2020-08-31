@@ -19,21 +19,16 @@ Estimated Time: 15 Minutes
 The logic for creating REST end points to access data from converged database is written under controllers as xxxController.java.  All the java class files collecting such data are named as xxxDao.java files.
 
 1. In the JDeveloper under Projects Navigation Pane, under Click on **+** sign against **converge**, Expand **Application Sources**, expand **converge.controllers**
-
 2. Double click on **JSONController.java** to open it in JDeveloper
-
 3. Check all the @RequestMapping annotations.  You will find the request method and data type consumed for each method. 
 
 ![](./images/open_jsoncontroller_code.png " ")
 
 4. Note that the code has functions to hold logic for presenting, updating, inserting and deleting JSON datatype
-
 5. Double click on JSONDao.java to open it in JDeveloper
 
 ![](./images/open_jsondao_code.png " ")
-
 6. Observe the SQL queries written to do database operations
-
 7. In the declaration section at top of the file (around line 16) check the GET_PRODUCT_BY_ID string and the sql select statement.
 8. Also check the getProductById(Connection con,  String id) function consuming the SQL select query and the result set is retrieved as a CLOB
 9. Also check that the statement 
