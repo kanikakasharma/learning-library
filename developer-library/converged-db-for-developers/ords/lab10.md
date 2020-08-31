@@ -1,0 +1,131 @@
+# ORDS as Microservice
+
+## Introduction
+
+This lab demonstrates how micro services are playing a major role in modern application development.
+We will learn to use REST end point created using Oracle REST Data Services (ORDS). We will modify the existing eSpeedShop JEE code to replace SQL query and database connection with ORDS URL.
+
+Oracle Converged Database with ORDS – Oracle REST Data Services options enables database to present required data within its tables and views as JSON data over REST on HTTP/HTTPS.
+
+**Estimated Time:** 30 Minutes
+
+### Before You Begin
+
+This lab assumes you have completed the following labs:
+- Lab 1: Generate SSH Key - Cloud Shell
+- Lab 2: Setup Compute Instance
+- Lab 3: Start Services
+- Lab 4: eSHOP Application
+
+### About Oracle REST Data Services (ORDS)
+
+ORDS is middle tier JAVA application that allows you to access your Oracle Database resources via REST. Use standard HTTP calls (GET|POST|PUT|DELETE|HEAD) via URIs that ORDS makes available.
+
+ORDS will find and run the appropriate database workload (a query, an anonymous block), and return the output as formatted JSON.
+
+
+![](./images/Lab10-AboutORDS.png)
+
+
+
+## **Step 1:** Observe eSpeedShop analytical data
+
+1. Open your web browser and go to URL - "http://localhost:7101/" or click [here](http://localhost:7101/), to run the eSpeedShop application.
+
+    ![](./images/Lab10-Step1-1.png)
+
+2. Navigate to the analytics module by clicking the Analytics link provided in application navigation bar at the top.
+
+    ![](./images/Lab10-Step1-2.png)
+
+3. Once redirected, observe the “Category shares in Product count” section, which displays a pie chart to show count of products by different categories.
+
+    ![](./images/Lab10-Step1-3.png)
+
+## **Step 2:** Modify data access code
+
+1. Open JDeveloper in Studio Mode, if not open already.
+
+2. On the left side in the Projects panel, locate converge application folder.
+
+    ![](./images/Lab10-Step2-2.png)
+
+3. Expand the “converge” application folder to go to the “Application Sources” directory.
+
+4. Under “Application Sources” expand “converge.controllers”, which contains the application supporting java files.
+
+5. Open AnalyticsDao.java
+
+    ![](./images/Lab10-Step2-5.png)
+
+6. Search for “getProductCountByCategory” function, which is fetching data from database for “Category shares in Product count” section in Analytics page.
+
+    ![](./images/Lab10-Step2-6.png)
+
+7. Look for the function body and make sure it is getting data by executing the SQL query string named “PRODUCT\_COUNT\_BY_GROUP”.
+
+8. Modify the function in such a way that instead of getting data by executing the SQL, it should fetch data from the provided ORDS URL.
+
+    In order to achieve that, uncomment the function call
+        
+        Vector v = getProductCountByCategoryOrds();
+
+    comment the function body below, except the return statement at the end of function body.
+
+    The code after edit should look like below:
+
+     ![](./images/Lab10-Step2-8.png)
+
+9. Once done, save the changes using “Ctrl + s”.
+
+
+## **Step 3:** Build and redeploy eSpeedShop application
+
+
+1.	In JDeveloper, go to the project panel and right click on the project folder (converge).
+
+    ![](./images/Lab10-Step3-1.png)
+
+2.	Go to “Run Maven” option in the menu.
+
+3.	Select “redeploy” to execute the maven redeploy goal and redeploy application on weblogic server.
+
+    ![](./images/Lab10-Step3-3.png)
+
+4.	Wait and observe JDeveloper console for redeployment confirmation.
+
+
+
+## **Step 4:** Re-check analytical data
+
+1.	Go to the browser.
+
+2.	Open the eSpeedShop application by entering the URL – localhost:7101
+
+    ![](./images/Lab10-Step1-1.png)
+
+3.	Navigate to the analytics module by clicking the Analytics link, provided in the application navigation bar at the top.
+
+    ![](./images/Lab10-Step1-2.png)
+
+4.	Check the “Product Count By Category”, the pie chart is still plotting the same data the only difference is that this time it is getting data from the ORDS end point.
+
+    ![](./images/Lab10-Step1-3.png)
+
+
+
+
+
+## Acknowledgements
+
+- **Authors** - Balasubramanian Ramamoorthy,Pradeep Chandramouli
+- **Contributors** - Kanika Sharma,Nishanth Kaushik,Laxmi
+- **Team** - North America AppDev Specialists
+- **Last Updated By** - Kay Malcolm, Director, Database Product Management, June 2021
+- **Expiration Date** - June 2021
+
+
+## Issues?
+Please submit an issue on our [issues](https://github.com/oracle/learning-library/issues) page. We review it regularly.
+
+
