@@ -45,7 +45,7 @@ makes us understand that the method in **DBSource.java** under converge.dbHelper
 
 ## Step 2: Access the tool code
 
-The datatype access and testing utility **“endPointChecker”** is pre-installed as part of the eSHOP application for workshop convenience.
+The datatype access and testing utility **endPointChecker** is pre-installed as part of the eSHOP application for workshop convenience.
 
 The tool will be useful to do all the Create, Retrieve, Update and Delete operations on the different datatypes.
 
