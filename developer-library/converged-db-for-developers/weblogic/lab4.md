@@ -148,7 +148,7 @@ gedit /u01/middleware_demo/scripts/createDS.py
 </copy>
 ````
 
-3. Remove the line with keyword “setEncrypted(“ or comment it by adding “#” as the first character of the line - before the keyword “setEncrypted”
+3. Remove the line with keyword **setEncrypted**( or comment it by adding “#” as the first character of the line - before the keyword **setEncrypted**
 
 ````
 <copy>
@@ -158,11 +158,11 @@ gedit /u01/middleware_demo/scripts/createDS.py
 </copy>
 ````
 
-4. Instead of setEncrypted() function, we can set the password for the datasource connection using the setPassword() command in WLST.  Write the below line in place of line containing “setEncrypted” 
+4. Instead of setEncrypted() function, we can set the password for the datasource connection using the setPassword() command in WLST.  Write the below line in place of line containing **setEncrypted** 
 
 ````
 <copy>
-cmo.setPassword(“Oracle_4U”)
+cmo.setPassword(**Oracle_4U**)
 </copy>
 ````
 
@@ -170,11 +170,11 @@ cmo.setPassword(“Oracle_4U”)
 
 ![](./images/edit_wlst_script.png " ")
 
-6. Find and Replace all occurrence of “jsonxmlds” with “spatialgraphds”
+6. Find and Replace all occurrence of **jsonxmlds** with **spatialgraphds**
 
-7. Find and Replace the username for database connection “appxml” with “appspat”
+7. Find and Replace the username for database connection **appxml** with **appspat**
 
-8. Find and Replace the PDB name “JXLPDB” with “SGRPDB”
+8. Find and Replace the PDB name **JXLPDB** with **SGRPDB**
 
 9. Click **Save** button and **Close** gedit window
 
@@ -206,7 +206,7 @@ sh $DOMAIN_HOME/bin/setDomainEnv.sh
 </copy>
 ````
 
-5. Execute the java command below to run the WLST script to create the second datasource “spatialgraphds”
+5. Execute the java command below to run the WLST script to create the second datasource **spatialgraphds**
 
 ````
 <copy>
