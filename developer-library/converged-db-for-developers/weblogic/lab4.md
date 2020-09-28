@@ -148,7 +148,7 @@ gedit /u01/middleware_demo/scripts/createDS.py
 </copy>
 ````
 
-3. Remove the line with keyword **setEncrypted**( or comment it by adding “#” as the first character of the line - before the keyword **setEncrypted**
+3. Remove the line with keyword **setEncrypted**( or comment it by adding **#** as the first character of the line - before the keyword **setEncrypted**
 
 ````
 <copy>
