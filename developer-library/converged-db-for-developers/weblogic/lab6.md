@@ -19,6 +19,10 @@ This lab assumes you have completed the following labs:
 
 1. Open the Firefox browser and navigate to http://localhost:7101/resources/html/endPointChecker.html. OR You can use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp in Bookmark Toolbar**
 
+## Step-1: Retrieve JSON data
+
+1. Open the Firefox browser and navigate to http://localhost:7101/resources/html/endPointChecker.html. OR You can use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp in Bookmark Toolbar**
+
 2. Click on the drop-down to see the list of datatypes shown in workshop
 
 3. Select **JSON** datatype and click on **Change View** button to change

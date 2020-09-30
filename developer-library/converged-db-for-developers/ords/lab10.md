@@ -30,7 +30,7 @@ ORDS will find and run the appropriate database workload (a query, an anonymous 
 
 ## **Step 1:** Observe eSpeedShop analytical data
 
-1. Open your web browser and go to URL - "http://localhost:7101/" or click [here](http://localhost:7101/), to run the eSpeedShop application.
+1. Open web browser, type [http://localhost:7101/](http://localhost:7101/) and hit enter to go to eSpeedShop application home page.
 
     ![](./images/Lab10-Step1-1.png)
 
@@ -38,7 +38,7 @@ ORDS will find and run the appropriate database workload (a query, an anonymous 
 
     ![](./images/Lab10-Step1-2.png)
 
-3. Once redirected, observe the “Category shares in Product count” section, which displays a pie chart to show count of products by different categories.
+3. Once redirected, observe the **Category shares in Product count** section, which displays a pie chart to show count of products by different categories.
 
     ![](./images/Lab10-Step1-3.png)
 
@@ -46,23 +46,23 @@ ORDS will find and run the appropriate database workload (a query, an anonymous 
 
 1. Open JDeveloper in Studio Mode, if not open already.
 
-2. On the left side in the Projects panel, locate converge application folder.
+2. On the left side in the projects panel, locate converge application folder.
 
     ![](./images/Lab10-Step2-2.png)
 
-3. Expand the “converge” application folder to go to the “Application Sources” directory.
+3. Expand the **converge** application folder and locate **Application Sources** directory.
 
-4. Under “Application Sources” expand “converge.controllers”, which contains the application supporting java files.
+4. Under **Application Sources** expand **converge.controllers**, which contains the application supporting java files.
 
 5. Open AnalyticsDao.java
 
     ![](./images/Lab10-Step2-5.png)
 
-6. Search for “getProductCountByCategory” function, which is fetching data from database for “Category shares in Product count” section in Analytics page.
+6. Search for **getProductCountByCategory** function, which is fetching data from database for **Category shares in Product count** section in Analytics page.
 
     ![](./images/Lab10-Step2-6.png)
 
-7. Look for the function body and make sure it is getting data by executing the SQL query string named “PRODUCT\_COUNT\_BY_GROUP”.
+7. Look for the function body and make sure it is getting data by executing the SQL query string named **PRODUCT\_COUNT\_BY_GROUP**.
 
 8. Modify the function in such a way that instead of getting data by executing the SQL, it should fetch data from the provided ORDS URL.
 
@@ -76,7 +76,7 @@ ORDS will find and run the appropriate database workload (a query, an anonymous 
 
      ![](./images/Lab10-Step2-8.png)
 
-9. Once done, save the changes using “Ctrl + s”.
+9. Once done, save the changes using **Ctrl + s**.
 
 
 ## **Step 3:** Build and redeploy eSpeedShop application
@@ -86,9 +86,9 @@ ORDS will find and run the appropriate database workload (a query, an anonymous 
 
     ![](./images/Lab10-Step3-1.png)
 
-2.	Go to “Run Maven” option in the menu.
+2.	Go to **Run Maven** option in the menu.
 
-3.	Select “redeploy” to execute the maven redeploy goal and redeploy application on weblogic server.
+3.	Select **redeploy** to execute the maven redeploy goal and redeploy application on weblogic server.
 
     ![](./images/Lab10-Step3-3.png)
 
@@ -108,7 +108,7 @@ ORDS will find and run the appropriate database workload (a query, an anonymous 
 
     ![](./images/Lab10-Step1-2.png)
 
-4.	Check the “Product Count By Category”, the pie chart is still plotting the same data the only difference is that this time it is getting data from the ORDS end point.
+4.	Check the **Product Count By Category**, the pie chart is still plotting the same data the only difference is that this time it is getting data from the ORDS end point.
 
     ![](./images/Lab10-Step1-3.png)
 
@@ -118,14 +118,16 @@ ORDS will find and run the appropriate database workload (a query, an anonymous 
 
 ## Acknowledgements
 
-- **Authors** - Balasubramanian Ramamoorthy,Pradeep Chandramouli
-- **Contributors** - Kanika Sharma,Nishanth Kaushik,Laxmi
-- **Team** - North America AppDev Specialists
-- **Last Updated By** - Kay Malcolm, Director, Database Product Management, June 2021
-- **Expiration Date** - June 2021
-
+- **Authors** - Pradeep Chandramouli, Nishant Kaushik
+- **Contributors** -  Laxmi Amarappanavar, Kanika Sharma, Balasubramanian Ramamoorthy, Nishant Kaushik
+- **Team** - 
+- **Last Updated By** - 
+- **Expiration Date** - 
 
 ## Issues?
-Please submit an issue on our [issues](https://github.com/oracle/learning-library/issues) page. We review it regularly.
+Please submit feedback using this 
+[form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1)  
+Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like for us to follow up with you, enter your email in the *Feedback Comments* section..
+
 
 

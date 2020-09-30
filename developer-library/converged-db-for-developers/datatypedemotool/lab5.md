@@ -2,11 +2,11 @@
 
 ## Introduction
 
-This lab demonstrates how to access the UI tool which is designed to perform CRUD operations on different datatypes like JSON, XML and SPATIAL stored in the converged database.  The UI tool is built using AJAX and HTML.  We will also walk through the code to access different data types. This tool has been already deployed as part of eSHOP application.
+ This lab demonstrates how to access the UI tool which is designed to perform CRUD operations on different datatypes like JSON, XML and SPATIAL stored in the converged database.  The UI tool is built using AJAX and HTML.  We will also walk through the code to access different data types. This tool has been already deployed as part of eSHOP application.
 
 Estimated Time: 15 Minutes
 
-## Prerequisites
+### Prerequisites
 
 - Lab 1: Generate SSH Key - Cloud Shell
 - Lab 2: Setup Compute Instance
@@ -14,9 +14,9 @@ Estimated Time: 15 Minutes
 - Lab 4: Deploy eSHOP Application
 
 
-## Step 1:  Access data type code
+## Step 1:  Access data type code 
 
-The logic for creating REST end points to access data from converged database is written under controllers as xxxController.java.  All the java class files collecting such data are named as xxxDao.java files.
+  The logic for creating REST end points to access data from converged database is written under controllers   as xxxController.java.  All the java class files collecting such data are named as xxxDao.java files.
 
 1. In the JDeveloper under Projects Navigation Pane, under Click on **+** sign against **converge**, Expand **Application Sources**, expand **converge.controllers**
 2. Double click on **JSONController.java** to open it in JDeveloper
@@ -39,17 +39,17 @@ conn = dbs.getJsonXmlConnection();
 </copy>
 ````
 
-makes us understand that the method in **DBSource.java** under converge.dbHelpers  to get database connection is using the be **datasource_jsonXml** bean name declared in **applicationContext.xml**  under **Resources** which is in turn pointing to **converge.oracle.jsonxml** datasource to fetch you the records, pointing to database apppdb (PDB).
+ makes us understand that the method in **DBSource.java** under converge.dbHelpers  to get database connection is using the be **datasource_jsonXml** bean name declared in **applicationContext.xml**  under **Resources** which is in turn pointing to **converge.oracle.jsonxml** datasource to fetch you the records, pointing to database apppdb (PDB).
 
 10. Similarly, there are controller and DAO files for different datatypes like XML, SPATIAL and Analytics.  Open the code and verify the flow if interested.
 
 ## Step 2: Access the tool code
 
-The datatype access and testing utility **endPointChecker** is pre-installed as part of the eSHOP application for workshop convenience.
+ The datatype access and testing utility **endPointChecker** is pre-installed as part of the eSHOP application for workshop convenience.
 
-The tool will be useful to do all the Create, Retrieve, Update and Delete operations on the different datatypes.
+ The tool will be useful to do all the Create, Retrieve, Update and Delete operations on the different datatypes.
 
-The HTML uses AJAX and Java Script technology to make calls to the business logic.  
+ The HTML uses AJAX and Java Script technology to make calls to the business logic.  
 
 1. Open JDeveloper in **Studio** mode.
 2. Under **Projects**  expand **Converge**
@@ -70,14 +70,15 @@ The HTML uses AJAX and Java Script technology to make calls to the business logi
 
 ## Acknowledgements
 
-- **Authors** - Pradeep Chandramouli,Nishanth Kaushik
-- **Contributors** - Kanika Sharma,Laxmi,Balasubramanian Ramamoorthy
-- **Team** - North America AppDev Specialists
-- **Last Updated By** - Kay Malcolm, Director, Database Product Management, June 2021
-- **Expiration Date** - June 2021
-
+- **Authors** - Pradeep Chandramouli, Nishant Kaushik
+- **Contributors** -  Laxmi Amarappanavar, Kanika Sharma, Balasubramanian Ramamoorthy, Nishant Kaushik
+- **Team** - 
+- **Last Updated By** - 
+- **Expiration Date** - 
 
 ## Issues?
-Please submit an issue on our [issues](https://github.com/oracle/learning-library/issues) page. We review it regularly.
+Please submit feedback using this 
+[form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1)  
+Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like for us to follow up with you, enter your email in the *Feedback Comments* section..
 
       

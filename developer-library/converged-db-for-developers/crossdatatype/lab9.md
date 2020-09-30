@@ -49,13 +49,13 @@ The COLUMNS clause evaluates the row source, finds specific JSON values within t
 
 1. Open JDeveloper in Studio Mode, if not open already.
 
-2. Click on "Window" -> "Database" -> Databases to open the Databases Navigation tab on the Left-Hand side of the JDeveloper editor.
+2. Click on **Window** select **Database** and then **Databases** to open the Databases Navigation tab on the Left-Hand side of the JDeveloper editor.
 
 
     ![](./images/Lab9-Step2-2.png)
 
 
-3. Click on the green “+” icon under the Databases tab on Left-Hand side Navigation to “Create Database Connection”. Use the details as below to and click on "Test Connection".
+3. Click on the green **+** icon under the Databases tab on Left-Hand side Navigation to **Create Database Connection**. Use the details as below to and click on **Test Connection**.
 
 
       - **Connection Name**: CROSSTYPE
@@ -70,7 +70,7 @@ The COLUMNS clause evaluates the row source, finds specific JSON values within t
     ![](./images/Lab9-Step2-3.png)
 
 
-4. After receiving “Success!” message as a result of “Test Connection”, click on “OK” button to actually add the database connection to JDeveloper.
+4. After receiving **Success!** message as a result of **Test Connection**, click on **OK** button to actually add the database connection to JDeveloper.
 
 
     ![](./images/Lab9-Step2-4.png)
@@ -82,13 +82,13 @@ The COLUMNS clause evaluates the row source, finds specific JSON values within t
     ![](./images/Lab9-Step2-5.png)
 
 
-6. In the Menu bar, click on “SQL” dropdown and select “CROSSTYPE”.
+6. In the Menu bar, click on **SQL** dropdown and select **CROSSTYPE**.
 
 
     ![](./images/Lab9-Step2-6.png)
 
 
-7. Finally, it will end to SQL “Worksheet”.
+7. Finally, it will end to SQL **Worksheet**.
 
 
     ![](./images/Lab9-Step2-7.png)
@@ -213,14 +213,14 @@ GeoJSON uses JSON objects that represent various geometrical entities and combin
 
 ## Acknowledgements
 
-- **Authors** - Balasubramanian Ramamoorthy,Pradeep Chandramouli
-- **Contributors** - Kanika Sharma,Nishanth Kaushik,Laxmi
-- **Team** - North America AppDev Specialists
-- **Last Updated By** - Kay Malcolm, Director, Database Product Management, June 2021
-- **Expiration Date** - June 2021
-
+- **Authors** - Pradeep Chandramouli, Nishant Kaushik
+- **Contributors** -  Laxmi Amarappanavar, Kanika Sharma, Balasubramanian Ramamoorthy, Nishant Kaushik
+- **Team** - 
+- **Last Updated By** - 
+- **Expiration Date** - 
 
 ## Issues?
-Please submit an issue on our [issues](https://github.com/oracle/learning-library/issues) page. We review it regularly.
-
+Please submit feedback using this 
+[form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1)  
+Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like for us to follow up with you, enter your email in the *Feedback Comments* section..
 

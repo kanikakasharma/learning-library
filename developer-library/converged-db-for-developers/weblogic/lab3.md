@@ -163,41 +163,41 @@ If you aren't already logged in, follow the steps below to login. If you are log
 
         Using HomeBrew
 
-            ````   
-            <copy>
-                sudo brew install putty
-            </copy>
-            ````
+        ````   
+        <copy>
+            sudo brew install putty
+        </copy>
+        ````
 
         Using MaCPorts
 
-            ````
-                <copy>
-                    sudo port install putty
-                </copy>
-            ````
+        ````
+        <copy>
+            sudo port install putty
+        </copy>
+        ````
          
     * To convert the private key to standard PEM format, type the following command.
         ````
-            <copy>
-                puttygen <filename>.privatekey -O private -P <passphrase> -o <filename>.ppk
-            </copy>
+        <copy>
+            puttygen <filename>.privatekey -O private -P <passphrase> -o <filename>.ppk
+        </copy>
         ````
     **For LINUX**
     
     * Install on Linux using the command below
         ````
-            <copy>
-                sudo apt install putty-tools
-            </copy>
+        <copy>
+            sudo apt install putty-tools
+        </copy>
         ````
 
         OR
 
         ````
-            <copy>
-                yum install putty-tools
-            </copy>
+        <copy>
+            yum install putty-tools
+        </copy>
         ````
     * We do not need a .ppk file to connect in Linux environments.  Saved <filename>.privatekey in OpenSSH format can be used to connect to workshop system over ssh.
 
@@ -247,15 +247,16 @@ If you aren't already logged in, follow the steps below to login. If you are log
 
 ## Acknowledgements
 
-- **Authors** - Balasubramanian Ramamoorthy,Pradeep Chandramouli
-- **Contributors** - Kanika Sharma,Nishanth Kaushik,Laxmi
-- **Team** - North America AppDev Specialists
-- **Last Updated By** - Kay Malcolm, Director, Database Product Management, June 2021
-- **Expiration Date** - June 2021
+- **Authors** - Pradeep Chandramouli, Nishant Kaushik
+- **Contributors** - - Laxmi Amarappanavar, Kanika Sharma, Balasubramanian Ramamoorthy, Nishant Kaushik
+- **Team** - 
+- **Last Updated By** - 
+- **Expiration Date** -    
 
-
-## Issues?
-Please submit an issue on our [issues](https://github.com/oracle/learning-library/issues) page. We review it regularly.
+## See an issue?
+Please submit feedback using this 
+[form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1)  
+Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like for us to follow up with you, enter your email in the *Feedback Comments* section.
 
 
 
