@@ -6,7 +6,7 @@ This lab will show how to create a datasource in WebLogic and will be recoding t
 
 Estimated Time: 45 Minutes
 
-## Prerequisites
+### Prerequisites
 
 • Lab 1: Generate SSH Key - Cloud Shell 
 
