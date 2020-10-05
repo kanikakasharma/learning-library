@@ -6,13 +6,9 @@ This lab will show you how to setup tunneling for VNC, start VNC Server and conn
 
 **Estimated Time:** 30 Minutes
 
-## Before You Begin
 
-This lab assumes you have completed the following labs:
-- Lab 1: Generate SSH Key - Cloud Shell
-- Lab 2: Setup Compute Instance
 
-## Objectives
+### Objectives
 
 - Start VNC Server
 - Configure Tunneling for VNC access
@@ -21,7 +17,11 @@ This lab assumes you have completed the following labs:
 - Start the Oracle Database and Listener
 - Start Weblogic Server
 
+### Pre-requisits
 
+This lab assumes you have completed the following labs:
+- Lab 1: Generate SSH Key - Cloud Shell
+- Lab 2: Setup Compute Instance
 
 ## **Step 1:** Login to ConvergedDB Compute instance
 
