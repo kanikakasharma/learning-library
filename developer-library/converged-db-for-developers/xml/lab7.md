@@ -15,26 +15,30 @@ This lab assumes you have completed the following labs:
 - Lab 4: Deploy eSHOP Application
 - Lab 5: Data type demonstrator tool
 
-## Step-1: Connect JDeveloper to database
+## Step 1: Connect JDeveloper to database
 
 To show the ease of integration of ConvergedDB with Java applications to access and process data and to create REST endpoints in the Java application to access the different datatypes like JSON, XML and SPATIAL, we have a simple application installed along with the eSHOP application.
 
 1.	Open JDeveloper in Studio Mode, if not open already
 
-2.	Click on **Window**  **Database**  **Databases** to open the Databases Navigation tab on the Left-Hand side of the JDeveloper editor
+2.	Click on **Window** -> **Database** -> **Databases** to open the Databases Navigation tab on the Left-Hand side of the JDeveloper editor
 
     ![](./images/jdev_database_connection.png " ")
 
-3.	Click on the green **+** icon under the **Databases** tab on Left-Hand side Navigation to “Create Database Connection”
-Provide Values 
+3.	Click on the green **+** icon under the **Databases** tab on Left-Hand side Navigation to “Create Database Connection”.
+````
+   <copy>
+Provide Values:   
 Connection Name: xml
 Connection Type: Oracle(JDBC)
 Username: appxml
 Password: Oracle_4U
 Hostname: localhost
 Service Name: JXLPDB
+ </copy>
+````
 
-     ![](./images/jdev_add_db_connection.png " ")
+![](./images/jdev_add_db_connection.png " ")
 
 4.	Click on **Test Connection** and upon **Success!** message, Click OK.
 
@@ -46,38 +50,38 @@ Service Name: JXLPDB
    ![](./images/jdev_sql_xml.png " ")
 
 2.	A worksheet for connection **xml** opens up execute your query commands
+
    ````
-   <copy>
-   CREATE TABLE XML_TYPE(doc XMLTYPE);
-   </copy>
-    ````
+<copy>
+   CREATE TABLE XML_TYPE(doc XMLTYPE); 
+</copy>
+   ````
 
 3.	Select the Text and Click on the Green **Play** Icon
 
 4.	You will see the **Table Created** message in the **Script Output** section below
 
-    ![](./images/jdev_xml_db_refresh.png " ")
+    ![](./images/jdev_create_xml_table.png " ")
 
 5.	Right Click on **Tables (Filtered)** on Left-Hand side and click **Refresh** to see the table created
     
-    ![](./images/json_search_product_292_updated.png " ")
+    ![](./images/jdev_xml_db_refresh.png " ")
 
 6.	Once you see the table **XML_TYPE** on the left-hand side, In the worksheet, in a new line, key in   the query below
-````
-   <copy>
+     ````
+<copy>
    select * from xml_type;
    </copy>
     ````
 
-7.	Select the query line and again click the green Play button to execute the query.
+7.	Select the query line and again click the green **Play** button to execute the query
 to see no results
 
     ![](./images/jdev_xml_db_select_no_result.png " ")
 
 8.	In the worksheet, execute the below Insert statement to create sample xml data into database table xml_type. Select the statement and click on the green **Play** Icon to execute the insert statement.  
-
-````
-   <copy>
+    ````
+<copy>
    insert into xml_type values ('<order><id>1</id><name>Java Developer 01</name><address><street>Oracle ParkWay</street><pincode>12345</pincode></address></order>');
    </copy>
     ````
@@ -86,10 +90,10 @@ to see no results
 
 ## Step 3: Modify JEE code for XML
 
-1.	Under the Projects in **Applications** tab on left Navigation, expand **converge**  **Resources** and double click on **“applicationContext.xml”** to open the configuration xml to add the new datasource bean. Add the code below the **</bean>** tag of **converge.oracle.spatialAnalytics** and before ending **</beans>** tag 
+1.	Under the Projects in **Applications** tab on left Navigation, expand **converge** -> **Resources** and double click on **“applicationContext.xml”** to open the configuration xml to add the new datasource bean. Add the code below the **</bean>** tag of **converge.oracle.spatialAnalytics** and before ending **</beans>** tag 
 
-````
-   <copy>
+    ````
+<copy>
    <bean id="xmldsbean" class="org.springframework.jndi.JndiObjectFactoryBean">
    <property name="jndiName" value="convergeddb.jsonxmlds"/>
    </bean>
@@ -101,12 +105,12 @@ to see no results
 
 2.	Click on **Save** Button
 
-3.	Similarly, open the **DBSource.java** file under **Projects**  **converge**  **Application Sources**  **converge.dbHelper** by double clicking the file
+3.	Similarly, open the **DBSource.java** file under **Projects** -> **converge** -> **Application Sources** -> **converge.dbHelper** by double clicking the file
+ 
+    •	 Search for **getXMLDS** and navigate to the existing empty getXMLDS function. Copy and Paste the function **code** in the code file.  The java code for the function is as below  
 
-•	Search for **getXMLDS** and navigate to the existing empty getXMLDS function. Copy and Paste the function **code** in the code file.  The java code for the function is as below  
-
-````
-   <copy>
+     ````
+<copy>
    public  Connection getXMLDS() throws SQLException {
 	LOG.debug("Reached to get xml Connection");
 	Connection con = null;
@@ -125,8 +129,9 @@ to see no results
 
 	return con;
 }
-   </copy>
-    ````
+ </copy>
+       ````
+
 
     ![](./images/jdev_xml_db_code_search.png " ")
 
@@ -135,12 +140,14 @@ to see no results
 4.	Click on **Save** icon to save the file
 
 It is assumed that names of the DataSource parameters, function names and JNDI names to be the same as mentioned in the workshop manual and have coded the XmlController.java and the XMLDao.java having the business logic to retrieve the xml datatype from the xml_type table from the Oracle Converged Database in the PDB JXLPDB. 
+
 The logic is so designed that the tags <order><id></id></order> is mandatory with <id> to have a numeric value.
+
 If you change any of it, the code may not compile and lead to errors.  Request you to stick to the naming conventions.
 
 5.	Right Click on **Converge** under **Projects**
 
-6.	Click on **Run Maven**  **redeploy**
+6.	Click on **Run Maven** -> **redeploy**
 
     ![](./images/jdev_xmlcode_redeploy.png " ")
 
@@ -159,13 +166,13 @@ If you change any of it, the code may not compile and lead to errors.  Request y
 
     ![](./images/tool_xml_blank.png " ")
 
-4.	You will see the only xml item inserted to the xml table with ID=1listed in the dropdown to fetch the details
+4.	You will see the only xml item inserted to the xml table with ID=1 listed in the dropdown to fetch the details
 
 5.	Click on “Fetch” button select 1 from the dropdown
     
     ![](./images/tool_xml_fetch_id1.png " ")
 
-6.	Navigate back to JDeveloper and open **XMLDao.java** under **converge**  **Application Sources**  **converge.controllers**s
+6.	Navigate back to JDeveloper and open **XMLDao.java** under **converge** -> **Application Sources** -> **converge.controllers**s
     
     ![](./images/jdev_read_xml_code.png " ")
 
@@ -173,12 +180,12 @@ The results are obtained by using the query under READ_XML string in XMLDao.java
 
 **XMLQUERY** lets you query XML data in SQL statements. It takes an XQuery expression as a string literal, an optional context item, and other bind variables and returns the result of evaluating the XQuery expression using these input values. XQuery string is a complete XQuery expression, including prolog.
 
-**XMLCAST** casts value_expression to the scalar SQL datatype specified by datatype. The value_expression argument is a SQL expression that is evaluated. The datatype argument can be of datatype NUMBER, VARCHAR2, and any of the datetime datatypes
+**XMLCAST** casts value\_expression to the scalar SQL datatype specified by datatype. The value\_expression argument is a SQL expression that is evaluated. The datatype argument can be of datatype NUMBER, VARCHAR2, and any of the datetime datatypes.
 
 
 ## Step 5: XML REST end-point
    
-1.	In JDeveloper, open **XMLController.java** under **converge**  **Application Sources**  **converge.controllers**. Search for **fetchXML** and check the function code.  The request mapping is done as **/read/{id}**.  The base rest end point being **/xml** for the code declared at the class level. Also see **getXmlIds()** function fetching all data by ID with rest end point **/ids**
+1.	In JDeveloper, open **XMLController.java** under **converge** -> **Application Sources** -> **converge.controllers**. Search for **fetchXML** and check the function code.  The request mapping is done as **/read/{id}**.  The base rest end point being **/xml** for the code declared at the class level. Also see **getXmlIds()** function fetching all data by ID with rest end point **/ids**.
 
     ![](./images/jdev_xml_rest_code.png" ")
 
@@ -193,12 +200,12 @@ The results are obtained by using the query under READ_XML string in XMLDao.java
 
 ## Step 6: Insert XML data 
 
-1.	Navigate back to endpointchecker tool to insert a xml record
+1.	Navigate back to **endpointchecker** tool to insert a xml record
 
-2.	Paste the text below as content in the text area and click on green Insert button
+2.	Paste the text below as content in the text area and click on green **Insert** button
 
-````
-   <copy>
+  ````
+ <copy>
    <order>
 <id>2</id>
 <name>Your Name</name>
@@ -225,7 +232,7 @@ The results are obtained by using the query under READ_XML string in XMLDao.java
 
 2.	In the **text box** next to **Delete** button specify the tag element you need to update and in the corresponding text box specify the value to which the tag item needs to be updated 
 
-example, update the pincode value by providing /order/address/pincode as first parameter and 0000000  as the value
+    example, update the pincode value by providing /order/address/pincode as first parameter and 0000000  as the value
 
     ![](./images/tool_xml_fetch_id2_and_update.png" ")
 
@@ -238,14 +245,14 @@ example, update the pincode value by providing /order/address/pincode as first p
     ![](./images/tool_xml_fetch_id2_post_update.png" ")
 
 5.	Navigate back to JDeveloper and open the **XMLDao.java**
-
-•	Check the query under **UPDATE_XML STRING**
+  
+    •	Check the query under **UPDATE_XML** STRING
 
     ![](./images/jdev_update_xml_sql.png" ")
 
 The Query uses updateXML function which is pre-built in database to support updates to data of xml datatype.
 
-UPDATEXML takes as arguments an XMLType instance and an XPath-value pair and returns an XMLType instance with the updated value. If XPath_string is an XML element, then the corresponding value_expr must be an XMLType instance.
+UPDATEXML takes as arguments an XMLType instance and an XPath-value pair and returns an XMLType instance with the updated value. If XPath\_string is an XML element, then the corresponding value\_expr must be an XMLType instance.
 
 
 ## Step 8: Delete XML data
@@ -264,13 +271,14 @@ You have seen how easy it is to query the data points with in XML using the Orac
 
 ## Acknowledgement
 
-•	**Authors –** Pradeep Chandramouli, Nishant Kaushik
-•	**Contributors -** Laxmi Amarappanavar, Kanika Sharma, Pragati Mourya, Balasubramanian Ramamoorthy
-•	**Last Updated By/Date -**
+-	**Authors** – Pradeep Chandramouli, Nishant Kaushik
+-	**Contributors** - Laxmi Amarappanavar, Kanika Sharma, Pragati Mourya, Balasubramanian Ramamoorthy
+-	**Last Updated By/Date** -
 
 
 ## See an Issue?
 
-Please submit feedback using this form. Please include the workshop name, lab and step in your request. If you don't see the workshop name listed, please enter it manually. If you would like for us to follow up with you, enter your email in the Feedback Comments section.
-
+Please submit feedback using this 
+[form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1)  
+Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like for us to follow up with you, enter your email in the *Feedback Comments* section.
 
