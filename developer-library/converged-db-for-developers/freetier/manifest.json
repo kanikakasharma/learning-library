@@ -66,7 +66,7 @@
             "partnumber": "Ennnnn_01",
             "publisheddate": "03/10/2020",
             "contentid": "12nnnn",
-            "filename": "../intro/intro.md"
+            "filename": "../xml/lab7.md"
         },
         {         
             "title": "Lab 8: SPATIAL",
@@ -74,7 +74,7 @@
             "partnumber": "Ennnnn_01",
             "publisheddate": "03/10/2020",
             "contentid": "12nnnn",
-            "filename": "../intro/intro.md"
+            "filename": "../spatial/lab8.md"
         },
         {         
             "title": "Lab 9: Cross Datatype ",
