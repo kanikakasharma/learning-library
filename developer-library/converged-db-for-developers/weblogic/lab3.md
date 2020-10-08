@@ -4,12 +4,9 @@
 
 This lab will show you how to setup tunneling for VNC, start VNC Server and connect to remote VNC session. Also, this lab will show steps to start the database instance, listener, Weblogic server and JDeveloper IDE. In this lab we will also import the eSHOP JEE Code to JDeveloper IDE.
 
-**Estimated Time:** 30 Minutes
-
-
+*Estimated Time:* 30 Minutes
 
 ### Objectives
-
 - Start VNC Server
 - Configure Tunneling for VNC access
 - Download & Install VNC Client OR use Chrome VNC Plugin
@@ -17,11 +14,10 @@ This lab will show you how to setup tunneling for VNC, start VNC Server and conn
 - Start the Oracle Database and Listener
 - Start Weblogic Server
 
-### Pre-requisits
-
+### Prerequisites
 This lab assumes you have completed the following labs:
 - Lab 1: Generate SSH Key - Cloud Shell
-- Lab 2: Setup Compute Instance
+- Lab 2: Setup Compute Instancecd 
 
 ## **Step 1:** Login to ConvergedDB Compute instance
 
@@ -139,69 +135,7 @@ If you aren't already logged in, follow the steps below to login. If you are log
 3.	Copy the text output without line breaks and carriage returns from the cloudshell console.
 4.	Save the text in your text editor locally as <<sshkeyname>>.privatekey.
 
-## **Step 5:** Install PuTTygen and Generate .PPK file
-
-1.	Download and install PuTTYgen from https://www.puttygen.com/ based on your OS
-2.	Generate the .PPK file as below:
-
-    **For Windows**
-
-    * Open PuTTYgen tool
-    * Click on Conversions, Click Import Key
-
-        ![](./images/import_private_key.png " ")
-
-    * Select the .privatekey file saved Step 4 above
-    * Provide the same Key Passphrase and Confirm Passphrase given while generating the keys as in Lab 1.
-    * Click on Save Private Key button and save as .ppk file to use it later in PuTTY tool to connect to the instance.
-
-        ![](./images/save_ppk.png " ")
-
-    **For MAC**
-    
-    * Install on MAC using any of the commands
-
-        Using HomeBrew
-
-        ````   
-        <copy>
-            sudo brew install putty
-        </copy>
-        ````
-
-        Using MaCPorts
-
-        ````
-        <copy>
-            sudo port install putty
-        </copy>
-        ````
-         
-    * To convert the private key to standard PEM format, type the following command.
-        ````
-        <copy>
-            puttygen <filename>.privatekey -O private -P <passphrase> -o <filename>.ppk
-        </copy>
-        ````
-    **For LINUX**
-    
-    * Install on Linux using the command below
-        ````
-        <copy>
-            sudo apt install putty-tools
-        </copy>
-        ````
-
-        OR
-
-        ````
-        <copy>
-            yum install putty-tools
-        </copy>
-        ````
-    * We do not need a .ppk file to connect in Linux environments.  Saved <filename>.privatekey in OpenSSH format can be used to connect to workshop system over ssh.
-
-## **Step 6:** Tunneling in PuTTY
+## **Step 5:** Tunneling in PuTTY
 
 **On Windows**
     
@@ -232,7 +166,7 @@ If you aren't already logged in, follow the steps below to login. If you are log
 2.	Keep the terminal open during the entire workshop session
 
 
-## **Step 7:** Install VNC Client and Connect
+## **Step 6:** Install VNC Client and Connect
 
 1. You need to have an SSH session or PuTTY session as Oracle user running
 2. Download and Install VNC Client like TigerVNC viewer from https://tigervnc.org/ and RealVNC from https://www.realvnc.com/en/connect/download/viewer/ 
@@ -243,21 +177,14 @@ If you aren't already logged in, follow the steps below to login. If you are log
 7. Provide vncserver as password  
 8. Your VNC session will open in a new window
 
-
-
 ## Acknowledgements
-
 - **Authors** - Pradeep Chandramouli, Nishant Kaushik
-- **Contributors** - - Laxmi Amarappanavar, Kanika Sharma, Balasubramanian Ramamoorthy, Nishant Kaushik
-- **Team** - 
-- **Last Updated By** - 
-- **Expiration Date** -    
+- **Contributors** - Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy
+- **Team** - North America Database and AppDev Specialists
+- **Last Updated By** - Kanika Sharma, Solution Engineer, Oracle Database, October 2020   
 
 ## See an issue?
-Please submit feedback using this 
-[form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1)  
-Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like for us to follow up with you, enter your email in the *Feedback Comments* section.
-
+Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.
 
 
 

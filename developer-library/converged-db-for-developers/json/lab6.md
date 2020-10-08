@@ -2,9 +2,23 @@
 
 ## Introduction
 
-In this lab we will walk through the SQL queries containing the built-in functions provided for JSON datatype. Will modify the code, re-build and re-deploy the eShop application. Will learn to write new conditions to access selective JSON data from the converged database using data type  demonstration tool. Will demonstrates how to create REST endpoints for publishing JSON data. Will perform insert, update and deletion of JSON data using the UI tool
+In this lab we will walk through the SQL queries containing the built-in functions provided for JSON datatype. We will modify the code, re-build and re-deploy the eShop application. Will learn to write new conditions to access selective JSON data from the converged database using data type  demonstration tool. This lab demonstrates how to create REST endpoints for publishing JSON data. We will be performing insert, update and deletion of JSON data using the UI tool
 
-Estimated Lab Time: 45 Minutes
+*Estimated Time*: 30 Minutes
+
+### About Oracle JSON
+
+JSON (JavaScript Object Notation) is a syntax for storing and exchanging data. When exchanging data between a browser and a server, the data can only be text.
+
+JSON is text, and we can convert any JavaScript object into JSON, and send JSON to the server. We can also convert any JSON received from the server into JavaScript objects.
+
+This way we can work with the data as JavaScript objects, with no complicated parsing and translations.
+
+**Storing and Managing JSON Documents**
+
+JSON documents can be stored usinga VARCHAR2, CLOB, or BLOB column. An IS JSON SQL constraint ensures that the column contains only valid JSON documents, allowing the database to understand that the column is being used as a container for JSON documents.
+
+Oracle’s JSON capabilities are focused on providing full support for schemaless development and document-based storage. Developers are free to change the structure of their JSON documents as necessary. With the addition of JSON support, Oracle Database delivers the same degree of flexibility as a NoSQL JSON document store.
 
 ### **Prerequisites**
 
@@ -15,9 +29,9 @@ This lab assumes you have completed the following labs:
 - Lab 4: Deploy eSHOP Application
 - Lab 5: Data type demonstrator tool
 
-## Step-1: Retrieve JSON data
+## Step 1: Retrieve JSON data
 
-1. Open the Firefox browser and navigate to http://localhost:7101/resources/html/endPointChecker.html. OR You can use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp in Bookmark Toolbar**
+1. Open the Firefox browser and navigate to http://localhost:7101/resources/html/endPointChecker.html OR You can use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp in Bookmark Toolbar**
 
 2. Click on the drop-down to see the list of datatypes shown in workshop
 
@@ -27,12 +41,12 @@ This lab assumes you have completed the following labs:
 
 4. Search for product with ID **292** and Click on **Go** button
 
-5.	In the text area you will find the JSON data related to product with ID 292 displayed
+5. In the text area you will find the JSON data related to product with ID 292 displayed
 
     ![](./images/json_search_product_292.png " ")
 
 6. To verify the product on eShop application, Open the firefox browser in the VNC session (Or a new tab if already open) and enter the URL http://localhost:7101/product/292 to see the details of the product graphically
-  ![](./images/datatype_tool.png " ")
+    ![](./images/datatype_tool.png " ")
 
 7.	Verify the PID, Details and Title
 
@@ -40,7 +54,7 @@ This lab assumes you have completed the following labs:
 
 1.	In the search result occurring after searching for product 292, update the price of the product from 12$ to 14$ in the text area
 
-   ![](./images/json_product_292_update.png " ")
+    ![](./images/json_product_292_update.png " ")
 
 2.	Click on the blue **Update** button below the text area
 
@@ -92,8 +106,11 @@ This lab assumes you have completed the following labs:
 
 4.	In the text area, paste the below JSON data about product **292**
 
+    ````
+    <copy>
     {"pid":"292","category":"Earring ","title":"Earring 1","details":"Earrings-aiony-haust-o08tVPuvDcQ-unsplash.jpg","price":"2","picture":"https://objectstorage.us-ashburn-1.oraclecloud.com/n/orasenatdpltsecitom03/b/ConvergedDB4/o/Earrings-aiony-haust-o08tVPuvDcQ-unsplash.jpg"}
-
+    </copy>
+    ````
 5. Click on green **Insert** button
     
     ![](./images/json_product_292_insert.png " ")
@@ -142,15 +159,19 @@ This lab assumes you have completed the following labs:
 
 6. Uncomment the line
 
-  ````
-   <copy>
-   pstmt = conn.prepareStatement(GET_PRODUCT_BY_ID_JSON_CHECK_PRICE);
-   Comment out the line
-   pstmt = conn.prepareStatement(GET_PRODUCT_BY_ID);
-   </copy>
-  ````
+    ````
+    <copy>
+    pstmt = conn.prepareStatement(GET_PRODUCT_BY_ID_JSON_CHECK_PRICE);
+    </copy>
+    ````
+    Comment out the line
+    ````
+    <copy>
+    pstmt = conn.prepareStatement(GET_PRODUCT_BY_ID);
+    </copy>
+    ````
   
-  ![](./images/json_comment_code.png " ")
+    ![](./images/json_comment_code.png " ")
 
 7.	Click on **Save** button
 
@@ -170,7 +191,7 @@ This lab assumes you have completed the following labs:
 
 13.	Enter **292** as product ID and Click **Go** You will NOT see the product details as JSON in the text area., as we have set the Price condition to $10., and the product we are trying to get data is worth $12
    
-    ![](./images/json_search_292_no_result.png" ")
+    ![](./images/json_product_292_notavlbl.png" ")
 
 14.	Enter product with ID **11** and click Go
 
@@ -185,17 +206,17 @@ This lab assumes you have completed the following labs:
 
  JSON\_VALUE selects a scalar value from JSON data and returns it as a SQL value. You can also use json\_value to create function-based B-tree indexes for use with JSON data — see Indexes for JSON Data. Function json_value has two required arguments and accepts optional returning and error clauses
  Repeat the steps done above restrict product search to items with Price $10 by changing the query statement and re-deploying the app.
-  
+
+## Want to learn more
+- [JSON](https://docs.oracle.com/en/database/oracle/oracle-database/19/adjsn/index.html)
+- [REST-JSON using JDeveloper](https://docs.oracle.com/cd/E53569_01/tutorials/tut_jdev_maf_json/tut_jdev_maf_json.html)
+
 
 ## Acknowledgements
-
 - **Authors** - Pradeep Chandramouli, Nishant Kaushik
-- **Contributors** - - Laxmi Amarappanavar, Kanika Sharma, Balasubramanian Ramamoorthy
-- **Team** - 
-- **Last Updated By** - 
-- **Expiration Date** -    
+- **Contributors** - Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy
+- **Team** - North America Database and AppDev Specialists
+- **Last Updated By** - Kanika Sharma, Solution Engineer, Oracle Database, October 2020    
 
 ## See an issue?
-Please submit feedback using this 
-[form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1)  
-Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like for us to follow up with you, enter your email in the *Feedback Comments* section.
+Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.

@@ -6,14 +6,10 @@ Java Platform, Enterprise Edition (Java EE) is the standard in community-driven 
 
 The Java EE platform is designed to help developers create large-scale, multitiered, scalable, reliable, and secure network applications. A shorthand name for such applications is enterprise applications, so called because these applications are designed to solve the problems encountered by large enterprises.The benefits of an enterprise application are helpful, even essential, for individual developers and small organizations in an increasingly networked world.
 
-The features that make enterprise applications powerful, like security and reliability, often make these applications complex. The Java EE platform reduces the complexity of enterprise application development by providing a development model, API, and runtime environment that allow developers to concentrate on functionality.
-
 The Enterprise Application Model
 
 ![](./images/enterprise_application_model.png " ")
 
-A Java EE server is a server application that implements the Java EE platform APIs and provides standard Java EE services. Java EE servers are sometimes called application servers, because they 
-allow you to serve application data to clients, much as web servers serve web pages to web browsers.
 
 Java EE servers host several application component types that correspond to the tiers in a multitiered application. The Java EE server provides services to these components in the form of a container.
 
@@ -28,8 +24,6 @@ The WebLogic Server complete implementation of the Java EE 6.0 specification pro
 ![](./images/weblogic_architecture.png " ")
 
 In addition to the Java EE implementation, WebLogic Server enables enterprises to deploy mission-critical applications in a robust, secure, highly available, and scalable environment. These features allow enterprises to configure clusters of WebLogic Server instances to distribute load, and provide extra capacity in case of hardware or other failures.
-
-![](./images/weblogic_product_overview.png " ")
 
 WebLogic Server with same features of on-premise installation is also available on Oracle Cloud Infrastructure, as an option to be deployed on Azure IaaS, as Docker Images and also as WebLogic Operator for deployment on Kubernetes Clusters to help application modernization and support lightweight and largely scalable deployment options.
 
@@ -46,19 +40,12 @@ You will get experience of using ORDS end-point in Java Code and also see JDevel
 Once you complete your setup, the next labs in this workshop cover these individual data types, and the final lab consists of ORDS examples:
 
 - Lab 4: eSHOP Application
-
 - Lab 5: Data Type Demonstration Tool
-
 - Lab6: JSON 
-
 - Lab 7: XML
-
 - Lab 8: SPATIAL
-
 - Lab 9: Cross Data Type
-
 - Lab 10: ORDS as Microservice
-
 
 You will also download VNC Client, setup SSH tunnelling to consume the JDeveloper installed on the workshop instance.
 
@@ -67,28 +54,11 @@ You will also download VNC Client, setup SSH tunnelling to consume the JDevelope
 - VNC Client, PuTTY tool 
 - An Oracle Cloud account, Free Trial, LiveLabs or a Paid account
 
-Estimated Workshop Time: 3 hours
+*Estimated Workshop Time*: 3 hours
 
-## About Use Case
-
-The eSHOP company has a shopping cart web application to sell all clothing and fashion accessories to its customers.  The product details are all provided in JSON format by different vendors of the product and the customers shopping data is retained as XML as per the current single database used for the shopping application.  The store location details are stored as spatial data in a separate single purpose database and all analytical data for the application is residing in a different single purpose database.  In total., the application must deal with multiple datatypes. Hence, the eSHOP company earlier had overhead of connecting to different single-purpose databases to work on each datatype for its shopping cart web application.
-
-The connections to databases and transactions involved with database is always costly and complex.  Because of these multiple single purpose databases, the eShop company had to have engineers knowing to handle these specific single purpose databases, bear the integration costs and complexities of handling the application code which talks to these different databases.  Scalability is another challenge the eSHOP company is facing due to the data fragmentation in the old architecture involving these multiple single-purpose databases.
-
-The CTO of the company decides to re-write the e-shopping  web application using J2EE standards to host on WebLogic., the market leader for enterprise application services. Java developers at eSHOP can leverage the Oracle’s best JEE development tool JDeveloper for coding this new application. 
-
-Oracle has Converged database to offer which supports all these and many more datatypes in one single database. The developers in eSHOP company now enjoy the freedom to connect to a single converged oracle database to handle JSON, XML, Spatial and Graph data for its application.  This doesn’t need the developers know how to deal with different data-type specific databases and the integration complexities beneath.
-
-The data fragmentation across different databases is avoided with converged database in action. The overhead of security and integration cost is avoided. By eliminating data fragmentation, eSHOP can eliminate copy contagion. Application modules or services automatically use a single copy of shared data in a converged database. There are no errors or time delays due to data propagated. The power new generation oracle database and application server features like scaling, high-availability and DR options can all be seamlessly leveraged now.
-
-Oracle Database is an excellent example of a converged database, as it provides support for Machine Learning, Blockchain, Graph, Spatial, JSON, REST, Events, Editions, and IoT Streaming as part of the core database at no additional cost. It allows you to support many diverse projects using a single platform, significantly reducing complexity and management overhead, while minimizing risk.
-
-The new application re-written in J2EE standards using JDeveloper to deploy on WebLogic, demonstrates how convenient it is to work with converged oracle database
-
-**Please proceed to the first lab**
+*Please proceed to the first lab*
 
 ## More Information
-
 Feel free to share with your colleagues
 
 Java EE
@@ -105,18 +75,13 @@ JDeveloper
 - [Java Application Development](https://www.oracle.com/application-development/technologies/jdeveloper.html)
 
 ## Acknowledgements
-
 - **Authors** - Pradeep Chandramouli, Nishant Kaushik
-- **Contributors** -  Laxmi Amarappanavar, Kanika Sharma, Balasubramanian Ramamoorthy, Nishant Kaushik
-- **Team** - 
-- **Last Updated By** - 
-- **Expiration Date** - 
+- **Contributors** - Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy
+- **Team** - North America Database and AppDev Specialists
+- **Last Updated By** - Kanika Sharma, Solution Engineer, Oracle Database, October 2020
 
-## Issues?
-Please submit feedback using this 
-[form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1)  
-Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like for us to follow up with you, enter your email in the *Feedback Comments* section..
-
+## See an issue?
+Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.
 
 
 

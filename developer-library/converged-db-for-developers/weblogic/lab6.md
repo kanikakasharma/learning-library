@@ -190,6 +190,9 @@ This lab assumes you have completed the following labs:
  JSON\_VALUE selects a scalar value from JSON data and returns it as a SQL value. You can also use json\_value to create function-based B-tree indexes for use with JSON data — see Indexes for JSON Data. Function json_value has two required arguments and accepts optional returning and error clauses
  Repeat the steps done above restrict product search to items with Price $10 by changing the query statement and re-deploying the app.
   
+## Want to learn more
+- [JSON](https://docs.oracle.com/en/database/oracle/oracle-database/19/adjsn/index.html)
+- [REST-JSON using JDeveloper](https://docs.oracle.com/cd/E53569_01/tutorials/tut_jdev_maf_json/tut_jdev_maf_json.html)
 
 ## Acknowledgements
 

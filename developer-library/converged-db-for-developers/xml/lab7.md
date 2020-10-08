@@ -2,9 +2,11 @@
 
 ## Introduction
 
-In this lab we will walk through the SQL queries containing the built-in functions for XML datatype. Will create database table with xml datatype, insert sample data, create REST endpoint to access that XML data. Will modify the code, re-build and re-deploy the code the observe the XML data type and its built-in functions. Will learn how a line item within the XML content stored in the database can be conditionally updated.
+In this lab we will walk through the SQL queries containing the built-in functions for XML datatype. We will create database table with xml datatype, insert sample data and create REST endpoint to access that XML data. We will also modify the code, re-build and re-deploy the code the observe the XML data type and its built-in functions. Will learn how a line item within the XML content stored in the database can be conditionally updated.
 
-Estimated Lab Time: 45 Minutes
+***Note***: You may not find any values in the drop down while trying to access XML data using this tool if XML data insertion is not complete.
+
+*Estimated Time*: 30 Minutes
 
 ### **Prerequisites**
 
@@ -14,6 +16,12 @@ This lab assumes you have completed the following labs:
 - Lab 3: Start Services
 - Lab 4: Deploy eSHOP Application
 - Lab 5: Data type demonstrator tool
+
+### **About XML**
+
+XML(Extensible Markup Language) is used to store and transport data. XML data is known as self-describing or self-defining, meaning that the structure of the data is embedded with the data, thus when the data arrives there is no need to pre-build the structure to store the data; it is dynamically understood within the XML.
+
+The basic building block of an XML document is an element, defined by tags. An element has a beginning and an ending tag. All elements in an XML document are contained in an outermost element known as the root element. XML can also support nested elements, or elements within elements. This ability allows XML to support hierarchical structures. Element names describe the content of the element, and the structure describes the relationship between the elements.
 
 ## Step 1: Connect JDeveloper to database
 
@@ -26,19 +34,17 @@ To show the ease of integration of ConvergedDB with Java applications to access 
     ![](./images/jdev_database_connection.png " ")
 
 3.	Click on the green **+** icon under the **Databases** tab on Left-Hand side Navigation to “Create Database Connection”.
-````
-   <copy>
-Provide Values:   
-Connection Name: xml
-Connection Type: Oracle(JDBC)
-Username: appxml
-Password: Oracle_4U
-Hostname: localhost
-Service Name: JXLPDB
- </copy>
-````
+Provide values:
 
-![](./images/jdev_add_db_connection.png " ")
+    - **Connection Name**: xml
+    - **Connection Type**: Oracle(JDBC)
+    - **Username**: appxml
+    - **Password**: Oracle_4U
+    - **Hostname**: localhost
+    - **Service Name**: JXLPDB
+  
+
+    ![](./images/jdev_add_db_connection.png " ")
 
 4.	Click on **Test Connection** and upon **Success!** message, Click OK.
 
@@ -244,15 +250,13 @@ The results are obtained by using the query under READ_XML string in XMLDao.java
 
     ![](./images/tool_xml_fetch_id2_post_update.png" ")
 
-5.	Navigate back to JDeveloper and open the **XMLDao.java**
-  
-    •	Check the query under **UPDATE_XML** STRING
+5.	Navigate back to JDeveloper and open the XMLDao.java. Check the query under **UPDATE_XML** STRING
 
     ![](./images/jdev_update_xml_sql.png" ")
 
-The Query uses updateXML function which is pre-built in database to support updates to data of xml datatype.
+    The Query uses updateXML function which is pre-built in database to support updates to data of xml datatype.
 
-UPDATEXML takes as arguments an XMLType instance and an XPath-value pair and returns an XMLType instance with the updated value. If XPath\_string is an XML element, then the corresponding value\_expr must be an XMLType instance.
+    UPDATEXML takes as arguments an XMLType instance and an XPath-value pair and returns an XMLType instance with the updated value. If XPath\_string is an XML element, then the corresponding value\_expr must be an XMLType instance.
 
 
 ## Step 8: Delete XML data
@@ -267,18 +271,17 @@ UPDATEXML takes as arguments an XMLType instance and an XPath-value pair and ret
 
     ![](./images/tool_xml_delete_success.png" ")
 
-You have seen how easy it is to query the data points with in XML using the Oracle Converged Database’s built-in functions for XML datatype.
+    You have seen how easy it is to query the data points with in XML using the Oracle Converged Database’s built-in functions for XML datatype.
 
-## Acknowledgement
+## Want to learn more
+- [XML](https://docs.oracle.com/en/database/oracle/oracle-database/19/adjsn/index.html)
 
--	**Authors** – Pradeep Chandramouli, Nishant Kaushik
--	**Contributors** - Laxmi Amarappanavar, Kanika Sharma, Pragati Mourya, Balasubramanian Ramamoorthy
--	**Last Updated By/Date** -
+## Acknowledgements
+- **Authors** - Pradeep Chandramouli, Nishant Kaushik
+- **Contributors** - Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy
+- **Team** - North America Database and AppDev Specialists
+- **Last Updated By** - Kanika Sharma, Solution Engineer, Oracle Database, October 2020
 
-
-## See an Issue?
-
-Please submit feedback using this 
-[form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1)  
-Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like for us to follow up with you, enter your email in the *Feedback Comments* section.
+## See an issue?
+Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.
 

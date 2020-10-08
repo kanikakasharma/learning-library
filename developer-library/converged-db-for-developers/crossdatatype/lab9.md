@@ -7,9 +7,9 @@ This lab will show you how to use cross data functions.
 - XML with Relational
 - JSON with Spatial
 
-**Estimated Time:** 30 Minutes
+*Estimated Time:* 15 Minutes
 
-### Before You Begin
+### Prerequisites
 
 This lab assumes you have completed the following labs:
 - Lab 1: Generate SSH Key - Cloud Shell
@@ -196,31 +196,12 @@ GeoJSON uses JSON objects that represent various geometrical entities and combin
 
     ![](./images/Lab9-Step5-1.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Acknowledgements
-
 - **Authors** - Pradeep Chandramouli, Nishant Kaushik
-- **Contributors** -  Laxmi Amarappanavar, Kanika Sharma, Balasubramanian Ramamoorthy, Nishant Kaushik
-- **Team** - 
-- **Last Updated By** - 
-- **Expiration Date** - 
+- **Contributors** - Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy
+- **Team** - North America Database and AppDev Specialists
+- **Last Updated By** - Kanika Sharma, Solution Engineer, Oracle Database, October 2020    
 
-## Issues?
-Please submit feedback using this 
-[form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1)  
-Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like for us to follow up with you, enter your email in the *Feedback Comments* section..
+## See an issue?
+Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.
 

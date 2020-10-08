@@ -7,9 +7,9 @@ We will learn to use REST end point created using Oracle REST Data Services (ORD
 
 Oracle Converged Database with ORDS – Oracle REST Data Services options enables database to present required data within its tables and views as JSON data over REST on HTTP/HTTPS.
 
-**Estimated Time:** 30 Minutes
+*Estimated Time:* 15 Minutes
 
-### Before You Begin
+### Prerequisites
 
 This lab assumes you have completed the following labs:
 - Lab 1: Generate SSH Key - Cloud Shell
@@ -112,22 +112,18 @@ ORDS will find and run the appropriate database workload (a query, an anonymous 
 
     ![](./images/Lab10-Step1-3.png)
 
-
-
-
+## Want to learn more
+- [ORDS](https://www.oracle.com/in/database/technologies/appdev/rest.html)
+- [Consuming a Database-Bound RESTful Web Service](https://docs.oracle.com/cd/E53569_01/tutorials/tut_rest_ws/tut_rest_ws.html)
 
 ## Acknowledgements
-
 - **Authors** - Pradeep Chandramouli, Nishant Kaushik
-- **Contributors** -  Laxmi Amarappanavar, Kanika Sharma, Balasubramanian Ramamoorthy, Nishant Kaushik
-- **Team** - 
-- **Last Updated By** - 
-- **Expiration Date** - 
+- **Contributors** - Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy
+- **Team** - North America Database and AppDev Specialists
+- **Last Updated By** - Kanika Sharma, Solution Engineer, Oracle Database, October 2020    
 
-## Issues?
-Please submit feedback using this 
-[form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1)  
-Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like for us to follow up with you, enter your email in the *Feedback Comments* section..
+## See an issue?
+Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.
 
 
 

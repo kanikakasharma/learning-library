@@ -5,16 +5,8 @@
 In this lab we will walk through the SQL queries containing the built-in functions for SPATIAL data. 
 Will create a test database table to store SPATIAL data and insert sample data. 
 Will modify the code, re-build and re-deploy the code the observe the SPATIAL data type with its built-in functions and also create REST end-point to access SPATIAL data. 
-As a developer, you will be handling data from the backend in your code, irrespective of the database beneath and the data-types.
-Spatial data types stores geometry and multi-dimensional data.  It is used to process geo-spatial data.
 
-Oracle Spatial consists of the following:
-* Schema (MDSYS)
-* A spatial indexing mechanism
-* Operators, functions, and procedures
-* Native data type for vector data called SDO\_GEOMETRY (An Oracle table can contain one or more SDO_GEOMETRY columns).
-
-**Estimated Time:** 45 Minutes
+*Estimated Time:* 30 Minutes
 
 ### Prerequisites
 
@@ -25,6 +17,14 @@ This lab assumes you have completed the following labs:
 * Lab 4: Deploy eSHOP Application
 * Lab 5: Data type demonstrator tool
 
+### About Oracle Spatial
+Spatial data types stores geometry and multi-dimensional data.  It is used to process geo-spatial data.
+
+Oracle Spatial consists of the following:
+* Schema (MDSYS)
+* A spatial indexing mechanism
+* Operators, functions, and procedures
+* Native data type for vector data called SDO\_GEOMETRY (An Oracle table can contain one or more SDO_GEOMETRY columns).
 
 ## **STEP 1**: Connect JDeveloper to database
 
@@ -114,10 +114,12 @@ This lab assumes you have completed the following labs:
     ````
     <copy>
 
-        ALTER TABLE city_points ADD (shape SDO_GEOMETRY);
-
-            
-        UPDATE city_points SET shape = SDO_GEOMETRY(2001,8307,SDO_POINT_TYPE(LONGITUDE, LATITUDE, NULL), NULL, NULL);
+    ALTER TABLE city_points ADD (shape SDO_GEOMETRY);
+    </copy>
+    ````
+    ````
+    <copy>        
+    UPDATE city_points SET shape = SDO_GEOMETRY(2001,8307,SDO_POINT_TYPE(LONGITUDE, LATITUDE, NULL), NULL, NULL);
     </copy>
     ````
 
@@ -157,7 +159,7 @@ This lab assumes you have completed the following labs:
 
 2. Click on **Save** Button.
 
-3. Similarly, open the **DBSource.java** file under **Projects** :arrow_right: **converge** :arrow_right: **Application Sources** :arrow_right: **converge.dbHelper** by double clicking the file.
+3. Similarly, open the **DBSource.java** file under **Projects** &#8594; **converge** &#8594; **Application Sources** &#8594; **converge.dbHelper** by double clicking the file.
 
 4. Search for getSpatialDS and navigate to the existing empty getSpatialDS function. Copy and Paste the function code in the code file.
 
@@ -206,7 +208,7 @@ This lab assumes you have completed the following labs:
 
 ## **STEP 4**: REST end-point for SPATIAL
 
-1. In JDeveloper, open **SpatialController.java** under **converge** :arrow_right: **Application Sources** :arrow_right: **converge.controllers**. Search for **getAllCities** and check the function code.  The request mapping is done as **/allCities**.  The base rest end point being **/spatial** for the code declared at the class level.
+1. In JDeveloper, open **SpatialController.java** under **converge** &#8594; **Application Sources** &#8594; **converge.controllers**. Search for **getAllCities** and check the function code.  The request mapping is done as **/allCities**.  The base rest end point being **/spatial** for the code declared at the class level.
 
     ![](./images/jdev_spatial_rest.png)
 
@@ -289,24 +291,17 @@ This lab assumes you have completed the following labs:
 
     This lab, we saw, how the complicated spatial data in a converged database is handled as easily as other datatypes using the buit-in functions and support for spatial data by Oracle Converged Database.
 
-
-
-
-
+## Want to learn more
+- [Spatial](https://docs.oracle.com/en/database/oracle/oracle-database/19/spatl/index.html)
 
 ## Acknowledgements
-
 - **Authors** - Pradeep Chandramouli, Nishant Kaushik
-- **Contributors** - - Laxmi Amarappanavar, Kanika Sharma, Balasubramanian Ramamoorthy
-- **Team** - 
-- **Last Updated By** - 
-- **Expiration Date** -    
+- **Contributors** - Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy
+- **Team** - North America Database and AppDev Specialists
+- **Last Updated By** - Kanika Sharma, Solution Engineer, Oracle Database, October 2020    
 
 ## See an issue?
-Please submit feedback using this 
-[form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1)  
-Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like for us to follow up with you, enter your email in the *Feedback Comments* section.
-      
+Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.
 
 
 

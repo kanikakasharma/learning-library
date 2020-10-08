@@ -4,16 +4,21 @@
 
 This lab will show how to create a datasource in WebLogic and will be recoding the steps for automation. We will also deploy the eSHOP application from JDeveloper to WebLogic server and verify the eSHOP application functionality.
 
-Estimated Time: 45 Minutes
+*Estimated Time*: 20 Minutes
 
 ### Prerequisites
+- Lab 1: Generate SSH Key - Cloud Shell 
+- Lab 2: Setup Compute Instance
+- Lab 3: Start Services
 
-• Lab 1: Generate SSH Key - Cloud Shell 
+### About eShop Application
 
-• Lab 2: Setup Compute Instance
+The eSHOP company has a shopping cart web application to sell all clothing and fashion accessories to its customers.  The product details are all provided in JSON format by different vendors of the product and the customers shopping data is retained as XML as per the current single database used for the shopping application.  The store location details are stored as spatial data in a separate single purpose database and all analytical data for the application is residing in a different single purpose database.  In total., the application must deal with multiple datatypes. Hence, the eSHOP company earlier had overhead of connecting to different single-purpose databases to work on each datatype for its shopping cart web application.
 
-• Lab 3: Start Services
+The connections to databases and transactions involved with database is always costly and complex.  Because of these multiple single purpose databases, the eShop company had to have engineers knowing to handle these specific single purpose databases, bear the integration costs and complexities of handling the application code which talks to these different databases.  Scalability is another challenge the eSHOP company is facing due to the data fragmentation in the old architecture involving these multiple single-purpose databases.
+The CTO of the company decides to re-write the e-shopping  web application using J2EE standards to host on WebLogic., the market leader for enterprise application services. Java developers at eSHOP can leverage the Oracle’s best JEE development tool JDeveloper for coding this new application. 
 
+The new application re-written in J2EE standards using JDeveloper to deploy on WebLogic, demonstrates how convenient it is to work with converged oracle database
 
 ## Step 1: Access the WebLogic Admin Console
 
@@ -24,57 +29,53 @@ It improves application performance as connections are not created/closed within
 1. Open the Firefox browser and navigate to http://localhost:7101/console. OR You can use the bookmark **Oracle Weblogic Server Administration Console** under **ConvergedDB-Workshp in Bookmark Toolbar** 
 
 2. Login with below credentials:
+      - **Username**: weblogic
+      - **Password**: Oracle123!
 
- - Username:  weblogic
-
- - Password:  Oracle123!
-
-![](./images/weblogic_console_login.png " ")
+    ![](./images/weblogic_console_login.png " ")
 
 
 ## Step 2: Configure datasource recoding
 
 1. Click on **Preferences**
 
-![](./images/weblogic_console_preferences.png " ")
+    ![](./images/weblogic_console_preferences.png " ")
 
 2. Click on **WLST Script Recording** tab. Under **General** tab, edit the values for parameters as 
+   
+    - **Base Script Directory**: /u01/middleware_demo/scriptsScript
+    - **File Name**: createDS.py
 
-- Base Script Directory: /u01/middleware_demo/scriptsScript
+    ![](./images/datasource_recording_setting_path.png " ")
 
-- File Name: createDS.py
+1. Scroll down, Select the CheckBox **Generate Prescript and Postscript**.  
 
-![](./images/datasource_recording_setting_path.png " ")
+    Fill the values given below in respective textareas
 
-3. Scroll down, Select the CheckBox **Generate Prescript and Postscript**.  
+    Prescript Text:
+    ````
+    <copy>
+    connect(‘weblogic’,’Oracle123!',’t3://localhost:7101’)
+    edit()
+    startEdit()
+    </copy>
+    ````
+    Postscript Text:
+    ````
+    <copy>
+    save()
+    activate()
+    exit()
+    </copy>
+    ````
+    ![](./images/datasource_recording_setting_prepost_text.png " ")
 
-Fill the values given below in respective textareas
+   4. Click on **Save** button
 
-Prescript Text:
-````
-<copy>
-connect(‘weblogic’,’Oracle123!?,’t3://localhost:7101’)edit()startEdit()
-</copy>
-````
-
-Postscript Text:
-````
-<copy>
-save()
-
-activate()
-
-exit()
-</copy>
-````
-![](./images/datasource_recording_setting_prepost_text.png " ")
-
-4. Click on **Save** button
-
-5. Click on **Control** tab.  Click Start **Recording**
+   5. Click on **Control** tab.  Click Start **Recording**
 
 
-![](./images/datasource_recording_start.png " ")
+   ![](./images/datasource_recording_start.png " ")
 
 
 
@@ -84,51 +85,45 @@ exit()
 
 2. Click on **Data Sources**  Click on New and select **Generic Data Source**
 
-![](./images/weblogic_console_create_ds.png " ")
+    ![](./images/weblogic_console_create_ds.png " ")
 
 3. Fill the values as below and click **Next** button
 
-Name: jsonxmlds
+    - **Name**: jsonxmlds
+    - **JNDI Name**: convergeddb.jsonxmlds
 
-JNDI Name: convergeddb.jsonxmlds
-
-![](./images/create_jsonxmlds.png " ")
+    ![](./images/create_jsonxmlds.png " ")
 
 4. For **Database Driver** select the default value of **Oralce’s Driver (Thin) for Service Connections; Versions: Any.** Click **Next**
 
-![](./images/create_jsonxmlds_driver.png " ")
+    ![](./images/create_jsonxmlds_driver.png " ")
 
 5. In the next screen do not change any values.  Let the default selections prevail.  Click **Next**
 
-![](./images/create_jsonxmlds_options.png " ")
+    ![](./images/create_jsonxmlds_options.png " ")
 
 6. Under the **Connection Properties** screen provide the following values. Click **Next** 
 
-- Database Name: JXLPDB
+   - **Database Name**: JXLPDB
+   - **Host Name**: localhost
+   - **Port**: 1521
+   - **Database User Name**: appxml
+   - **Password**: Oracle_4U
+   - **Confirm Password**: Oracle_4U
 
-- Host Name: localhost
-
-- Port: 1521
-
-- Database User Name: appxml
-
-- Password: Oracle_4U
-
-- Confirm Password: Oracle_4U
-
-![](./images/create_jsonxmlds_connection_properties.png " ")
+    ![](./images/create_jsonxmlds_connection_properties.png " ")
 
 7. Click on **Test Configurtion** to confirm the connection.  Once you see a successful connection, Click **Next**
 
-![](./images/create_jsonxmlds_test_connection.png " ")
+    ![](./images/create_jsonxmlds_test_connection.png " ")
 
 8. In the **Select Target** screen, select the checkbox against **AdminServer**. Click **Finish**
 
-![](./images/create_jsonxmlds_select_target.png " ")
+    ![](./images/create_jsonxmlds_select_target.png " ")
 
 9. Navigate back to **Preferences**, **WLST Script Recording** tab. Click **Control** tab. Click on **Stop Recording** button
 
-![](./images/datasource_recording_stop.png " ")
+    ![](./images/datasource_recording_stop.png " ")
 
 Now we have successfully recorded how a datasource can be created from WebLogic Admin Console
 
@@ -142,35 +137,35 @@ In this step we will edit the recorded script a little to connect to the require
    
 2. Edit the recorded commands in /u01/middleware_demo/scripts/createDS.py using the command
 
-````
-<copy>
-gedit /u01/middleware_demo/scripts/createDS.py
-</copy>
-````
+    ````
+    <copy>
+    gedit /u01/middleware_demo/scripts/createDS.py
+    </copy>
+    ````
 
 3. Remove the line with keyword **setEncrypted**( or comment it by adding **#** as the first character of the line - before the keyword **setEncrypted**
 
-````
-<copy>
-#setEncrypted('Password', 'Password_1592840128546',
-'/u01/middleware_demo/scripts/createDSConfig',
-'/u01/middleware_demo/scripts/createDSSecret')
-</copy>
-````
+    ````
+    <copy>
+    #setEncrypted('Password', 'Password_1592840128546',
+    '/u01/middleware_demo/scripts/createDSConfig',
+    '/u01/middleware_demo/scripts/createDSSecret')
+    </copy>
+    ````
 
 4. Instead of setEncrypted() function, we can set the password for the datasource connection using the setPassword() command in WLST.  Write the below line in place of line containing **setEncrypted** 
 
-````
-<copy>
-cmo.setPassword(**Oracle_4U**)
-</copy>
-````
+    ````
+    <copy>
+    cmo.setPassword(**Oracle_4U**)
+    </copy>
+    ````
 
 5. Click on the **Menu** icon on the right hand side of the gedit window.  Click **Find and Replace** option
 
-![](./images/edit_wlst_script.png " ")
+    ![](./images/edit_wlst_script.png " ")
 
-6. Find and Replace all occurrence of **jsonxmlds** with **spatialgraphds**
+6. Find and Replace all occurrence of **jsonxmlds** with **spatialds**
 
 7. Find and Replace the username for database connection **appxml** with **appspat**
 
@@ -184,53 +179,56 @@ cmo.setPassword(**Oracle_4U**)
   
 2. Navigate to folder where the edited datasource create script exits
 
-````
-<copy>
-cd /u01/middleware_demo/scripts
-</copy>
-````
+    ````
+    <copy>
+    cd /u01/middleware_demo/scripts
+    </copy>
+    ````
 
 3. Source the lab profile file (DOT SPACE PATH)
 
-````
-<copy>
-. /u01/middleware_demo/scripts/setWLS14Profile.sh
-</copy>
-````
+    ````
+    <copy>
+    . /u01/middleware_demo/scripts/setWLS14Profile.sh
+    </copy>
+    ````
 
 4. Source the setDomainEnv.sh to set all WebLogic and WLST paths
 
-````
-<copy>
-sh $DOMAIN_HOME/bin/setDomainEnv.sh
-</copy>
-````
+    ````
+    <copy>
+    sh $DOMAIN_HOME/bin/setDomainEnv.sh
+    </copy>
+    ````
 
 5. Execute the java command below to run the WLST script to create the second datasource **spatialgraphds**
 
-````
-<copy>
-java weblogic.WLST createDS.py
-</copy>
-````
+    ````
+    <copy>
+    java weblogic.WLST createDS.py
+    </copy>
+    ````
 
 6. Navigate to folder /u01/middleware_demo/converge-java/utilities
 
-````
-<copy>
-cd /u01/middleware_demo/converge-java/utilities
-</copy>
-````
+    ````
+    <copy>
+    cd /u01/middleware_demo/converge-java/utilities
+    </copy>
+    ````
 
 7. Execute the java command below to run the WLST script to create datasource connecting to PDB apppdb where the eShop data is stored
 
-````
-<copy>
-java weblogic.WLST createAppDataSourceSGR.py
-
-java weblogic.WLST createAppDataSourceJXL.py
-</copy>
-````
+    ````
+    <copy>
+    java weblogic.WLST createAppDataSourceSGR.py
+    </copy>
+    ````
+    ````
+    <copy>
+    java weblogic.WLST createAppDataSourceJXL.py
+    </copy>
+    ````
 
 ## Step 6: Deploy eSHOP Application
 
@@ -238,45 +236,45 @@ java weblogic.WLST createAppDataSourceJXL.py
 
 2. When prompted for **Select Role**, opt for **Studio Developer** Role and Click **OK** button. 
   
-This role has access to all features of JDeveloper.  We need it for accessing different kind of project templates to build the eSHOP application
+    This role has access to all features of JDeveloper.  We need it for accessing different kind of project templates to build the eSHOP application
 
-![](./images/jdev_studio_option.png " ")
+    ![](./images/jdev_studio_option.png " ")
 
 3. Click on **File** menu. Click **Import**
 
 4. In the **Import** menu, Select **Maven Project** and Click **OK**
 
-![](./images/jdev_import_maven_project.png " ")
+    ![](./images/jdev_import_maven_project.png " ")
 
 5. Use the **Search Icon** and navigate to /u01/middleware_demo/converge-java folder against the Root Directory .  Leave the **Settings File** option to default.  Select the checkbox against **pom.xml** under the **Project** options. Click **OK**
 
-![](./images/jdev_select_project.png " ")
+    ![](./images/jdev_select_project.png " ")
 
 6. Provide a proper **Application Name** like eShopWebApp. Click **OK**
 
-![](./images/jdev_project_naming.png " ")
+    ![](./images/jdev_project_naming.png " ")
 
 7. JDeveloper will take some time to import the application code.  Expand all **+** signs under **Converge** beneath the **Projects** tab on left hand side navigation bar to see different RESOURCES, WEB COMPONENTS and PACKAGES used in the eSHOP code
 
-![](./images/jdev_project_expanded.png " ")
+    ![](./images/jdev_project_expanded.png " ")
 
 8. Expand **Resources**.  Double click on **pom.xml**.  In the Main window of the **JDeveloper**, Click on **Source**
 
-We can see the weblogic-maven-plugin which calls the weblogic.deployer tool internally for and execution goal of *8deploy** in a Maven call.
+    We can see the weblogic-maven-plugin which calls the weblogic.deployer tool internally for and execution goal of *8deploy** in a Maven call.
 
-![](./images/jdev_project_pom.png " ")
+    ![](./images/jdev_project_pom.png " ")
 
 9. Under Applications Navigation Panel in JDeveloper, Under **Projects**, right click on **converge**
 
 10. Select Run Maven, Click **Install**
 
-![](./images/jdev_project_install.png " ")
+    ![](./images/jdev_project_install.png " ")
 
 11. In the Logs section **Apache-Maven-Install-Log** observe the text **BUILD SUCCESS**.
 
-Scroll up the log and observe that the Maven automation has created a deployable war file called converge.war under /u01/middleware_demo/converge-java/target/ folder and using the “weblogic.deployer” tool, has installed it on the configured on AdminServer of WebLogic 14 installed
+    Scroll up the log and observe that the Maven automation has created a deployable war file called converge.war under /u01/middleware_demo/converge-java/target/ folder and using the “weblogic.deployer” tool, has installed it on the configured on AdminServer of WebLogic 14 installed
 
-![](./images/jdev_project_deploy_to_wls.png " ")
+    ![](./images/jdev_project_deploy_to_wls.png " ")
 
 ## Step 7: Verify eSHOP functionality
 
@@ -284,19 +282,17 @@ Scroll up the log and observe that the Maven automation has created a deployable
 
 2. Navigate through all endpoints and features of the application like Dashboard, shopping cart, search etc.,
 
-![](./images/eShop_application_home.png " ")
+    ![](./images/eShop_application_home.png " ")
 
+  The eShop application is deployed and functional.   
 
 ## Acknowledgements
-
 - **Authors** - Pradeep Chandramouli, Nishant Kaushik
-- **Contributors** - - Laxmi Amarappanavar, Kanika Sharma, Balasubramanian Ramamoorthy
-- **Team** - 
-- **Last Updated By** - 
-- **Expiration Date** -    
+- **Contributors** - Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy
+- **Team** - North America Database and AppDev Specialists
+- **Last Updated By** - Kanika Sharma, Solution Engineer, Oracle Database, October 2020
 
 ## See an issue?
-Please submit feedback using this 
-[form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1)  
-Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like for us to follow up with you, enter your email in the *Feedback Comments* section.
+Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.
+
       
