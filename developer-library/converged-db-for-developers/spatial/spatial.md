@@ -219,14 +219,14 @@ Oracle Spatial consists of the following:
     ![](./images/jdev-spatial-rest.png)
 
 
-2. Open Firefox if not already open, in other browser tab, open the URL **http://localhost:7001/spatial/allCities**. Data is retrieved by the **getAllCities()** method in **SpatialController.java**.
+2. Open Firefox if not already open, in other browser tab, open the URL `http://localhost:7101/spatial/allCities`. Data is retrieved by the **getAllCities()** method in **SpatialController.java**.
 
     ![](./images/spatial-rest-data.png)
 
 
 ## **STEP 5:** Read SPATIAL data
 
-1. Open the Firefox browser and navigate to **http://localhost:7101/resources/html/endPointChecker.html** OR  use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp** in bookmark toolbar
+1. Open the Firefox browser and navigate to `http://localhost:7101/resources/html/endPointChecker.html` OR  use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp** in bookmark toolbar
 2. Click on the drop-down to see the list of datatypes shown in workshop.
 3. Select **SPATIAL** datatype and click on change view button to change.
 4. Click on blue fetch cities button.
@@ -268,7 +268,7 @@ Oracle Spatial consists of the following:
 
 ## **STEP 7:** Delete SPATIAL data
 
-1. Open the Firefox browser and navigate to **http://localhost:7101/resources/html/endPointChecker.html** OR use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp** in bookmark toolbar.
+1. Open the Firefox browser and navigate to `http://localhost:7101/resources/html/endPointChecker.html` OR use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp** in bookmark toolbar.
 
 2. Click on the drop-down to see the list of datatypes shown in workshop.
 
@@ -303,10 +303,9 @@ You may now proceed to the next lab.
 - [Spatial](https://docs.oracle.com/en/database/oracle/oracle-database/19/spatl/index.html)
 
 ## Acknowledgements
-- **Authors** - Pradeep Chandramouli, Nishant Kaushik
-- **Contributors** - Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy
-- **Team** - North America Database and AppDev Specialists
-- **Last Updated By** - Kanika Sharma, Solution Engineer, Oracle Database, October 2020    
+- **Authors** - Pradeep Chandramouli, Nishant Kaushik, Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy, AppDev & Database Team, Oracle, October 2020
+- **Contributors** - Meghana Banka, Rene Fontcha
+- **Last Updated By/Date** - Kanika Sharma, NA Technology, October 2020
 
 ## See an issue?
 Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.

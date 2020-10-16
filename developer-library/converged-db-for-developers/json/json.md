@@ -21,7 +21,7 @@ This lab assumes you have completed the following labs:
 - Lab 4: Deploy eSHOP Application
 - Lab 5: Data Type Demonstrator Tool
 
-### About Oracle JSON
+### About JSON
 
 JSON (JavaScript Object Notation) is a syntax for storing and exchanging data. When exchanging data between a browser and a server, the data can only be text.
 
@@ -37,7 +37,7 @@ Oracle’s JSON capabilities are focused on providing full support for schemales
 
 ## **Step 1:** Retrieve JSON data
 
-1. Open the Firefox browser and navigate to http://localhost:7101/resources/html/endPointChecker.html OR You can use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp in Bookmark Toolbar**
+1. Open the Firefox browser and navigate to `http://localhost:7101/resources/html/endPointChecker.html` OR You can use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp in Bookmark Toolbar**
 
 2. Click on the drop-down to see the list of datatypes shown in workshop
 
@@ -51,7 +51,7 @@ Oracle’s JSON capabilities are focused on providing full support for schemales
 
     ![](./images/json-search-product-292.png " ")
 
-6. To verify the product on eShop application, Open the firefox browser in the VNC session (Or a new tab if already open) and enter the URL http://localhost:7101/product/292 to see the details of the product graphically
+6. To verify the product on eShop application, Open the firefox browser in the VNC session (Or a new tab if already open) and enter the URL `http://localhost:7101/product/292` to see the details of the product graphically
     ![](./images/json-product-292.png " ")
 
 7.	Verify the PID, Details and Title
@@ -66,7 +66,7 @@ Oracle’s JSON capabilities are focused on providing full support for schemales
 
 3.	You will observe the message “1 records updated”
 
-4.	To verify the product on eShop application, Open the firefox browser in the VNC session (Or a new tab if already open) and enter the URL http://localhost:7101/product/292 to see the details of the product graphically
+4.	To verify the product on eShop application, Open the firefox browser in the VNC session (Or a new tab if already open) and enter the URL `http://localhost:7101/product/292` to see the details of the product graphically
 
     ![](./images/json-product-292-updated.png " ")
 
@@ -94,7 +94,7 @@ Oracle’s JSON capabilities are focused on providing full support for schemales
 
     ![](./images/json-product-292-notavlbl.png " ")
 
-6. To verify the product on eShop application, Open the firefox browser in the VNC session (Or a new tab if already open) and enter the URL http://localhost:7101/product/292 
+6. To verify the product on eShop application, Open the firefox browser in the VNC session (Or a new tab if already open) and enter the URL `http://localhost:7101/product/292` 
 
 7. You will find the product missing from the JSON database
    
@@ -102,7 +102,7 @@ Oracle’s JSON capabilities are focused on providing full support for schemales
 
 ## **Step 4:** Insert JSON data
 
-1.	Open the Firefox browser and navigate to http://localhost:7101/resources/html/endPointChecker.html. OR You can use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp in Bookmark Toolbar**
+1.	Open the Firefox browser and navigate to `http://localhost:7101/resources/html/endPointChecker.html` OR You can use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp in Bookmark Toolbar**
 
    If the tool is already open, continue
 
@@ -131,7 +131,7 @@ Oracle’s JSON capabilities are focused on providing full support for schemales
 
     ![](./images/json-search-product-292.png " ")
 
-9. To verify the product on eShop application, Open the firefox browser in the VNC session (Or a new tab if already open) and enter the URL http://localhost:7101/product/292 to see the details of the product graphically
+9. To verify the product on eShop application, Open the firefox browser in the VNC session (Or a new tab if already open) and enter the URL `http://localhost:7101/product/292` to see the details of the product graphically
 
     ![](./images/json-product-292.png " ")
 
@@ -191,7 +191,7 @@ Oracle’s JSON capabilities are focused on providing full support for schemales
     
     ![](./images/json-redeploy-log.png " ")
 
-11.	Navigate back to browser to the **End Point Checker** tool under http://localhost:7101/resources/html/endPointChecker.html
+11.	Navigate back to browser to the **End Point Checker** tool at `http://localhost:7101/resources/html/endPointChecker.html`
 
 12.	Refresh couple of times to ensure avoiding pages from cache	
 
@@ -221,10 +221,9 @@ You may now proceed to the next lab.
 
 
 ## Acknowledgements
-- **Authors** - Pradeep Chandramouli, Nishant Kaushik
-- **Contributors** - Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy
-- **Team** - North America Database and AppDev Specialists
-- **Last Updated By** - Kanika Sharma, Solution Engineer, Oracle Database, October 2020    
+- **Authors** - Pradeep Chandramouli, Nishant Kaushik, Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy, AppDev & Database Team, Oracle, October 2020
+- **Contributors** - Meghana Banka, Rene Fontcha
+- **Last Updated By/Date** - Kanika Sharma, NA Technology, October 2020
 
 ## See an issue?
 Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.

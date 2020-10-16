@@ -167,7 +167,7 @@ to see no results
 
 ## **Step 4:** Read XML in tool
 
-1.	Open the Firefox browser and navigate to http://localhost:7101/resources/html/endPointChecker.html. OR You can use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp in Bookmark Toolbar**
+1.	Open the Firefox browser and navigate to `http://localhost:7101/resources/html/endPointChecker.html` OR You can use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp in Bookmark Toolbar**
 
 2.	Click on the drop-down to see the list of datatypes shown in workshop
 
@@ -198,11 +198,11 @@ to see no results
 
     ![](./images/jdev-xml-rest-code.png" ")
 
-2.	Open firefox or if already open, in other browser tab, open the URL http://localhost:7101/xml/read/1 Data is retrieved by the fetchXml() method in XmlController.java
+2.	Open firefox or if already open, in other browser tab, open the URL `http://localhost:7101/xml/read/1` Data is retrieved by the fetchXml() method in XmlController.java
 
     ![](./images/rest-id1-retrieve.png" ")
 
-3.	To retrieve all IDs, Open the URL http://localhost:7101/xml/ids Data is retrieved by the **getXmlIds()** method in XmlController.java
+3.	To retrieve all IDs, Open the URL `http://localhost:7101/xml/ids` Data is retrieved by the **getXmlIds()** method in XmlController.java
 
     ![](./images/rest-retrieve-all-ids.png" ")
 
@@ -239,7 +239,7 @@ to see no results
 
 2.	In the **text box** next to **Delete** button specify the tag element you need to update and in the corresponding text box specify the value to which the tag item needs to be updated 
 
-    example, update the pincode value by providing /order/address/pincode as first parameter and 0000000  as the value
+    example, update the pincode value by providing `/order/address/pincode` as first parameter and 0000000  as the value
 
     ![](./images/tool-xml-fetch-id2-and-update.png" ")
 
@@ -276,19 +276,19 @@ to see no results
 
 You may now proceed to the next lab.
 
-## Want to learn more
-- [XML](https://docs.oracle.com/en/database/oracle/oracle-database/19/adjsn/index.html)
-
 ## Appendix: Data Type Demonstration Tool for XML - Issues
 
 - You may not find any values in the drop down while trying to access XML data using this tool if XML data insertion is not complete.
 - If your xml is not valid, the record will not be inserted.
 
+## Want to learn more
+- [XML](https://docs.oracle.com/en/database/oracle/oracle-database/19/adjsn/index.html)
+
+
 ## Acknowledgements
-- **Authors** - Pradeep Chandramouli, Nishant Kaushik
-- **Contributors** - Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy
-- **Team** - North America Database and AppDev Specialists
-- **Last Updated By** - Kanika Sharma, Solution Engineer, Oracle Database, October 2020
+- **Authors** - Pradeep Chandramouli, Nishant Kaushik, Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy, AppDev & Database Team, Oracle, October 2020
+- **Contributors** - Meghana Banka, Rene Fontcha
+- **Last Updated By/Date** - Kanika Sharma, NA Technology, October 2020
 
 ## See an issue?
 Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.

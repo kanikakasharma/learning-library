@@ -33,9 +33,7 @@ ORDS will find and run the appropriate database workload (a query, an anonymous 
 
 ## **Step 1:** Observe eSpeedShop analytical data
 
-1. Open web browser, type [http://localhost:7101/](http://localhost:7101/) and hit enter to go to eSpeedShop application home page.
-
-    ![](./images/lab10-step1-1.png)
+1. Open web browser, type `http://localhost:7101/` and hit enter to go to eSpeedShop application home page.
 
 2. Navigate to the analytics module by clicking the Analytics link provided in application navigation bar at the top.
 
@@ -119,11 +117,11 @@ You have successfully completed **Converged Database for WebLogic Developer** wo
 - [ORDS](https://www.oracle.com/in/database/technologies/appdev/rest.html)
 - [Consuming a Database-Bound RESTful Web Service](https://docs.oracle.com/cd/E53569_01/tutorials/tut_rest_ws/tut_rest_ws.html)
 
+
 ## Acknowledgements
-- **Authors** - Pradeep Chandramouli, Nishant Kaushik
-- **Contributors** - Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy
-- **Team** - North America Database and AppDev Specialists
-- **Last Updated By** - Kanika Sharma, Solution Engineer, Oracle Database, October 2020    
+- **Authors** - Pradeep Chandramouli, Nishant Kaushik, Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy, AppDev & Database Team, Oracle, October 2020
+- **Contributors** - Meghana Banka, Rene Fontcha
+- **Last Updated By/Date** - Kanika Sharma, NA Technology, October 2020
 
 ## See an issue?
 Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.

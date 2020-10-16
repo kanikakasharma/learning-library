@@ -158,9 +158,9 @@ If you aren't already logged in, follow the steps below to login. If you are log
 1. Use command below
 
     ````
-        <copy>
-            ssh -N -L <port>:localhost:<port> <Public_IP>
-        </copy>
+        
+        ssh -N -L <port>:localhost:<port> <Public_IP>
+        
     ````
 
 2.	Keep the terminal open during the entire workshop session
@@ -169,24 +169,25 @@ If you aren't already logged in, follow the steps below to login. If you are log
 ## **Step 6:** Install VNC Client and Connect
 
 1. You need to have an SSH session or PuTTY session as Oracle user running
-2. Download and Install VNC Client like TigerVNC viewer from https://tigervnc.org/ and RealVNC from https://www.realvnc.com/en/connect/download/viewer/ 
-3. If you have Chrome browser, add VNC Viewer from the link https://chrome.google.com/webstore/detail/vnc%C2%AE-viewer-for-google-ch/iabmpiboiopbgfabjmgeedhcmjenhbla  
+2. Download and Install VNC Client like TigerVNC viewer from [TigerVNC Portal](https://tigervnc.org/) OR RealVNC from [RealVNC Portal](https://www.realvnc.com/en/connect/download/viewer/)
+3. If you have Chrome browser, add VNC Viewer from this [link](https://chrome.google.com/webstore/detail/vnc%C2%AE-viewer-for-google-ch/iabmpiboiopbgfabjmgeedhcmjenhbla)  
 4. Open Chrome apps and Install Extension on Chrome
 5. Launch VNC Viewer / RealVNC
-6. Enter localhost:<port> and connect
-7. Provide vncserver as password  
+6. Enter localhost:<port\> and connect
+7. Provide **vncserver** as password
 8. Your VNC session will open in a new window
 
 You may now proceed to the next lab.
 
+
 ## Acknowledgements
-- **Authors** - Pradeep Chandramouli, Nishant Kaushik
-- **Contributors** - Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy
-- **Team** - North America Database and AppDev Specialists
-- **Last Updated By** - Kanika Sharma, Solution Engineer, Oracle Database, October 2020   
+- **Authors** - Pradeep Chandramouli, Nishant Kaushik, Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy, AppDev & Database Team, Oracle, October 2020
+- **Contributors** - Meghana Banka, Rene Fontcha
+- **Last Updated By/Date** - Kanika Sharma, NA Technology, October 2020
 
 ## See an issue?
 Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.
+
 
 
 

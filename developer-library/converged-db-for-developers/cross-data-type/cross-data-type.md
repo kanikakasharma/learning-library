@@ -19,7 +19,7 @@ This lab assumes you have completed the following labs:
 - Lab 2: Setup Compute Instance
 - Lab 3: Start Services
 
-### About Oracle Cross Datatype
+### About Oracle Cross Data Type
 
 JSON_TABLE creates a relational view of JSON data. It maps the result of a JSON data evaluation into relational rows and columns.
 
@@ -28,7 +28,7 @@ The COLUMNS clause evaluates the row source, finds specific JSON values within t
 
 ## **Step 1:** Connect to the Pluggable Database (PDB)
 
-1. As oracle user set oracle Environment and connect to the PDB.
+1. Open Linux terminal on VNC. As Oracle user set Oracle Environment and connect to the PDB.
 
     ````
     <copy>
@@ -202,11 +202,9 @@ GeoJSON uses JSON objects that represent various geometrical entities and combin
 You may now proceed to the next lab.
 
 ## Acknowledgements
-- **Authors** - Pradeep Chandramouli, Nishant Kaushik
-- **Contributors** - Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy
-- **Team** - North America Database and AppDev Specialists
-- **Last Updated By** - Kanika Sharma, Solution Engineer, Oracle Database, October 2020    
+- **Authors** - Pradeep Chandramouli, Nishant Kaushik, Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy, AppDev & Database Team, Oracle, October 2020
+- **Contributors** - Meghana Banka, Rene Fontcha
+- **Last Updated By/Date** - Kanika Sharma, NA Technology, October 2020
 
 ## See an issue?
 Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.
-

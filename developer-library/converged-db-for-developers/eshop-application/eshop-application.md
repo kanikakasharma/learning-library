@@ -31,7 +31,7 @@ Handling database connections using WebLogic datasources gives the developers fr
 
 It improves application performance as connections are not created/closed within a class, they are managed by the application server and can be fetched while at runtime.it provides a facility for creating a pool of connectionsrecycling of connections in the pool is helpful for enterprise application performanceIt supports distributed transactions
 
-1. Open the Firefox browser and navigate to http://localhost:7101/console. OR You can use the bookmark **Oracle Weblogic Server Administration Console** under **ConvergedDB-Workshp in Bookmark Toolbar** 
+1. Open the Firefox browser and navigate to `http://localhost:7101/console` OR You can use the bookmark **Oracle Weblogic Server Administration Console** under **ConvergedDB-Workshp in Bookmark Toolbar** 
 
 2. Login with below credentials:
       - **Username**: weblogic
@@ -277,13 +277,13 @@ In this step we will edit the recorded script a little to connect to the require
 
 11. In the Logs section **Apache-Maven-Install-Log** observe the text **BUILD SUCCESS**.
 
-    Scroll up the log and observe that the Maven automation has created a deployable war file called converge.war under /u01/middleware_demo/converge-java/target/ folder and using the “weblogic.deployer” tool, has installed it on the configured on AdminServer of WebLogic 14 installed
+    Scroll up the log and observe that the Maven automation has created a deployable war file called converge.war under `/u01/middleware_demo/converge-java/target/` folder and using the **weblogic.deployer** tool, has installed it on the configured on AdminServer of WebLogic 14 installed
 
     ![](./images/jdev-project-deploy-to-wls.png " ")
 
 ## **Step 7:** Verify eSHOP functionality
 
-1. Open the Firefox browser, access the application by navigating to http://localhost:7101/  or from the bookmarks toolbar, Click **ConvergeDB-Workshop**, and Click **eSpeedShop**
+1. Open the Firefox browser, access the application by navigating to `http://localhost:7101/`  or from the bookmarks toolbar, Click **ConvergeDB-Workshop**, and Click **eSpeedShop**
 
 2. Navigate through all endpoints and features of the application like Dashboard, shopping cart, search etc.,
 
@@ -294,10 +294,9 @@ In this step we will edit the recorded script a little to connect to the require
 You may now proceed to the next lab. 
 
 ## Acknowledgements
-- **Authors** - Pradeep Chandramouli, Nishant Kaushik
-- **Contributors** - Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy
-- **Team** - North America Database and AppDev Specialists
-- **Last Updated By** - Kanika Sharma, Solution Engineer, Oracle Database, October 2020
+- **Authors** - Pradeep Chandramouli, Nishant Kaushik, Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy, AppDev & Database Team, Oracle, October 2020
+- **Contributors** - Meghana Banka, Rene Fontcha
+- **Last Updated By/Date** - Kanika Sharma, NA Technology, October 2020
 
 ## See an issue?
 Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.
