@@ -49,17 +49,17 @@
         {         
             "title": "Lab 8: SPATIAL",
             "description": "Introduction to Spatial",
-            "filename": "../spatial/lab8.md"
+            "filename": "../spatial/spatial.md"
         },
         {         
-            "title": "Lab 9: Cross Datatype ",
-            "description": "Introduction to Cross Data type",
-            "filename": "../crossdatatype/lab9.md"
+            "title": "Lab 9: Cross Data Type ",
+            "description": "Introduction to Cross Data Type",
+            "filename": "../cross-data-type/cross-data-type.md"
         },
         {         
             "title": "Lab 10: ORDS as Microservice",
             "description": "Introduction to ORDS as microservice",
-            "filename": "../ords/lab10.md"
+            "filename": "../ords-as-microservice/ords-as-microservice.md"
         }
        
 

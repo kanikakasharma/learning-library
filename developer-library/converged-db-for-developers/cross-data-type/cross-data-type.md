@@ -1,4 +1,4 @@
-# Oracle Cross Datatype
+# Cross Data Type
 
 ## Introduction
 
@@ -7,7 +7,10 @@ This lab will show you how to use cross data functions.
 - XML with Relational
 - JSON with Spatial
 
-*Estimated Time:* 15 Minutes
+*Estimated Lab Time:* 15 Minutes
+
+### Objectives
+- Use different data types in combination
 
 ### Prerequisites
 
@@ -195,6 +198,8 @@ GeoJSON uses JSON objects that represent various geometrical entities and combin
 
 
     ![](./images/Lab9-Step5-1.png)
+
+You may now proceed to the next lab.
 
 ## Acknowledgements
 - **Authors** - Pradeep Chandramouli, Nishant Kaushik

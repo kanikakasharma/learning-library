@@ -6,32 +6,38 @@ In this lab we will walk through the SQL queries containing the built-in functio
 Will create a test database table to store SPATIAL data and insert sample data. 
 Will modify the code, re-build and re-deploy the code the observe the SPATIAL data type with its built-in functions and also create REST end-point to access SPATIAL data. 
 
-*Estimated Time:* 30 Minutes
+*Estimated Lab Time:* 30 Minutes
+
+### Objectives
+- Create a database table to store Oracle Spatial data
+- Use Spatial data type built-in functions
+- Create REST end-point to access SPATIAL data
+
 
 ### Prerequisites
 
 This lab assumes you have completed the following labs:
-* Lab 1: Generate SSH Key - Cloud Shell
-* Lab 2: Setup Compute Instance
-* Lab 3: Start Services
-* Lab 4: Deploy eSHOP Application
-* Lab 5: Data type demonstrator tool
+- Lab 1: Generate SSH Key - Cloud Shell
+- Lab 2: Setup Compute Instance
+- Lab 3: Start Services
+- Lab 4: Deploy eSHOP Application
+- Lab 5: Data type demonstrator tool
 
 ### About Oracle Spatial
 Spatial data types stores geometry and multi-dimensional data.  It is used to process geo-spatial data.
 
 Oracle Spatial consists of the following:
-* Schema (MDSYS)
-* A spatial indexing mechanism
-* Operators, functions, and procedures
-* Native data type for vector data called SDO\_GEOMETRY (An Oracle table can contain one or more SDO_GEOMETRY columns).
+- Schema (MDSYS)
+- A spatial indexing mechanism
+- Operators, functions, and procedures
+- Native data type for vector data called SDO\_GEOMETRY (An Oracle table can contain one or more SDO_GEOMETRY columns).
 
-## **STEP 1**: Connect JDeveloper to database
+## **STEP 1:** Connect JDeveloper to database
 
 1. Open JDeveloper in Studio Mode, if not open already.
 2. Click on **Window** select **Database** and then **Databases** to open the databases navigation tab on the left-hand side of the JDeveloper editor.
 
-    ![](./images/jdev_database_connection.png)
+    ![](./images/jdev-database-connection.png)
 
 
 3. Click on the green **+** icon under the **Databases** tab on left-hand side navigation to **Create Database Connection**.
@@ -44,20 +50,20 @@ Oracle Spatial consists of the following:
     - **Service Name:** SGRPDB
 
 
-    ![](./images/jdev_add_database_connection.png)
+    ![](./images/jdev-add-database-connection.png)
 
 
 4. Click on **Test Connection** and upon **Success!** message, Click **OK**.
 
 
-## **STEP 2**: Create SPATIAL Data
+## **STEP 2:** Create SPATIAL Data
 
-1. In the Menu bare, click on **SQL** dropdown and select **spatial**.
+1. In the Menu bar, click on **SQL** dropdown and select **spatial**.
 
-    ![](./images/jdev_sql_spatial.png)
+    ![](./images/jdev-sql-spatial.png)
 
 
-2. A worksheet for connection **spatial** opens.  Execute your query commands.
+2. A worksheet for connection **spatial** opens.  Execute your query commands here.
 
 3. Key in or copy paste the statement below in worksheet to create a table to hold spatial data.
 
@@ -69,7 +75,7 @@ Oracle Spatial consists of the following:
 4. Select the text and click on the green **Play** icon, look for **Table Created** confirmation message in the **Script Output** tab.
 
 
-    ![](./images/jdev_create_spatial_table.png)
+    ![](./images/jdev-create-spatial-table.png)
 
 
 5. Key in the statements below in worksheet to insert data in the spatial table **city_points**.
@@ -86,12 +92,12 @@ Oracle Spatial consists of the following:
 6. Select the text and click on the Green **Play** icon, **Script Output** tab will show **1 Row Inserted** message 4 times.
 
 
-    ![](./images/jdev_insert_spatial.png)
+    ![](./images/jdev-insert-spatial.png)
 
 7. Right Click on **Tables (Filtered)** on Left-Hand side and click **Refresh** to see the table created.
 
 
-    ![](./images/jdev_refresh_spatial.png)
+    ![](./images/jdev-refresh-spatial.png)
 
 
 8. Once you see the table **city_points** on the left-hand side, In a new line of the worksheet key in below query.
@@ -106,7 +112,7 @@ Oracle Spatial consists of the following:
 9. Select the query line again and click the green Play button to execute the query.
 
 
-    ![](./images/jdev_select_data_spatial_table.png)
+    ![](./images/jdev-select-data-spatial-table.png)
 
 
 10. In the worksheet, execute the alter statement to add the SDO_Geometry column to store the spatial data, also add the geometry values to the 4 rows already present.
@@ -126,7 +132,7 @@ Oracle Spatial consists of the following:
 11.	Select the statements and click on the green **Play** icon to execute the alter and update statements.
 
     
-    ![](./images/jdev_alter_spatial_table.png)
+    ![](./images/jdev-alter-spatial-table.png)
 
 
 12.	Execute the statement below to see the column and data for city_points table.
@@ -138,10 +144,10 @@ Oracle Spatial consists of the following:
     </copy>
     ````
 
-    ![](./images/jdev_select_new_column_spatial_table.png)
+    ![](./images/jdev-select-new-column-spatial-table.png)
 
 
-## **STEP 3**: Modify JEE code for SPATIAL
+## **STEP 3:** Modify JEE code for SPATIAL
 
 1. Under the Projects in **Applications** tab on left Navigation, expand **converge** then **Resources** and double click on **applicationContext.xml** to open the configuration xml. To add the new datasource bean add the code below the < /bean> tag of convergejsonxmlds and before ending < /beans> tag.
 
@@ -154,7 +160,7 @@ Oracle Spatial consists of the following:
     ````
 
 
-    ![](./images/jdev_db_bean_add.png)
+    ![](./images/jdev-db-bean-add.png)
 
 
 2. Click on **Save** Button.
@@ -184,9 +190,9 @@ Oracle Spatial consists of the following:
     </copy>
     ````
 
-    ![](./images/jdev_search_function.png)
+    ![](./images/jdev-search-function.png)
 
-    ![](./images/jdev_replace_function.png)
+    ![](./images/jdev-replace-function.png)
 
 5. Click on **Save** button.
 
@@ -199,26 +205,26 @@ Oracle Spatial consists of the following:
 7. Click on **Run Maven** and select **redeploy**.
 
 
-    ![](./images/jdev_spatialcode_redepoy.png)
+    ![](./images/jdev-spatialcode-redepoy.png)
 
 8. In the JDeveloper Log message area, you will see the **successful redeployment**.
 
-    ![](./images/jdev_spatialcode_redepoy_success.png)
+    ![](./images/jdev-spatialcode-redepoy-success.png)
 
 
-## **STEP 4**: REST end-point for SPATIAL
+## **STEP 4:** REST end-point for SPATIAL
 
 1. In JDeveloper, open **SpatialController.java** under **converge** &#8594; **Application Sources** &#8594; **converge.controllers**. Search for **getAllCities** and check the function code.  The request mapping is done as **/allCities**.  The base rest end point being **/spatial** for the code declared at the class level.
 
-    ![](./images/jdev_spatial_rest.png)
+    ![](./images/jdev-spatial-rest.png)
 
 
 2. Open Firefox if not already open, in other browser tab, open the URL **http://localhost:7001/spatial/allCities**. Data is retrieved by the **getAllCities()** method in **SpatialController.java**.
 
-    ![](./images/spatial_rest_data.png)
+    ![](./images/spatial-rest-data.png)
 
 
-## **STEP 5**: Read SPATIAL data
+## **STEP 5:** Read SPATIAL data
 
 1. Open the Firefox browser and navigate to **http://localhost:7101/resources/html/endPointChecker.html** OR  use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp** in bookmark toolbar
 2. Click on the drop-down to see the list of datatypes shown in workshop.
@@ -226,12 +232,12 @@ Oracle Spatial consists of the following:
 4. Click on blue fetch cities button.
 
 
-    ![](./images/spatial_load_map_1.png)
+    ![](./images/spatial-load-map-1.png)
 
     You should see the 4 CITIES listed on the map which we inserted In the CITY_POINTS table. Zoom out on the map to view the cities.
 
 
-## **STEP 6**: Insert SPATIAL data
+## **STEP 6:** Insert SPATIAL data
 
 1. Navigate back to **endpointchecker** tool to try the insert a spatial record.
 
@@ -242,25 +248,25 @@ Oracle Spatial consists of the following:
     Get the co-ordinates of any city and use it to insert in the **CITY_POINTS** table using the tool. Latitude and Longitude of Bangalore has been taken here for example.
 
 
-    ![](./images/spatial_latlong_values.png)
+    ![](./images/spatial-latlong-values.png)
 
 
-    ![](./images/spatial_pin_bangalore.png)
+    ![](./images/spatial-pin-bangalore.png)
 
 
 3. You will get the notification pop-up that the record was Inserted. Click Ok.  If you do not get notification check for pop-up blockers.
 4. The map changes to point to newly added city. Zoom in/out if required to see all 5 cities.
 
-    ![](./images/spatial_locate_bangalore.png)
+    ![](./images/spatial-locate-bangalore.png)
 
 
 5. Navigate back to **SpatialDAO.java** and verify the insert query in string variable **INSERT\_NEW\_CITY**. Also check that the shape (Geometry) of the object is updated later after inserting the longitude and latitude in **UPDATE_SHAPE** string query.
 
 
-    ![](./images/jdev_spatial_insert_query.png)
+    ![](./images/jdev-spatial-insert-query.png)
 
 
-## **STEP 7**: Delete SPATIAL data
+## **STEP 7:** Delete SPATIAL data
 
 1. Open the Firefox browser and navigate to **http://localhost:7101/resources/html/endPointChecker.html** OR use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp** in bookmark toolbar.
 
@@ -271,25 +277,27 @@ Oracle Spatial consists of the following:
 4. Click on blue **Fetch Cities** button.
 
 
-    ![](./images/spatial_load_map_2.png)
+    ![](./images/spatial-load-map-2.png)
 
 5. To delete a city from the table, select the required city from drop down and press red **Unpin City** button. You will see a pop-up notifying about the deletion, Click **OK**.
     SanFrancisco deleted/unpinned here for example.
 
 
-    ![](./images/spatial_delete_sfo.png)
+    ![](./images/spatial-delete-sfo.png)
 
 
-    ![](./images/spatial_delete_sfo_confirm.png)
+    ![](./images/spatial-delete-sfo-confirm.png)
 
 
 6. Again click on **Fetch Cities** button to see the deleted city missing on the map.
 
 
-    ![](./images/spatial_sfo_deleted.png)
+    ![](./images/spatial-sfo-deleted.png)
 
 
     This lab, we saw, how the complicated spatial data in a converged database is handled as easily as other datatypes using the buit-in functions and support for spatial data by Oracle Converged Database.
+
+You may now proceed to the next lab.
 
 ## Want to learn more
 - [Spatial](https://docs.oracle.com/en/database/oracle/oracle-database/19/spatl/index.html)

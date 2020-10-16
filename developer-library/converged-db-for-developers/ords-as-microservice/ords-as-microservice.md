@@ -7,7 +7,10 @@ We will learn to use REST end point created using Oracle REST Data Services (ORD
 
 Oracle Converged Database with ORDS – Oracle REST Data Services options enables database to present required data within its tables and views as JSON data over REST on HTTP/HTTPS.
 
-*Estimated Time:* 15 Minutes
+*Estimated Lab Time:* 15 Minutes
+
+### Objectives
+- Modify JEE code to replace data from database by ORDS end-point
 
 ### Prerequisites
 
@@ -24,7 +27,7 @@ ORDS is middle tier JAVA application that allows you to access your Oracle Datab
 ORDS will find and run the appropriate database workload (a query, an anonymous block), and return the output as formatted JSON.
 
 
-![](./images/Lab10-AboutORDS.png)
+![](./images/lab10-about-ords.png)
 
 
 
@@ -32,15 +35,15 @@ ORDS will find and run the appropriate database workload (a query, an anonymous 
 
 1. Open web browser, type [http://localhost:7101/](http://localhost:7101/) and hit enter to go to eSpeedShop application home page.
 
-    ![](./images/Lab10-Step1-1.png)
+    ![](./images/lab10-step1-1.png)
 
 2. Navigate to the analytics module by clicking the Analytics link provided in application navigation bar at the top.
 
-    ![](./images/Lab10-Step1-2.png)
+    ![](./images/lab10-step1-2.png)
 
 3. Once redirected, observe the **Category shares in Product count** section, which displays a pie chart to show count of products by different categories.
 
-    ![](./images/Lab10-Step1-3.png)
+    ![](./images/lab10-step1-3.png)
 
 ## **Step 2:** Modify data access code
 
@@ -48,7 +51,7 @@ ORDS will find and run the appropriate database workload (a query, an anonymous 
 
 2. On the left side in the projects panel, locate converge application folder.
 
-    ![](./images/Lab10-Step2-2.png)
+    ![](./images/lab10-step2-2.png)
 
 3. Expand the **converge** application folder and locate **Application Sources** directory.
 
@@ -56,26 +59,25 @@ ORDS will find and run the appropriate database workload (a query, an anonymous 
 
 5. Open AnalyticsDao.java
 
-    ![](./images/Lab10-Step2-5.png)
+    ![](./images/lab10-step2-5.png)
 
 6. Search for **getProductCountByCategory** function, which is fetching data from database for **Category shares in Product count** section in Analytics page.
 
-    ![](./images/Lab10-Step2-6.png)
+    ![](./images/lab10-step2-6.png)
 
 7. Look for the function body and make sure it is getting data by executing the SQL query string named **PRODUCT\_COUNT\_BY_GROUP**.
 
 8. Modify the function in such a way that instead of getting data by executing the SQL, it should fetch data from the provided ORDS URL.
 
     In order to achieve that, uncomment the function call
-        
-        Vector v = getProductCountByCategoryOrds();
+    ````
+    <copy>    
+    Vector v = getProductCountByCategoryOrds();
+    </copy>
+    ````
+    comment the function body after the above line, except the return statement at the end of function body.
 
-    comment the function body below, except the return statement at the end of function body.
-
-    The code after edit should look like below:
-
-     ![](./images/Lab10-Step2-8.png)
-
+   
 9. Once done, save the changes using **Ctrl + s**.
 
 
@@ -84,16 +86,17 @@ ORDS will find and run the appropriate database workload (a query, an anonymous 
 
 1.	In JDeveloper, go to the project panel and right click on the project folder (converge).
 
-    ![](./images/Lab10-Step3-1.png)
+    ![](./images/lab10-step3-1.png)
 
 2.	Go to **Run Maven** option in the menu.
 
 3.	Select **redeploy** to execute the maven redeploy goal and redeploy application on weblogic server.
 
-    ![](./images/Lab10-Step3-3.png)
+    ![](./images/lab10-step3-3.png)
 
 4.	Wait and observe JDeveloper console for redeployment confirmation.
 
+    ![](./images/lab10-step3-4.png)
 
 
 ## **Step 4:** Re-check analytical data
@@ -102,15 +105,15 @@ ORDS will find and run the appropriate database workload (a query, an anonymous 
 
 2.	Open the eSpeedShop application by entering the URL – localhost:7101
 
-    ![](./images/Lab10-Step1-1.png)
-
 3.	Navigate to the analytics module by clicking the Analytics link, provided in the application navigation bar at the top.
 
-    ![](./images/Lab10-Step1-2.png)
+    ![](./images/lab10-step1-2.png)
 
 4.	Check the **Product Count By Category**, the pie chart is still plotting the same data the only difference is that this time it is getting data from the ORDS end point.
 
-    ![](./images/Lab10-Step1-3.png)
+    ![](./images/lab10-step1-3.png)
+
+You have successfully completed **Converged Database for WebLogic Developer** workshop 
 
 ## Want to learn more
 - [ORDS](https://www.oracle.com/in/database/technologies/appdev/rest.html)
