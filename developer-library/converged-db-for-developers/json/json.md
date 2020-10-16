@@ -1,10 +1,25 @@
-# Oracle JSON 
+# JSON 
 
 ## Introduction
 
-In this lab we will walk through the SQL queries containing the built-in functions provided for JSON datatype. We will modify the code, re-build and re-deploy the eShop application. Will learn to write new conditions to access selective JSON data from the converged database using data type  demonstration tool. This lab demonstrates how to create REST endpoints for publishing JSON data. We will be performing insert, update and deletion of JSON data using the UI tool
+This lab demonstrates the ease of handling JSON data type in JAVA EE code. We will be performing insert, update and deletion of JSON data using the UI tool.
 
-*Estimated Time*: 30 Minutes
+*Estimated Lab Time*: 30 Minutes
+
+### Objectives
+
+- Walk through the SQL queries having built-in functions for JSON datatype
+- Change business logic to query JSON conditionally
+- Showcase creation of REST end-points for JSON data retrived
+
+### Prerequisites
+
+This lab assumes you have completed the following labs:
+- Lab 1: Generate SSH Key - Cloud Shell
+- Lab 2: Setup Compute Instance
+- Lab 3: Start Services
+- Lab 4: Deploy eSHOP Application
+- Lab 5: Data Type Demonstrator Tool
 
 ### About Oracle JSON
 
@@ -20,16 +35,7 @@ JSON documents can be stored usinga VARCHAR2, CLOB, or BLOB column. An IS JSON S
 
 Oracle’s JSON capabilities are focused on providing full support for schemaless development and document-based storage. Developers are free to change the structure of their JSON documents as necessary. With the addition of JSON support, Oracle Database delivers the same degree of flexibility as a NoSQL JSON document store.
 
-### **Prerequisites**
-
-This lab assumes you have completed the following labs:
-- Lab 1: Generate SSH Key - Cloud Shell
-- Lab 2: Setup Compute Instance
-- Lab 3: Start Services
-- Lab 4: Deploy eSHOP Application
-- Lab 5: Data type demonstrator tool
-
-## Step 1: Retrieve JSON data
+## **Step 1:** Retrieve JSON data
 
 1. Open the Firefox browser and navigate to http://localhost:7101/resources/html/endPointChecker.html OR You can use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp in Bookmark Toolbar**
 
@@ -37,24 +43,24 @@ This lab assumes you have completed the following labs:
 
 3. Select **JSON** datatype and click on **Change View** button to change
 
-    ![](./images/datatype_tool.png " ")
+    ![](./images/datatype-tool.png " ")
 
 4. Search for product with ID **292** and Click on **Go** button
 
 5. In the text area you will find the JSON data related to product with ID 292 displayed
 
-    ![](./images/json_search_product_292.png " ")
+    ![](./images/json-search-product-292.png " ")
 
 6. To verify the product on eShop application, Open the firefox browser in the VNC session (Or a new tab if already open) and enter the URL http://localhost:7101/product/292 to see the details of the product graphically
-    ![](./images/datatype_tool.png " ")
+    ![](./images/json-product-292.png " ")
 
 7.	Verify the PID, Details and Title
 
-## Step 2: Update JSON data
+## **Step 2:** Update JSON data
 
 1.	In the search result occurring after searching for product 292, update the price of the product from 12$ to 14$ in the text area
 
-    ![](./images/json_product_292_update.png " ")
+    ![](./images/json-product-292-update.png " ")
 
 2.	Click on the blue **Update** button below the text area
 
@@ -62,39 +68,39 @@ This lab assumes you have completed the following labs:
 
 4.	To verify the product on eShop application, Open the firefox browser in the VNC session (Or a new tab if already open) and enter the URL http://localhost:7101/product/292 to see the details of the product graphically
 
-    ![](./images/json_product_292_updated.png " ")
+    ![](./images/json-product-292-updated.png " ")
 
 5.	Again, search for product **292**, to observe the results with updated price value in the JSON object retrieved from database
     
-    ![](./images/json_search_product_292_updated.png " ")
+    ![](./images/json-search-product-292-updated.png " ")
 
    JSON manipulation function which is supplied out of the box called JSON_MERGEPATCH which is entirely replacing the JSON text with the new text is used within the code to update JSON data.  Similarly, we can re-write the query to update only a particular field and value in JSON by other methods provided to scan through and manipulate JSON key-value pairs in Oracle Converged DB for JSON.
 
-## Step 3: Delete JSON data
+## **Step 3:** Delete JSON data
 
 1. Search for product with ID **292** and Click on **Go** button
 
 2. Click on red **Delete** button below the search result display text area
 
-    ![](./images/json_product_292_delete.png " ")
+    ![](./images/json-product-292-delete.png " ")
 
 3. The deletion confirmation message is displayed
 
-    ![](./images/json_product_292_delete_msg.png " ")
+    ![](./images/json-product-292-delete-msg.png " ")
 
 4. Click on **Go** button again to search for product with ID 292
 
 5. The unavailability message is displayed
 
-    ![](./images/json_product_292_notavlbl.png " ")
+    ![](./images/json-product-292-notavlbl.png " ")
 
 6. To verify the product on eShop application, Open the firefox browser in the VNC session (Or a new tab if already open) and enter the URL http://localhost:7101/product/292 
 
 7. You will find the product missing from the JSON database
    
-   ![](./images/json_product_292_missing.png " ")
+   ![](./images/json-product-292-missing.png " ")
 
-## Step 4: Insert JSON data
+## **Step 4:** Insert JSON data
 
 1.	Open the Firefox browser and navigate to http://localhost:7101/resources/html/endPointChecker.html. OR You can use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp in Bookmark Toolbar**
 
@@ -108,30 +114,30 @@ This lab assumes you have completed the following labs:
 
     ````
     <copy>
-    {"pid":"292","category":"Earring ","title":"Earring 1","details":"Earrings-aiony-haust-o08tVPuvDcQ-unsplash.jpg","price":"2","picture":"https://objectstorage.us-ashburn-1.oraclecloud.com/n/orasenatdpltsecitom03/b/ConvergedDB4/o/Earrings-aiony-haust-o08tVPuvDcQ-unsplash.jpg"}
+    {"pid":"292","category":"Earring ","title":"Earring 1","details":"Earrings-aiony-haust-o08tVPuvDcQ-unsplash.jpg","price":"12","picture":"https://objectstorage.us-ashburn-1.oraclecloud.com/n/orasenatdpltsecitom03/b/ConvergedDB4/o/Earrings-aiony-haust-o08tVPuvDcQ-unsplash.jpg"}
     </copy>
     ````
 5. Click on green **Insert** button
     
-    ![](./images/json_product_292_insert.png " ")
+    ![](./images/json-product-292-insert.png " ")
 
 6. Data insert confirmation message is displayed.
     
-    ![](./images/json_product_292_insert_msg.png " ")
+    ![](./images/json-product-292-insert-msg.png " ")
 
 7. Search for product id **292** and Click **Go**
 
 8. The newly inserted product details are displayed in the text area
 
-    ![](./images/json_search_product_292.png " ")
+    ![](./images/json-search-product-292.png " ")
 
 9. To verify the product on eShop application, Open the firefox browser in the VNC session (Or a new tab if already open) and enter the URL http://localhost:7101/product/292 to see the details of the product graphically
 
-    ![](./images/json_search_product_292.png " ")
+    ![](./images/json-product-292.png " ")
 
 10.	Verify the PID, Details and Title
 
-## Step 5: Update JSON Query and verify
+## **Step 5:** Update JSON Query and verify
    
  We have searched and handled JSON data based on the product id.  Now what if we want to get the products by ID only if the price of the product is $10?  
 
@@ -149,7 +155,7 @@ This lab assumes you have completed the following labs:
 
 4. Compare the query with the one against GET_PRODUCT\_BY\_ID\_JSON\_CHECK\_PRICE.
 
-    ![](./images/json_query_by_price.png " ")
+    ![](./images/json-query-by-price.png " ")
 
   We are first using function JSON\_EXISTS which will do a verification if the data is in the JSON format and if the condition is met. 
 
@@ -171,7 +177,7 @@ This lab assumes you have completed the following labs:
     </copy>
     ````
   
-    ![](./images/json_comment_code.png " ")
+    ![](./images/json-comment-code.png " ")
 
 7.	Click on **Save** button
 
@@ -179,11 +185,11 @@ This lab assumes you have completed the following labs:
 
 9.	Click on **Run Maven** and click on **redeploy**
     
-    ![](./images/json_redeploy.png " ")
+    ![](./images/json-redeploy.png " ")
 
 10.	In the JDeveloper Log message area, you will see the successful redeployment
     
-    ![](./images/json_redeploy_log.png " ")
+    ![](./images/json-redeploy-log.png " ")
 
 11.	Navigate back to browser to the **End Point Checker** tool under http://localhost:7101/resources/html/endPointChecker.html
 
@@ -191,13 +197,13 @@ This lab assumes you have completed the following labs:
 
 13.	Enter **292** as product ID and Click **Go** You will NOT see the product details as JSON in the text area., as we have set the Price condition to $10., and the product we are trying to get data is worth $12
    
-    ![](./images/json_product_292_notavlbl.png" ")
+    ![](./images/json-product-292-notavlbl.png" ")
 
 14.	Enter product with ID **11** and click Go
 
 15.	You will see the product details retrieved as the price is $10
 
-    ![](./images/json_search_product_11.png" ")
+    ![](./images/json-search-product-11.png" ")
 
  OPTIONAL
  You can also try the select statement in GET\_PRODUCT\_BY\_ID\_JSON\_QUERY string in JSONDao.java which has a SQL statement containing built-in JSON operational functions JSON\_QUERY and JSON\_VALUE to handle the same request.
@@ -206,6 +212,8 @@ This lab assumes you have completed the following labs:
 
  JSON\_VALUE selects a scalar value from JSON data and returns it as a SQL value. You can also use json\_value to create function-based B-tree indexes for use with JSON data — see Indexes for JSON Data. Function json_value has two required arguments and accepts optional returning and error clauses
  Repeat the steps done above restrict product search to items with Price $10 by changing the query statement and re-deploying the app.
+
+You may now proceed to the next lab.
 
 ## Want to learn more
 - [JSON](https://docs.oracle.com/en/database/oracle/oracle-database/19/adjsn/index.html)

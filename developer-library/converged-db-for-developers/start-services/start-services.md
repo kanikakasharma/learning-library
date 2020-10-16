@@ -4,7 +4,7 @@
 
 This lab will show you how to setup tunneling for VNC, start VNC Server and connect to remote VNC session. Also, this lab will show steps to start the database instance, listener, Weblogic server and JDeveloper IDE. In this lab we will also import the eSHOP JEE Code to JDeveloper IDE.
 
-*Estimated Time:* 30 Minutes
+*Estimated Lab Time:* 30 Minutes
 
 ### Objectives
 - Start VNC Server
@@ -26,13 +26,13 @@ If you aren't already logged in, follow the steps below to login. If you are log
 1. Click the Hamburger Menu in the top left corner. Then hover over Compute > Instances. Find the instance you created in the previous lab.
 
     
-    ![](./images/nav_compute_instance.png " ")
+    ![](./images/nav-compute-instance.png " ")
 
 
 2. Click on your instance and copy your Public IP address to a notepad.
 
    
-    ![](./images/public_ip.png " ")
+    ![](./images/public-ip.png " ")
 
 
 
@@ -117,7 +117,7 @@ If you aren't already logged in, follow the steps below to login. If you are log
     </copy>
     ````
 
-    ![](./images/check_vnc.png " ")
+    ![](./images/check-vnc.png " ")
 
 
 
@@ -144,13 +144,13 @@ If you aren't already logged in, follow the steps below to login. If you are log
 3. Enter the port that you noted down while verifying VNC service under Source port. Then supply the destination address as Destination as shown in the following image.
 
   
-    ![](./images/configure_tunneling.png " ")
+    ![](./images/configure-tunneling.png " ")
 
 
 4. Click on Session on left hand side menu and Save the session
 
 
-    ![](./images/save_session.png " ")
+    ![](./images/save-session.png " ")
 
 
 **On Mac**
@@ -176,6 +176,8 @@ If you aren't already logged in, follow the steps below to login. If you are log
 6. Enter localhost:<port> and connect
 7. Provide vncserver as password  
 8. Your VNC session will open in a new window
+
+You may now proceed to the next lab.
 
 ## Acknowledgements
 - **Authors** - Pradeep Chandramouli, Nishant Kaushik
