@@ -22,44 +22,44 @@
         },
         {         
             "title": "Lab 3: Start Services ",
-            "description": "Connect to Schema",
-            "filename": "../weblogic/lab3.md"
+            "description": "Start all services",
+            "filename": "../start-services/start-services.md"
         },
         {         
             "title": "Lab 4: eSHOP Application ",
-            "description": "Connect to Schema",
-            "filename": "../weblogic/lab4.md"
+            "description": "Launch eSHOP application",
+            "filename": "../eshop-application/eshop-application.md"
         },
         
         {         
             "title": "Lab 5: Data Type Demonstration Tool ",
-            "description": "Connect to Schema",
-            "filename": "../datatypedemotool/lab5.md"
+            "description": "Introduction to Data Type Demonstration Tool",
+            "filename": "../data-type-demonstration-tool/data-type-demonstration-tool.md"
         },
         {         
             "title": "Lab 6: JSON ",
-            "description": "Introduction to Converged Database Workshop",
-            "filename": "../json/lab6.md"
+            "description": "Introduction to JSON",
+            "filename": "../json/json.md"
         },
         {         
             "title": "Lab 7: XML",
-            "description": "Introduction to Converged Database Workshop",
-            "filename": "../xml/lab7.md"
+            "description": "Introduction to XML",
+            "filename": "../xml/xml.md"
         },
         {         
             "title": "Lab 8: SPATIAL",
-            "description": "Introduction to Converged Database Workshop",
-            "filename": "../spatial/lab8.md"
+            "description": "Introduction to Spatial",
+            "filename": "../spatial/spatial.md"
         },
         {         
-            "title": "Lab 9: Cross Datatype ",
-            "description": "Connect to Schema",
-            "filename": "../crossdatatype/lab9.md"
+            "title": "Lab 9: Cross Data Type ",
+            "description": "Introduction to Cross Data Type",
+            "filename": "../cross-data-type/cross-data-type.md"
         },
         {         
             "title": "Lab 10: ORDS as Microservice",
-            "description": "Introduction to Converged Database Workshop",
-            "filename": "../ords/lab10.md"
+            "description": "Introduction to ORDS as microservice",
+            "filename": "../ords-as-microservice/ords-as-microservice.md"
         }
        
 
