@@ -1,75 +1,114 @@
+# Workshop Introduction and Overview #
+
+## Converged Database with Weblogic for Developers
 # Introduction
 
-## About Java EE ##
+This workshop aims at providing hands-on labs for creating an eCommerce application using JDeveloper as an IDE. The labs show the ease of handling data stored as different datatypes like JSON, XML and Spatial as multiple pluggable databases in a single converged Oracle database.
+
+The power of weblogic for JEE development like JNDI, DataSources, Maven Plugins and REST are leveraged in labs from a developers perspective.
+
+*Estimated Workshop Time:* 3 Hours
+
+### About Product/Technology
+**Java EE**
 
 Java Platform, Enterprise Edition (Java EE) is the standard in community-driven enterprise software. Java EE is developed using the Java Community Process, with contributions from industry experts, commercial and open source organizations, Java User Groups, and countless individuals. Each release integrates new features that align with industry needs, improves application portability, and increases developer productivity.
 
-The Java EE platform is designed to help developers create large-scale, multitiered, scalable, reliable, and secure network applications. A shorthand name for such applications is enterprise applications, so called because these applications are designed to solve the problems encountered by large enterprises.The benefits of an enterprise application are helpful, even essential, for individual developers and small organizations in an increasingly networked world.
-
-The Enterprise Application Model
-
-![](./images/enterprise_application_model.png " ")
-
-
 Java EE servers host several application component types that correspond to the tiers in a multitiered application. The Java EE server provides services to these components in the form of a container.
 
-Java EE containers are the interface between the component and the lower-level functionality provided by the platform to support that component. The functionality of the container is defined by the platform and is different for each component type. Nonetheless, the server allows the different component types to work together to provide functionality in an enterprise application.
-
-## About Oracle WebLogic Server
+**WebLogic**
 
 Oracle WebLogic Server is a scalable, enterprise-ready Java Platform, Enterprise Edition (Java EE) application server. The WebLogic Server infrastructure supports the deployment of many types of distributed applications and is an ideal foundation for building applications based on Service Oriented Architectures (SOA). 
 
-The WebLogic Server complete implementation of the Java EE 6.0 specification provides a standard set of APIs for creating distributed Java applications that can access a wide variety of services, such as databases, messaging services, and connections to external enterprise systems. End-user clients access these applications using Web browser clients or Java clients. It also supports the Spring Framework, a programming model for Java applications which provides an alternative to aspects of the Java EE model.
+The WebLogic Server complete implementation of the Java EE 6.0 specification provides a standard set of APIs for creating distributed Java applications that can access a wide variety of services, such as databases, messaging services, and connections to external enterprise systems. End-user clients access these applications using Web browser clients or Java clients.
 
-![](./images/weblogic_architecture.png " ")
 
-In addition to the Java EE implementation, WebLogic Server enables enterprises to deploy mission-critical applications in a robust, secure, highly available, and scalable environment. These features allow enterprises to configure clusters of WebLogic Server instances to distribute load, and provide extra capacity in case of hardware or other failures.
 
-WebLogic Server with same features of on-premise installation is also available on Oracle Cloud Infrastructure, as an option to be deployed on Azure IaaS, as Docker Images and also as WebLogic Operator for deployment on Kubernetes Clusters to help application modernization and support lightweight and largely scalable deployment options.
 
 ### Objectives
 
-In this workshop, you'll gain first-hand experience of using data types beyond relational data - JSON, XML, Spatial and Graph.
-
-You will walk through the different components of a JEE application, know how to use datasource in WebLogic, deploy an application from JDeveloper on to a linked WebLogic Server.  
-
-You will also see how to create REST endpoints to present data over HTTP/HTTPS in JSON format and also see CRUD operations on different data types.
-
-You will get experience of using ORDS end-point in Java Code and also see JDeveloper’s potential to be used as an IDE to connect to database and also develop JEE applications.
-
-Once you complete your setup, the next labs in this workshop cover these individual data types, and the final lab consists of ORDS examples:
-
-- Lab 4: eSHOP Application
-- Lab 5: Data Type Demonstration Tool
-- Lab6: JSON 
-- Lab 7: XML
-- Lab 8: SPATIAL
-- Lab 9: Cross Data Type
-- Lab 10: ORDS as Microservice
-
-You will also download VNC Client, setup SSH tunnelling to consume the JDeveloper installed on the workshop instance.
+In this workshop you will:
+* Offload Converged Database features for Multiple Datatypes in a single JEE application
+* Experience the ease of coding for different data types
+* Leverage different built-in functions for JSON, XML, Graph and Spatial Data from Converged DB
+* Develop REST end points for database development
+* Consume out of box REST options from Converged Database in application
 
 ### Prerequisites
 
-- VNC Client, PuTTY tool 
-- An Oracle Cloud account, Free Trial, LiveLabs or a Paid account
+* An Oracle Free Tier, Always Free, Paid or LiveLabs Cloud Account
+* Basic understanding of Java application development and any IDE
 
-*Estimated Workshop Time*: 3 hours
 
-*Please proceed to the first lab*
+**Architecture Overview**
 
-## More Information
-Feel free to share with your colleagues
+The Java EE application implements the enterprise services like security, portablity and developer productivity. A JEE server like WebLogic provides a platform to levrage all components of JEE for application development and hosting.
 
-Java EE
+In this workshop however, we will be connecting to a converged database holding data in different datatypes using the JNDI APIs, build the application on JDeveloper IDE using Maven extension and deploy the code on WebLogic. We also levrage the REST support provided by WebLogic to expose data as REST end-points.
+
+![](./images/wls-cdb-lab-architecture.png " ")
+
+
+**Labs**
+
+Converged Database with Weblogic for Developers workshop consists of 7 separate labs. The labs should be followed in order from Lab4-Lab10. There are also screen shots available throughout the labs to guide you through the exercises.  Additional information has been provided in the Appendix section of the workshop to help guide through the lab exercises.
+
+
+* **Lab 4:** eSHOP Application
+
+    This lab is designed to configure and launch eShop application on WebLogic
+
+    *Estimated Lab Time:*  20 minutes
+
+* **Lab 5:** Data Type Demonstration Tool
+
+    This lab is to launch a pre-built application(Datatype Demonstration tool) used to perform CRUD operations on different datatypes
+
+    *Estimated Lab Time:*  10 minutes
+
+* **Lab 6:** JSON
+
+    This lab demonstrates the ease of handling JSON data type in JAVA EE code. We will be performing insert, update and deletion of JSON data using the UI tool.
+
+    *Estimated Lab Time:*  30 minutes
+
+* **Lab 7:** XML
+
+    This lab we will work on XML datatype in Converge database
+
+    *Estimated Lab Time:* 30 Minutes
+
+* **Lab 8:** SPATIAL
+
+    This lab we will create sample SPATIAL data and work on SPATIAL datatype in Converge database
+
+    *Estimated Lab Time:* 30 Minutes
+
+* **Lab 9:** Cross Data Type (Optional)
+
+    This lab will show you how to use cross data functions
+
+    *Estimated Lab Time:* 15 Minutes
+
+* **Lab 10:** ORDS as Microservice
+
+    This lab demonstrates ORDS end-point as an alternate datasource
+
+    *Estimated Lab Time:* 15 Minutes
+
+You may now proceed to labs.
+
+## Learn More
+
+**Java EE**
 - [Oracle J2EE (JEE)](https://www.oracle.com/in/java/technologies/java-ee-glance.html)
 
-WebLogic Resources
+**WebLogic Resources**
 - [Video PageBlogs](https://www.youtube.com/user/OracleWebLogic)
 - [White Paper](https://www.oracle.com/middleware/weblogic/resources.html)
 - [Product Page](https://www.oracle.com/java/weblogic/)
 
-JDeveloper
+**JDeveloper**
 - [Overview Video](https://www.youtube.com/watch?v=63rnCGawF9w)
 - [Product Tutorial](https://docs.oracle.com/cd/E53569_01/tutorials/tut_ide/tut_ide.html)
 - [Java Application Development](https://www.oracle.com/application-development/technologies/jdeveloper.html)
@@ -81,6 +120,3 @@ JDeveloper
 
 ## See an issue?
 Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.
-
-
-

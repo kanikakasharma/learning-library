@@ -8,7 +8,7 @@
         {         
             "title": "Introduction",
             "description": "Login to Oracle Cloud",
-            "filename": "../intro/intro.md"
+            "filename": "../introduction/introduction.md"
         },
         {         
             "title": "Lab 1: Generate SSH Key – Cloud Shell",
