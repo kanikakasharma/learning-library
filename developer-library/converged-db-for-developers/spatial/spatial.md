@@ -32,7 +32,7 @@ Oracle Spatial consists of the following:
 - Operators, functions, and procedures
 - Native data type for vector data called SDO\_GEOMETRY (An Oracle table can contain one or more SDO_GEOMETRY columns).
 
-## **STEP 1:** Connect JDeveloper to database
+## **STEP 1**: Connect JDeveloper to database
 
 1. Open JDeveloper in Studio Mode, if not open already.
 2. Click on **Window** select **Database** and then **Databases** to open the databases navigation tab on the left-hand side of the JDeveloper editor.
@@ -42,12 +42,12 @@ Oracle Spatial consists of the following:
 
 3. Click on the green **+** icon under the **Databases** tab on left-hand side navigation to **Create Database Connection**.
 
-    - **Connection Name:** spatial
-    - **Connection Type:** Oracle(JDBC)
-    - **Username:** appspat
-    - **Password:** Oracle_4U
-    - **Hostname:** localhost
-    - **Service Name:** SGRPDB
+    - **Connection Name**: spatial
+    - **Connection Type**: Oracle(JDBC)
+    - **Username**: appspat
+    - **Password**: Oracle_4U
+    - **Hostname**: localhost
+    - **Service Name**: SGRPDB
 
 
     ![](./images/jdev-add-database-connection.png)
@@ -56,7 +56,7 @@ Oracle Spatial consists of the following:
 4. Click on **Test Connection** and upon **Success!** message, Click **OK**.
 
 
-## **STEP 2:** Create SPATIAL Data
+## **STEP 2**: Create SPATIAL Data
 
 1. In the Menu bar, click on **SQL** dropdown and select **spatial**.
 
@@ -147,7 +147,7 @@ Oracle Spatial consists of the following:
     ![](./images/jdev-select-new-column-spatial-table.png)
 
 
-## **STEP 3:** Modify JEE code for SPATIAL
+## **STEP 3**: Modify JEE code for SPATIAL
 
 1. Under the Projects in **Applications** tab on left Navigation, expand **converge** then **Resources** and double click on **applicationContext.xml** to open the configuration xml. To add the new datasource bean add the code below the < /bean> tag of convergejsonxmlds and before ending < /beans> tag.
 
@@ -212,7 +212,7 @@ Oracle Spatial consists of the following:
     ![](./images/jdev-spatialcode-redepoy-success.png)
 
 
-## **STEP 4:** REST end-point for SPATIAL
+## **STEP 4**: REST end-point for SPATIAL
 
 1. In JDeveloper, open **SpatialController.java** under **converge** &#8594; **Application Sources** &#8594; **converge.controllers**. Search for **getAllCities** and check the function code.  The request mapping is done as **/allCities**.  The base rest end point being **/spatial** for the code declared at the class level.
 
@@ -224,7 +224,7 @@ Oracle Spatial consists of the following:
     ![](./images/spatial-rest-data.png)
 
 
-## **STEP 5:** Read SPATIAL data
+## **STEP 5**: Read SPATIAL data
 
 1. Open the Firefox browser and navigate to `http://localhost:7101/resources/html/endPointChecker.html` OR  use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp** in bookmark toolbar
 2. Click on the drop-down to see the list of datatypes shown in workshop.
@@ -237,7 +237,7 @@ Oracle Spatial consists of the following:
     You should see the 4 CITIES listed on the map which we inserted In the CITY_POINTS table. Zoom out on the map to view the cities.
 
 
-## **STEP 6:** Insert SPATIAL data
+## **STEP 6**: Insert SPATIAL data
 
 1. Navigate back to **endpointchecker** tool to try the insert a spatial record.
 
@@ -266,7 +266,7 @@ Oracle Spatial consists of the following:
     ![](./images/jdev-spatial-insert-query.png)
 
 
-## **STEP 7:** Delete SPATIAL data
+## **STEP 7**: Delete SPATIAL data
 
 1. Open the Firefox browser and navigate to `http://localhost:7101/resources/html/endPointChecker.html` OR use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp** in bookmark toolbar.
 
@@ -297,7 +297,10 @@ Oracle Spatial consists of the following:
 
     This lab, we saw, how the complicated spatial data in a converged database is handled as easily as other datatypes using the buit-in functions and support for spatial data by Oracle Converged Database.
 
-You may now proceed to the next lab.
+## Summary
+In summary, you created a table to store Spatial data-type, performed CRUD operations on Spatial data-type stored in the converged database. You also got familiar with out of box functions provided by Oracle database to handle Spatial data-type, modified SQL queries in java code to access Spatial as data over REST.
+
+You may now *proceed to the next lab*.
 
 ## Want to learn more
 - [Spatial](https://docs.oracle.com/en/database/oracle/oracle-database/19/spatl/index.html)
@@ -307,8 +310,10 @@ You may now proceed to the next lab.
 - **Contributors** - Meghana Banka, Rene Fontcha
 - **Last Updated By/Date** - Kanika Sharma, NA Technology, October 2020
 
-## See an issue?
-Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.
+## Need Help?
+Please submit feedback or ask for help using our [LiveLabs Support Forum](https://community.oracle.com/tech/developers/categories/livelabsdiscussions). Please click the **Log In** button and login using your Oracle Account. Click the **Ask A Question** button to the left to start a *New Discussion* or *Ask a Question*.  Please include your workshop name and lab name.  You can also include screenshots and attach files.  Engage directly with the author of the workshop.
+
+If you do not have an Oracle Account, click [here](https://profile.oracle.com/myprofile/account/create-account.jspx) to create one.
 
 
 

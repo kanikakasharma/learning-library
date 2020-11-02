@@ -35,7 +35,7 @@ JSON documents can be stored usinga VARCHAR2, CLOB, or BLOB column. An IS JSON S
 
 Oracle’s JSON capabilities are focused on providing full support for schemaless development and document-based storage. Developers are free to change the structure of their JSON documents as necessary. With the addition of JSON support, Oracle Database delivers the same degree of flexibility as a NoSQL JSON document store.
 
-## **Step 1:** Retrieve JSON data
+## **STEP 1**: Retrieve JSON data
 
 1. Open the Firefox browser and navigate to `http://localhost:7101/resources/html/endPointChecker.html` OR You can use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp in Bookmark Toolbar**
 
@@ -56,7 +56,7 @@ Oracle’s JSON capabilities are focused on providing full support for schemales
 
 7.	Verify the PID, Details and Title
 
-## **Step 2:** Update JSON data
+## **STEP 2**: Update JSON data
 
 1.	In the search result occurring after searching for product 292, update the price of the product from 12$ to 14$ in the text area
 
@@ -76,7 +76,7 @@ Oracle’s JSON capabilities are focused on providing full support for schemales
 
    JSON manipulation function which is supplied out of the box called JSON_MERGEPATCH which is entirely replacing the JSON text with the new text is used within the code to update JSON data.  Similarly, we can re-write the query to update only a particular field and value in JSON by other methods provided to scan through and manipulate JSON key-value pairs in Oracle Converged DB for JSON.
 
-## **Step 3:** Delete JSON data
+## **STEP 3**: Delete JSON data
 
 1. Search for product with ID **292** and Click on **Go** button
 
@@ -100,7 +100,7 @@ Oracle’s JSON capabilities are focused on providing full support for schemales
    
    ![](./images/json-product-292-missing.png " ")
 
-## **Step 4:** Insert JSON data
+## **STEP 4**: Insert JSON data
 
 1.	Open the Firefox browser and navigate to `http://localhost:7101/resources/html/endPointChecker.html` OR You can use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp in Bookmark Toolbar**
 
@@ -137,7 +137,7 @@ Oracle’s JSON capabilities are focused on providing full support for schemales
 
 10.	Verify the PID, Details and Title
 
-## **Step 5:** Update JSON Query and verify
+## **STEP 5**: Update JSON Query and verify
    
  We have searched and handled JSON data based on the product id.  Now what if we want to get the products by ID only if the price of the product is $10?  
 
@@ -213,7 +213,10 @@ Oracle’s JSON capabilities are focused on providing full support for schemales
  JSON\_VALUE selects a scalar value from JSON data and returns it as a SQL value. You can also use json\_value to create function-based B-tree indexes for use with JSON data — see Indexes for JSON Data. Function json_value has two required arguments and accepts optional returning and error clauses
  Repeat the steps done above restrict product search to items with Price $10 by changing the query statement and re-deploying the app.
 
-You may now proceed to the next lab.
+## Summary
+In summary, you have performed Create, Update, Retrieve and Delete functions on JSON data-type stored for eShop application in the converged database. You also got familiar with out of box functions provided by Oracle database to handle JSON data-type, modified SQL queries in java code to access JSON as data over REST.
+
+You may now *proceed to the next lab*.
 
 ## Want to learn more
 - [JSON](https://docs.oracle.com/en/database/oracle/oracle-database/19/adjsn/index.html)
@@ -225,5 +228,7 @@ You may now proceed to the next lab.
 - **Contributors** - Meghana Banka, Rene Fontcha
 - **Last Updated By/Date** - Kanika Sharma, NA Technology, October 2020
 
-## See an issue?
-Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.
+## Need Help?
+Please submit feedback or ask for help using our [LiveLabs Support Forum](https://community.oracle.com/tech/developers/categories/livelabsdiscussions). Please click the **Log In** button and login using your Oracle Account. Click the **Ask A Question** button to the left to start a *New Discussion* or *Ask a Question*.  Please include your workshop name and lab name.  You can also include screenshots and attach files.  Engage directly with the author of the workshop.
+
+If you do not have an Oracle Account, click [here](https://profile.oracle.com/myprofile/account/create-account.jspx) to create one.

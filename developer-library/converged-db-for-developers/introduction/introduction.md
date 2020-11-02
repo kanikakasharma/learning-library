@@ -53,50 +53,19 @@ In this workshop however, we will be connecting to a converged database holding 
 
 Converged Database with Weblogic for Developers workshop consists of 7 separate labs. The labs should be followed in order from Lab4-Lab10. There are also screen shots available throughout the labs to guide you through the exercises.  Additional information has been provided in the Appendix section of the workshop to help guide through the lab exercises.
 
+### Lab Timing (estimated)
+| Lab Seq. | Name | Approx. Time |
+|--|------------------------------------------------------------|-------------|
+| 3 | Start Services | 30 minutes |
+| 4 | eSHOP Application | 20 minutes |
+| 5 | Data Type Demonstration Tool | 10 minutes |
+| 6 | JSON | 30 minutes |
+| 7 | XML | 30 minutes |
+| 8 | SPATIAL | 30 minutes |
+| 9 | (Optional) Cross Data Type | 15 minutes |
+| 10 | ORDS as Microservice | 15 minutes |
 
-* **Lab:** eSHOP Application
-
-    This lab is designed to configure and launch eShop application on WebLogic
-
-    *Estimated Lab Time:*  20 minutes
-
-* **Lab:** Data Type Demonstration Tool
-
-    This lab is to launch a pre-built application(Datatype Demonstration tool) used to perform CRUD operations on different datatypes
-
-    *Estimated Lab Time:*  10 minutes
-
-* **Lab:** JSON
-
-    This lab demonstrates the ease of handling JSON data type in JAVA EE code. We will be performing insert, update and deletion of JSON data using the UI tool.
-
-    *Estimated Lab Time:*  30 minutes
-
-* **Lab:** XML
-
-    This lab we will work on XML datatype in Converge database
-
-    *Estimated Lab Time:* 30 Minutes
-
-* **Lab:** SPATIAL
-
-    This lab we will create sample SPATIAL data and work on SPATIAL datatype in Converge database
-
-    *Estimated Lab Time:* 30 Minutes
-
-* **Lab:** Cross Data Type (Optional)
-
-    This lab will show you how to use cross data functions
-
-    *Estimated Lab Time:* 15 Minutes
-
-* **Lab:** ORDS as Microservice
-
-    This lab demonstrates ORDS end-point as an alternate datasource
-
-    *Estimated Lab Time:* 15 Minutes
-
-You may now proceed to labs.
+You may now *proceed to the labs*.
 
 ## Learn More
 
@@ -118,5 +87,7 @@ You may now proceed to labs.
 - **Contributors** - Meghana Banka, Rene Fontcha
 - **Last Updated By/Date** - Kanika Sharma, NA Technology, October 2020
 
-## See an issue?
-Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.
+## Need Help?
+Please submit feedback or ask for help using our [LiveLabs Support Forum](https://community.oracle.com/tech/developers/categories/livelabsdiscussions). Please click the **Log In** button and login using your Oracle Account. Click the **Ask A Question** button to the left to start a *New Discussion* or *Ask a Question*.  Please include your workshop name and lab name.  You can also include screenshots and attach files.  Engage directly with the author of the workshop.
+
+If you do not have an Oracle Account, click [here](https://profile.oracle.com/myprofile/account/create-account.jspx) to create one.

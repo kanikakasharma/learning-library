@@ -26,7 +26,7 @@ JSON_TABLE creates a relational view of JSON data. It maps the result of a JSON 
 The COLUMNS clause evaluates the row source, finds specific JSON values within the row source, and returns those JSON values as SQL values in individual columns of a row of relational data.
 
 
-## **Step 1:** Connect to the Pluggable Database (PDB)
+## **STEP 1**: Connect to the Pluggable Database (PDB)
 
 1. Open Linux terminal on VNC. As Oracle user set Oracle Environment and connect to the PDB.
 
@@ -48,7 +48,7 @@ The COLUMNS clause evaluates the row source, finds specific JSON values within t
     </copy>
     ````
 
-## **Step 2:** Connect to Database using JDeveloper
+## **STEP 2**: Connect to Database using JDeveloper
 
 1. Open JDeveloper in Studio Mode, if not open already.
 
@@ -97,7 +97,7 @@ The COLUMNS clause evaluates the row source, finds specific JSON values within t
     ![](./images/Lab9-Step2-7.png)
 
 
-## **Step 3:** JSON with Relational
+## **STEP 3**: JSON with Relational
 
 **JSON_TABLE** creates a relational view of JSON data. It maps the result of a JSON data evaluation into relational rows and columns. The COLUMNS clause evaluates the row source, finds specific JSON values within the row source, and returns those JSON values as SQL values in individual columns of a row of relational data
 
@@ -149,9 +149,9 @@ Below are the examples using **JSON_TABLE**.
     ![](./images/Lab9-Step3-2.png)
 
 
-## **Step 4:** XML with Relational
+## **STEP 4**: XML with Relational
 
-**XMLTABLE:** Convert XML Data into Rows and Columns using SQL. The XMLTABLE operator, which allows you to project columns on to XML data in an XMLTYPE , making it possible to query the data directly from SQL as if it were relational data.
+**XMLTABLE**: Convert XML Data into Rows and Columns using SQL. The XMLTABLE operator, which allows you to project columns on to XML data in an XMLTYPE , making it possible to query the data directly from SQL as if it were relational data.
 
 Below are the examples using **XMLTABLE**
 
@@ -175,7 +175,7 @@ Below are the examples using **XMLTABLE**
     
     ![](./images/Lab9-Step4-2.png)
 
-## **Step 5:** JSON with Spatial
+## **STEP 5**: JSON with Spatial
 
 GeoJSON Objects: Geometry, Feature, Feature Collection
 GeoJSON uses JSON objects that represent various geometrical entities and combinations of these together with user-defined properties.
@@ -199,12 +199,17 @@ GeoJSON uses JSON objects that represent various geometrical entities and combin
 
     ![](./images/Lab9-Step5-1.png)
 
-You may now proceed to the next lab.
+## Summary
+In summary, you queried different tables in Oracle converged database to access different data-types and see how they work together on a single platform.
+
+You may now *proceed to the next lab*.
 
 ## Acknowledgements
 - **Authors** - Pradeep Chandramouli, Nishant Kaushik, Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy, AppDev & Database Team, Oracle, October 2020
 - **Contributors** - Meghana Banka, Rene Fontcha
 - **Last Updated By/Date** - Kanika Sharma, NA Technology, October 2020
 
-## See an issue?
-Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.
+## Need Help?
+Please submit feedback or ask for help using our [LiveLabs Support Forum](https://community.oracle.com/tech/developers/categories/livelabsdiscussions). Please click the **Log In** button and login using your Oracle Account. Click the **Ask A Question** button to the left to start a *New Discussion* or *Ask a Question*.  Please include your workshop name and lab name.  You can also include screenshots and attach files.  Engage directly with the author of the workshop.
+
+If you do not have an Oracle Account, click [here](https://profile.oracle.com/myprofile/account/create-account.jspx) to create one.

@@ -25,7 +25,7 @@ The CTO of the company decides to re-write the e-shopping  web application using
 
 The new application re-written in J2EE standards using JDeveloper to deploy on WebLogic, demonstrates how convenient it is to work with converged oracle database
 
-## **Step 1:** Access the WebLogic Admin Console
+## **STEP 1**: Access the WebLogic Admin Console
 
 Handling database connections using WebLogic datasources gives the developers freedom to configure database related performance parameters on the WebLogic side rather than tweaking the application code. 
 
@@ -40,7 +40,7 @@ It improves application performance as connections are not created/closed within
     ![](./images/weblogic-console-login.png " ")
 
 
-## **Step 2:** Configure datasource recoding
+## **STEP 2**: Configure datasource recoding
 
 1. Click on **Preferences**
 
@@ -84,7 +84,7 @@ It improves application performance as connections are not created/closed within
 
 
 
-## **Step 3:** Create a datasource using WebLogic console
+## **STEP 3**: Create a datasource using WebLogic console
 
 1. Under **Domain Structure** tab on left hand side, expand **Service**
 
@@ -132,7 +132,7 @@ It improves application performance as connections are not created/closed within
 
 Now we have successfully recorded how a datasource can be created from WebLogic Admin Console
 
-## **Step 4:** Edit the recorded script for creating another datasource
+## **STEP 4**: Edit the recorded script for creating another datasource
 
 WebLogic Scripting tool is used to do all administrative actions which can be done using administrative console on a command prompt.
 
@@ -178,7 +178,7 @@ In this step we will edit the recorded script a little to connect to the require
 
 9. Click **Save** button and **Close** gedit window
 
-## **Step 5:** Use WLST for creating eSHOP datasources
+## **STEP 5**: Use WLST for creating eSHOP datasources
 
 1. Use the existing **Terminal**  or Open a new **Terminal** on VNC desktop to execute commands 
   
@@ -235,7 +235,7 @@ In this step we will edit the recorded script a little to connect to the require
     </copy>
     ````
 
-## **Step 6:** Deploy eSHOP Application
+## **STEP 6**: Deploy eSHOP Application
 
 1. Click on the **Coffee Cup** Icon of **Oracle JDeveloper** 12c on the VNC desktop to open the Oracle JDeveloper IDE
 
@@ -281,7 +281,7 @@ In this step we will edit the recorded script a little to connect to the require
 
     ![](./images/jdev-project-deploy-to-wls.png " ")
 
-## **Step 7:** Verify eSHOP functionality
+## **STEP 7**: Verify eSHOP functionality
 
 1. Open the Firefox browser, access the application by navigating to `http://localhost:7101/`  or from the bookmarks toolbar, Click **ConvergeDB-Workshop**, and Click **eSpeedShop**
 
@@ -291,14 +291,17 @@ In this step we will edit the recorded script a little to connect to the require
 
  The eShop application is deployed and functional. 
  
-You may now proceed to the next lab. 
+## Summary
+In summary, you have deployed the eShop application on to WebLogic and verified its functionality. You have also started the JDeveloper on the lab system and have accessed to the working code of eShop application.
+
+You may now *proceed to the next lab*.
 
 ## Acknowledgements
 - **Authors** - Pradeep Chandramouli, Nishant Kaushik, Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy, AppDev & Database Team, Oracle, October 2020
 - **Contributors** - Meghana Banka, Rene Fontcha
 - **Last Updated By/Date** - Kanika Sharma, NA Technology, October 2020
 
-## See an issue?
-Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.
+## Need Help?
+Please submit feedback or ask for help using our [LiveLabs Support Forum](https://community.oracle.com/tech/developers/categories/livelabsdiscussions). Please click the **Log In** button and login using your Oracle Account. Click the **Ask A Question** button to the left to start a *New Discussion* or *Ask a Question*.  Please include your workshop name and lab name.  You can also include screenshots and attach files.  Engage directly with the author of the workshop.
 
-      
+If you do not have an Oracle Account, click [here](https://profile.oracle.com/myprofile/account/create-account.jspx) to create one.

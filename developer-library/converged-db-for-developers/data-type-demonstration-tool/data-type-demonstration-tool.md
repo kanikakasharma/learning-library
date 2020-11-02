@@ -22,7 +22,7 @@
  This tool will be used to perform Create, Retrieve, Update and Delete operations on the different data types.
  The tool makes AJAX calls to the business logic.
 
-## **Step 1:**  Access data type code 
+## **STEP 1**:  Access data type code 
 
   The logic for creating REST end points to access data from converged database is written under controllers   as xxxController.java.  All the java class files collecting such data are named as xxxDao.java files.
 
@@ -51,7 +51,7 @@
 
 10. Similarly, there are controller and DAO files for different datatypes like XML, SPATIAL and Analytics.  Open the code and verify the flow if interested.
 
-## **Step 2:** Access the tool code
+## **STEP 2**: Access the tool code
 
 1. Open JDeveloper in **Studio** mode.
 
@@ -62,14 +62,14 @@
 4. Expand **resources**, Open folder **html** to see the UI tool
 5. Double click on **endPointChecker.html** (Optional)
 
- ***Note:*** Accept certificates if prompted and proceed 
+ ***Note***: Accept certificates if prompted and proceed 
 
     ![](./images/jdev-open-tool-code.png " ")
 
 6. Click on **Source** to view code (Optional)
 
 
-## **Step 3:** Launch the demonstrator tool
+## **STEP 3**: Launch the demonstrator tool
 
 1. Open the Firefox browser and navigate to `http://localhost:7101/resources/html/endPointChecker.html` OR You can use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshop** in Bookmark Toolbar
 2. Click on the drop-down to see the list of datatypes shown in workshop
@@ -77,16 +77,20 @@
 
   ![](./images/datatype-tool.png " ")
 
-***Note:*** Certain Datatype's fetch requests may not give results instantaneosly. In certain cases we have to insert data before accessing it. 
+***Note***: Certain Datatype's fetch requests may not give results instantaneosly. In certain cases we have to insert data before accessing it. 
 
-You may now proceed to the next lab.
+## Summary
+In summary, you have accessed the data-type demonstration tool deployed along with eShop application and have got familiar with the tool's UI to work with different data-types in the coming labs.
+
+You may now *proceed to the next lab*.
 
 ## Acknowledgements
 - **Authors** - Pradeep Chandramouli, Nishant Kaushik, Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy, AppDev & Database Team, Oracle, October 2020
 - **Contributors** - Meghana Banka, Rene Fontcha
 - **Last Updated By/Date** - Kanika Sharma, NA Technology, October 2020
 
-## See an issue?
-Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.
+## Need Help?
+Please submit feedback or ask for help using our [LiveLabs Support Forum](https://community.oracle.com/tech/developers/categories/livelabsdiscussions). Please click the **Log In** button and login using your Oracle Account. Click the **Ask A Question** button to the left to start a *New Discussion* or *Ask a Question*.  Please include your workshop name and lab name.  You can also include screenshots and attach files.  Engage directly with the author of the workshop.
 
+If you do not have an Oracle Account, click [here](https://profile.oracle.com/myprofile/account/create-account.jspx) to create one.
       

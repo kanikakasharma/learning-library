@@ -19,7 +19,7 @@ This lab assumes you have completed the following labs:
 - Lab 1: Generate SSH Key - Cloud Shell
 - Lab 2: Setup Compute Instancecd 
 
-## **Step 1:** Login to ConvergedDB Compute instance
+## **STEP 1**: Login to ConvergedDB Compute instance
 
 If you aren't already logged in, follow the steps below to login. If you are logged in, skip to Step 2.
 
@@ -49,7 +49,7 @@ If you aren't already logged in, follow the steps below to login. If you are log
 
 
 
-## **Step 2:** Start the Database and the Listener
+## **STEP 2**: Start the Database and the Listener
 
 
 
@@ -74,7 +74,7 @@ If you aren't already logged in, follow the steps below to login. If you are log
    ![](./images/setup-script.png " ")
 
 
-## **Step 3:** Start the WebLogic service and VNC Service
+## **STEP 3**: Start the WebLogic service and VNC Service
 
 1. Switch to the oracle user
       ````
@@ -121,7 +121,7 @@ If you aren't already logged in, follow the steps below to login. If you are log
 
 
 
-## **Step 4:** Setup PuTTY
+## **STEP 4**: Setup PuTTY
 
 
 **Save Private Key from CloudShell**
@@ -135,7 +135,7 @@ If you aren't already logged in, follow the steps below to login. If you are log
 3.	Copy the text output without line breaks and carriage returns from the cloudshell console.
 4.	Save the text in your text editor locally as <<sshkeyname>>.privatekey.
 
-## **Step 5:** Tunneling in PuTTY
+## **STEP 5**: Tunneling in PuTTY
 
 **On Windows**
     
@@ -166,7 +166,7 @@ If you aren't already logged in, follow the steps below to login. If you are log
 2.	Keep the terminal open during the entire workshop session
 
 
-## **Step 6:** Install VNC Client and Connect
+## **STEP 6**: Install VNC Client and Connect
 
 1. You need to have an SSH session or PuTTY session as Oracle user running
 2. Download and Install VNC Client like TigerVNC viewer from [TigerVNC Portal](https://tigervnc.org/) OR RealVNC from [RealVNC Portal](https://www.realvnc.com/en/connect/download/viewer/)
@@ -177,7 +177,11 @@ If you aren't already logged in, follow the steps below to login. If you are log
 7. Provide **vncserver** as password
 8. Your VNC session will open in a new window
 
-You may now proceed to the next lab.
+
+## Summary
+In summary, you have successfully accessed the VNC console of the lab system and started all required services to walk through the labs.
+
+You may now *proceed to the next lab*.
 
 
 ## Acknowledgements
@@ -185,8 +189,11 @@ You may now proceed to the next lab.
 - **Contributors** - Meghana Banka, Rene Fontcha
 - **Last Updated By/Date** - Kanika Sharma, NA Technology, October 2020
 
-## See an issue?
-Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.
+## Need Help?
+Please submit feedback or ask for help using our [LiveLabs Support Forum](https://community.oracle.com/tech/developers/categories/livelabsdiscussions). Please click the **Log In** button and login using your Oracle Account. Click the **Ask A Question** button to the left to start a *New Discussion* or *Ask a Question*.  Please include your workshop name and lab name.  You can also include screenshots and attach files.  Engage directly with the author of the workshop.
+
+If you do not have an Oracle Account, click [here](https://profile.oracle.com/myprofile/account/create-account.jspx) to create one.
+
 
 
 

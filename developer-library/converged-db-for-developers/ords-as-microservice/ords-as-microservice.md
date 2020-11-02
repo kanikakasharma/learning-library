@@ -31,7 +31,7 @@ ORDS will find and run the appropriate database workload (a query, an anonymous 
 
 
 
-## **Step 1:** Observe eSpeedShop analytical data
+## **STEP 1**: Observe eSpeedShop analytical data
 
 1. Open web browser, type `http://localhost:7101/` and hit enter to go to eSpeedShop application home page.
 
@@ -43,7 +43,7 @@ ORDS will find and run the appropriate database workload (a query, an anonymous 
 
     ![](./images/lab10-step1-3.png)
 
-## **Step 2:** Modify data access code
+## **STEP 2**: Modify data access code
 
 1. Open JDeveloper in Studio Mode, if not open already.
 
@@ -79,7 +79,7 @@ ORDS will find and run the appropriate database workload (a query, an anonymous 
 9. Once done, save the changes using **Ctrl + s**.
 
 
-## **Step 3:** Build and redeploy eSpeedShop application
+## **STEP 3**: Build and redeploy eSpeedShop application
 
 
 1.	In JDeveloper, go to the project panel and right click on the project folder (converge).
@@ -97,7 +97,7 @@ ORDS will find and run the appropriate database workload (a query, an anonymous 
     ![](./images/lab10-step3-4.png)
 
 
-## **Step 4:** Re-check analytical data
+## **STEP 4**: Re-check analytical data
 
 1.	Go to the browser.
 
@@ -111,7 +111,11 @@ ORDS will find and run the appropriate database workload (a query, an anonymous 
 
     ![](./images/lab10-step1-3.png)
 
-You have successfully completed **Converged Database for WebLogic Developer** workshop 
+
+## Summary
+In summary, you replaced the business logic to retrieve JSON data-type from converged database with the URL fetching the same data over REST using Oracle REST Data Services(ORDS).
+
+You have successfully completed *Converged Database for WebLogic Developer* workshop 
 
 ## Want to learn more
 - [ORDS](https://www.oracle.com/in/database/technologies/appdev/rest.html)
@@ -123,8 +127,10 @@ You have successfully completed **Converged Database for WebLogic Developer** wo
 - **Contributors** - Meghana Banka, Rene Fontcha
 - **Last Updated By/Date** - Kanika Sharma, NA Technology, October 2020
 
-## See an issue?
-Please submit feedback using this [form](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Please include the *workshop name*, *lab* and *step* in your request.  If you don't see the workshop name listed, please enter it manually. If you would like us to follow up with you, enter your email in the *Feedback Comments* section.
+## Need Help?
+Please submit feedback or ask for help using our [LiveLabs Support Forum](https://community.oracle.com/tech/developers/categories/livelabsdiscussions). Please click the **Log In** button and login using your Oracle Account. Click the **Ask A Question** button to the left to start a *New Discussion* or *Ask a Question*.  Please include your workshop name and lab name.  You can also include screenshots and attach files.  Engage directly with the author of the workshop.
+
+If you do not have an Oracle Account, click [here](https://profile.oracle.com/myprofile/account/create-account.jspx) to create one.
 
 
 
