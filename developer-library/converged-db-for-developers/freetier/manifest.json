@@ -10,8 +10,8 @@
             "description": "Login to Oracle Cloud",
             "filename": "../introduction/introduction.md"
         },
-        {         
-            "title": "Lab 1: Generate SSH Key – Cloud Shell",
+        {
+            "title": "Lab 1: Generate SSH Keys",
             "description": "Generate SSH Key",
             "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/generate-ssh-key/generate-ssh-keys.md"
         },
