@@ -13,11 +13,13 @@ This lab will show you how to use cross data functions.
 - Use different data types in combination
 
 ### Prerequisites
-
-This lab assumes you have completed the following labs:
-- Lab 1: Generate SSH Key - Cloud Shell
-- Lab 2: Setup Compute Instance
-- Lab 3: Start Services
+This lab assumes you have:
+- A Free Tier, Paid or LiveLabs Oracle Cloud account
+- SSH Private Key to access the host via SSH
+- You have completed:
+    - Lab: Generate SSH Keys
+    - Lab: Setup Compute Instance
+    - Lab: Start Services
 
 ### About Oracle Cross Data Type
 
@@ -99,11 +101,11 @@ The COLUMNS clause evaluates the row source, finds specific JSON values within t
 
 ## **STEP 3**: JSON with Relational
 
-**JSON_TABLE** creates a relational view of JSON data. It maps the result of a JSON data evaluation into relational rows and columns. The COLUMNS clause evaluates the row source, finds specific JSON values within the row source, and returns those JSON values as SQL values in individual columns of a row of relational data
+**JSON_TABLE** creates a relational view of JSON data. It maps the result of a JSON data evaluation into relational rows and columns. The COLUMNS clause evaluates the row source, finds specific JSON values within the row source, and returns those JSON values as SQL values in individual columns of a row of relational data.
 
 Below are the examples using **JSON_TABLE**.
 
-1. Find all the Products, those sold with payment mode – Cash on Delivery
+1. Find all the Products, those sold with payment mode – Cash on Delivery.
 
     ````
     <copy>
@@ -137,7 +139,7 @@ Below are the examples using **JSON_TABLE**.
     ![](./images/Lab9-Step3-1.png)
 
 
-2.  Purchase order history count based on City
+2.  Purchase order history count based on City.
 
 
     ````
@@ -153,9 +155,9 @@ Below are the examples using **JSON_TABLE**.
 
 **XMLTABLE**: Convert XML Data into Rows and Columns using SQL. The XMLTABLE operator, which allows you to project columns on to XML data in an XMLTYPE , making it possible to query the data directly from SQL as if it were relational data.
 
-Below are the examples using **XMLTABLE**
+Below are the examples using **XMLTABLE**:
 
-1. Customers who ordered quantity of items more than 5 and unit price is greater than $15
+1. Customers who ordered quantity of items more than 5 and unit price is greater than $15.
 
     ````
     <copy>
@@ -165,7 +167,7 @@ Below are the examples using **XMLTABLE**
 
     ![](./images/Lab9-Step4-1.png)
 
-2. History of customers who ordered for a specific products
+2. History of customers who ordered for a specific products.
 
     ````
     <copy>
@@ -177,16 +179,16 @@ Below are the examples using **XMLTABLE**
 
 ## **STEP 5**: JSON with Spatial
 
-GeoJSON Objects: Geometry, Feature, Feature Collection
+GeoJSON Objects: Geometry, Feature, Feature Collection.
 GeoJSON uses JSON objects that represent various geometrical entities and combinations of these together with user-defined properties.
   - A position is an array of two or more spatial (numerical) coordinates, the first three of which generally represent longitude, latitude, and altitude.
 
-  - A geometry object has a type field and (except for a geometry-collection object) a coordinates field
+  - A geometry object has a type field and (except for a geometry-collection object) a coordinates field.
 
   - A geometry collection is a geometry object with type GeometryCollection. Instead of a coordinates field it has a geometries field, whose value is an array of geometry objects other than GeometryCollection objects.
 
 
-1. Compute the distance in KM from specific point to each Geometry. This example selects the documents (there is only one in this table) for which the geometry field of the first features element is within 100 kilometers of a given point. The point is provided literally here (its coordinates are the longitude and latitude of San Francisco, California). The distance is computed from this point to each geometry object. The query orders the selected documents by the calculated distance. The tolerance in meters for the distance calculation is provided in this query as the literal argument 100.
+    Compute the distance in KM from specific point to each Geometry. This example selects the documents (there is only one in this table) for which the geometry field of the first features element is within 100 kilometers of a given point. The point is provided literally here (its coordinates are the longitude and latitude of San Francisco, California). The distance is computed from this point to each geometry object. The query orders the selected documents by the calculated distance. The tolerance in meters for the distance calculation is provided in this query as the literal argument 100.
 
 
     ````
@@ -205,8 +207,8 @@ In summary, you queried different tables in Oracle converged database to access 
 You may now *proceed to the next lab*.
 
 ## Acknowledgements
-- **Authors** - Pradeep Chandramouli, Nishant Kaushik, Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy, AppDev & Database Team, Oracle, October 2020
-- **Contributors** - Meghana Banka, Rene Fontcha
+- **Authors** - Pradeep Chandramouli, Nishant Kaushik, Balasubramanian Ramamoorthy, Dhananjay Kumar, AppDev & Database Team, Oracle, October 2020
+- **Contributors** - Robert Bates, Daniel Glasscock, Baba Shaik, Meghana Banka, Rene Fontcha
 - **Last Updated By/Date** - Kanika Sharma, NA Technology, October 2020
 
 ## Need Help?

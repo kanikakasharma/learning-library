@@ -83,8 +83,8 @@ You may now *proceed to the labs*.
 - [Java Application Development](https://www.oracle.com/application-development/technologies/jdeveloper.html)
 
 ## Acknowledgements
-- **Authors** - Pradeep Chandramouli, Nishant Kaushik, Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy, AppDev & Database Team, Oracle, October 2020
-- **Contributors** - Meghana Banka, Rene Fontcha
+- **Authors** - Pradeep Chandramouli, Nishant Kaushik, Balasubramanian Ramamoorthy, Dhananjay Kumar, AppDev & Database Team, Oracle, October 2020
+- **Contributors** - Robert Bates, Daniel Glasscock, Baba Shaik, Meghana Banka, Rene Fontcha
 - **Last Updated By/Date** - Kanika Sharma, NA Technology, October 2020
 
 ## Need Help?

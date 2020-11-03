@@ -12,13 +12,16 @@ In this lab we will work on xml datatype in Converge database. You will insert s
 - Showcase creation of REST end-points for XML data retrived
 
 ### Prerequisites
+This lab assumes you have:
+- A Free Tier, Paid or LiveLabs Oracle Cloud account
+- SSH Private Key to access the host via SSH
+- You have completed:
+    - Lab: Generate SSH Keys
+    - Lab: Setup Compute Instance
+    - Lab: Start Services
+    - Lab: eSHOP Application
+    - Lab: Data Type Demonstrator Tool
 
-This lab assumes you have completed the following labs:
-- Lab 1: Generate SSH Key - Cloud Shell
-- Lab 2: Setup Compute Instance
-- Lab 3: Start Services
-- Lab 4: Deploy eSHOP Application
-- Lab 5: Data Type Demonstrator Tool
 
 ### About XML
 
@@ -30,9 +33,9 @@ The basic building block of an XML document is an element, defined by tags. An e
 
 To show the ease of integration of ConvergedDB with Java applications to access and process data and to create REST endpoints in the Java application to access the different datatypes like JSON, XML and SPATIAL, we have a simple application installed along with the eSHOP application.
 
-1.	Open JDeveloper in Studio Mode, if not open already
+1.	Open JDeveloper in Studio Mode, if not open already.
 
-2.	Click on **Window** -> **Database** -> **Databases** to open the Databases Navigation tab on the Left-Hand side of the JDeveloper editor
+2.	Click on **Window** -> **Database** -> **Databases** to open the Databases Navigation tab on the Left-Hand side of the JDeveloper editor.
 
     ![](./images/jdev-database-connection.png " ")
 
@@ -49,16 +52,16 @@ Provide values:
 
     ![](./images/jdev-add-db-connection.png " ")
 
-4.	Click on **Test Connection** and upon **Success!** message, Click OK.
+4.	Click on **Test Connection** and upon **Success!** message, Click **OK**.
 
 
 ## **STEP 2**: Sample XML Data
 
-1.	In the Menu bar, click on **SQL** dropdown and select **xml**
+1.	In the Menu bar, click on **SQL** dropdown and select **xml**.
 
    ![](./images/jdev-sql-xml.png " ")
 
-2.	A worksheet for connection **xml** opens up execute your query commands
+2.	A worksheet for connection **xml** opens up execute your query commands.
 
     ````
     <copy>
@@ -66,25 +69,24 @@ Provide values:
     </copy>
     ````
 
-3.	Select the Text and Click on the Green **Play** Icon
+3.	Select the Text and Click on the Green **Play** Icon.
 
-4.	You will see the **Table Created** message in the **Script Output** section below
+4.	You will see the **Table Created** message in the **Script Output** section below:
 
     ![](./images/jdev-create-xml-table.png " ")
 
-5.	Right Click on **Tables (Filtered)** on Left-Hand side and click **Refresh** to see the table created
+5.	Right Click on **Tables (Filtered)** on Left-Hand side and click **Refresh** to see the table created.
     
     ![](./images/jdev-xml-db-refresh.png " ")
 
-6.	Once you see the table **XML_TYPE** on the left-hand side, In the worksheet, in a new line, key in   the query below
+6.	Once you see the table **XML_TYPE** on the left-hand side, In the worksheet, in a new line, key in the query below:
      ````
 <copy>
    select * from xml_type;
    </copy>
     ````
 
-7.	Select the query line and again click the green **Play** button to execute the query
-to see no results
+7.	Select the query line and again click the green **Play** button to execute the query to see no result.
 
     ![](./images/jdev-xml-db-select-no-result.png " ")
 
@@ -99,7 +101,7 @@ to see no results
 
 ## **STEP 3**: Modify JEE code for XML
 
-1.	Under the Projects in **Applications** tab on left Navigation, expand **converge** -> **Resources** and double click on **applicationContext.xml** to open the configuration xml to add the new datasource bean. Add the code below the **</bean>** tag of **converge.oracle.spatialAnalytics** and before ending **</beans>** tag 
+1.	Under the Projects in **Applications** tab on left Navigation, expand **converge** -> **Resources** and double click on **applicationContext.xml** to open the configuration xml to add the new datasource bean. Add the code below the **</bean>** tag of **converge.oracle.spatialAnalytics** and before ending **</beans>** tag.
 
     ````
 <copy>
@@ -112,11 +114,11 @@ to see no results
 
     ![](./images/jdev-xml-bean-add.png " ")
 
-2.	Click on **Save** Button
+2.	Click on **Save** Button.
 
-3.	Similarly, open the **DBSource.java** file under **Projects** -> **converge** -> **Application Sources** -> **converge.dbHelper** by double clicking the file
+3.	Similarly, open the **DBSource.java** file under **Projects** -> **converge** -> **Application Sources** -> **converge.dbHelper** by double clicking the file.
  
-    •	 Search for **getXMLDS** and navigate to the existing empty getXMLDS function. Copy and Paste the function **code** in the code file.  The java code for the function is as below  
+    • Search for **getXMLDS** and navigate to the existing empty getXMLDS function. Copy and Paste the function **code** in the code file.  The java code for the function is as below:  
 
      ````
     <copy>
@@ -144,7 +146,7 @@ to see no results
 
     ![](./images/jdev-xml-db-code-search.png " ")
 
-4.	Click on **Save** icon to save the file
+4.	Click on **Save** icon to save the file.
 
     ![](./images/jdev-xml-db-code.png " ")
 
@@ -154,34 +156,34 @@ to see no results
 
     If you change any of it, the code may not compile and lead to errors.  Request you to stick to the naming conventions.
 
-5.	Right Click on **Converge** under **Projects**
+5.	Right Click on **Converge** under **Projects**.
 
-6.	Click on **Run Maven** -> **redeploy**
+6.	Click on **Run Maven** -> **redeploy**.
 
     ![](./images/jdev-xmlcode-redeploy.png " ")
 
-7.	In the JDeveloper Log message area, you will see the successful redeployment
+7.	In the JDeveloper Log message area, you will see the successful redeployment.
 
     ![](./images/jdev-xmlcode-redeploy-success.png " ")
 
 
 ## **STEP 4**: Read XML in tool
 
-1.	Open the Firefox browser and navigate to `http://localhost:7101/resources/html/endPointChecker.html` OR You can use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp in Bookmark Toolbar**
+1.	Open the Firefox browser and navigate to `http://localhost:7101/resources/html/endPointChecker.html` OR You can use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp in Bookmark Toolbar**.
 
-2.	Click on the drop-down to see the list of datatypes shown in workshop
+2.	Click on the drop-down to see the list of datatypes shown in workshop.
 
-3.	Select **XML** datatype and click on **Change View** button to change
+3.	Select **XML** datatype and click on **Change View** button to change.
 
     ![](./images/tool-xml-blank.png " ")
 
-4.	You will see the only xml item inserted to the xml table with **ID 1** listed in the dropdown to fetch the details
+4.	You will see the only xml item inserted to the xml table with **ID 1** listed in the dropdown to fetch the details.
 
-5.	Click on **Fetch** button select 1 from the dropdown
+5.	Click on **Fetch** button select 1 from the dropdown.
     
     ![](./images/tool-xml-fetch-id1.png " ")
 
-6.	Navigate back to JDeveloper and open **XMLDao.java** under **converge** -> **Application Sources** -> **converge.controllers**
+6.	Navigate back to JDeveloper and open **XMLDao.java** under **converge** -> **Application Sources** -> **converge.controllers**.
     
     ![](./images/jdev-read-xml-code.png " ")
 
@@ -198,20 +200,20 @@ to see no results
 
     ![](./images/jdev-xml-rest-code.png" ")
 
-2.	Open firefox or if already open, in other browser tab, open the URL `http://localhost:7101/xml/read/1` Data is retrieved by the fetchXml() method in XmlController.java
+2.	Open firefox or if already open, in other browser tab, open the URL `http://localhost:7101/xml/read/1` Data is retrieved by the fetchXml() method in XmlController.java.
 
     ![](./images/rest-id1-retrieve.png" ")
 
-3.	To retrieve all IDs, Open the URL `http://localhost:7101/xml/ids` Data is retrieved by the **getXmlIds()** method in XmlController.java
+3.	To retrieve all IDs, Open the URL `http://localhost:7101/xml/ids` Data is retrieved by the **getXmlIds()** method in XmlController.java.
 
     ![](./images/rest-retrieve-all-ids.png" ")
 
 
 ## **STEP 6**: Insert XML data 
 
-1.	Navigate back to **endpointchecker** tool to insert a xml record
+1.	Navigate back to **endpointchecker** tool to insert a xml record.
 
-2.	Paste the text below as content in the text area and click on green **Insert** button
+2.	Paste the text below as content in the text area and click on green **Insert** button.
 
   ````
  <copy>
@@ -228,18 +230,18 @@ to see no results
 
     ![](./images/tool-xml-insert.png" ")
 
-3.	The xml will be inserted and in the dropdown, you will see the newly added ID
+3.	The xml will be inserted and in the dropdown, you will see the newly added ID.
 
     ![](./images/tool-xml-insert-success.png" ")
 
 
 ## **STEP 7**: Update XML data
 
-1.	**Fetch** the xml with **ID 2** to update it
+1.	**Fetch** the xml with **ID 2** to update it.
 
-2.	In the **text box** next to **Delete** button specify the tag element you need to update and in the corresponding text box specify the value to which the tag item needs to be updated 
+2.	In the **text box** next to **Delete** button specify the tag element you need to update and in the corresponding text box specify the value to which the tag item needs to be updated.
 
-    example, update the pincode value by providing `/order/address/pincode` as first parameter and 0000000  as the value
+    example, update the pincode value by providing `/order/address/pincode` as first parameter and 0000000  as the value.
 
     ![](./images/tool-xml-fetch-id2-and-update.png" ")
 
@@ -251,7 +253,7 @@ to see no results
 
     ![](./images/tool-xml-fetch-id2-post-update.png" ")
 
-5.	Navigate back to JDeveloper and open **XMLDao.java**. Check the query under **UPDATE_XML** STRING
+5.	Navigate back to JDeveloper and open **XMLDao.java**. Check the query under **UPDATE_XML** STRING.
 
     ![](./images/jdev-update-xml-sql.png" ")
 
@@ -262,13 +264,13 @@ to see no results
 
 ## **STEP 8**: Delete XML data
 
-1.	Navigate back to **Data Type Demonstration Tool** and fetch the XML with **ID 2** from the dropdown
+1.	Navigate back to **Data Type Demonstration Tool** and fetch the XML with **ID 2** from the dropdown.
 
-2.	Click on **Delete**
+2.	Click on **Delete**.
 
     ![](./images/tool-xml-delete.png" ")
 
-3.	Data with **ID 2** is disappeared from the dropdown and a deletion success message is shown
+3.	Data with **ID 2** is disappeared from the dropdown and a deletion success message is shown.
 
     ![](./images/tool-xml-delete-success.png" ")
 
@@ -289,8 +291,8 @@ You may now *proceed to the next lab*.
 
 
 ## Acknowledgements
-- **Authors** - Pradeep Chandramouli, Nishant Kaushik, Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy, AppDev & Database Team, Oracle, October 2020
-- **Contributors** - Meghana Banka, Rene Fontcha
+- **Authors** - Pradeep Chandramouli, Nishant Kaushik, Balasubramanian Ramamoorthy, Dhananjay Kumar, AppDev & Database Team, Oracle, October 2020
+- **Contributors** - Robert Bates, Daniel Glasscock, Baba Shaik, Meghana Banka, Rene Fontcha
 - **Last Updated By/Date** - Kanika Sharma, NA Technology, October 2020
 
 ## Need Help?

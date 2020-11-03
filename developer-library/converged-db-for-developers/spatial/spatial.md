@@ -15,13 +15,15 @@ Will modify the code, re-build and re-deploy the code the observe the SPATIAL da
 
 
 ### Prerequisites
-
-This lab assumes you have completed the following labs:
-- Lab 1: Generate SSH Key - Cloud Shell
-- Lab 2: Setup Compute Instance
-- Lab 3: Start Services
-- Lab 4: Deploy eSHOP Application
-- Lab 5: Data type demonstrator tool
+This lab assumes you have:
+- A Free Tier, Paid or LiveLabs Oracle Cloud account
+- SSH Private Key to access the host via SSH
+- You have completed:
+    - Lab: Generate SSH Keys
+    - Lab: Setup Compute Instance
+    - Lab: Start Services
+    - Lab: eSHOP Application
+    - Lab: Data Type Demonstrator Tool
 
 ### About Oracle Spatial
 Spatial data types stores geometry and multi-dimensional data.  It is used to process geo-spatial data.
@@ -226,7 +228,7 @@ Oracle Spatial consists of the following:
 
 ## **STEP 5**: Read SPATIAL data
 
-1. Open the Firefox browser and navigate to `http://localhost:7101/resources/html/endPointChecker.html` OR  use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp** in bookmark toolbar
+1. Open the Firefox browser and navigate to `http://localhost:7101/resources/html/endPointChecker.html` OR  use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshp** in bookmark toolbar.
 2. Click on the drop-down to see the list of datatypes shown in workshop.
 3. Select **SPATIAL** datatype and click on change view button to change.
 4. Click on blue fetch cities button.
@@ -306,8 +308,8 @@ You may now *proceed to the next lab*.
 - [Spatial](https://docs.oracle.com/en/database/oracle/oracle-database/19/spatl/index.html)
 
 ## Acknowledgements
-- **Authors** - Pradeep Chandramouli, Nishant Kaushik, Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy, AppDev & Database Team, Oracle, October 2020
-- **Contributors** - Meghana Banka, Rene Fontcha
+- **Authors** - Pradeep Chandramouli, Nishant Kaushik, Balasubramanian Ramamoorthy, Dhananjay Kumar, AppDev & Database Team, Oracle, October 2020
+- **Contributors** - Robert Bates, Daniel Glasscock, Baba Shaik, Meghana Banka, Rene Fontcha
 - **Last Updated By/Date** - Kanika Sharma, NA Technology, October 2020
 
 ## Need Help?

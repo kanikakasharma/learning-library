@@ -11,11 +11,14 @@
 - Launch the tool UI 
 
 ### Prerequisites
-
-- Lab 1: Generate SSH Key - Cloud Shell
-- Lab 2: Setup Compute Instance
-- Lab 3: Start Services
-- Lab 4: Deploy eSHOP Application
+This lab assumes you have:
+- A Free Tier, Paid or LiveLabs Oracle Cloud account
+- SSH Private Key to access the host via SSH
+- You have completed:
+    - Lab: Generate SSH Keys
+    - Lab: Setup Compute Instance
+    - Lab: Start Services
+    - Lab: eSHOP Application
 
 ### About Datatype Demonstration tool
  The datatype access and testing utility **endPointChecker** is pre-installed as part of the eSHOP application for workshop convenience.
@@ -26,28 +29,26 @@
 
   The logic for creating REST end points to access data from converged database is written under controllers   as xxxController.java.  All the java class files collecting such data are named as xxxDao.java files.
 
-1. In the JDeveloper under Projects Navigation Pane, under Click on **+** sign against **converge**, Expand **Application Sources**, expand **converge.controllers**
-2. Double click on **JSONController.java** to open it in JDeveloper
+1. In the JDeveloper under Projects Navigation Pane, under Click on **+** sign against **converge**, Expand **Application Sources**, expand **converge.controllers**.
+2. Double click on **JSONController.java** to open it in JDeveloper.
 3. Check all the @RequestMapping annotations.  You will find the request method and data type consumed for each method. 
 
   ![](./images/open-jsoncontroller-code.png " ")
 
-4. Note that the code has functions to hold logic for presenting, updating, inserting and deleting JSON datatype
-5. Double click on JSONDao.java to open it in JDeveloper
+4. Note that the code has functions to hold logic for presenting, updating, inserting and deleting JSON datatype.
+5. Double click on JSONDao.java to open it in JDeveloper.
 
   ![](./images/open-jsondao-code.png " ")
-6. Observe the SQL queries written to do database operations
+6. Observe the SQL queries written to do database operations.
 7. In the declaration section at top of the file (around line 16) check the GET\_PRODUCT\_BY_ID string and the sql select statement.
-8. Also check the getProductById(Connection con,  String id) function consuming the SQL select query and the result set is retrieved as a CLOB
-9. Also check that the statement 
+8. Also check the getProductById(Connection con,  String id) function consuming the SQL select query and the result set is retrieved as a CLOB.
+9. Also check the statement
 
     ````
-    <copy>
     conn = dbs.getJsonXmlConnection();
-    </copy>
+    
     ````
-
-  makes us understand that the method in **DBSource.java** under converge.dbHelpers  to get database connection is using the be **datasource_jsonXml** bean name declared in **applicationContext.xml**  under **Resources** which is in turn pointing to **converge.oracle.jsonxml** datasource to fetch you the records, pointing to database apppdb (PDB).
+  Clearly we can understand that this method in **DBSource.java** under converge.dbHelpers is using the be **datasource_jsonXml** bean name declared in **applicationContext.xml**  under **Resources** to get database connection. The bean configuration in-turn points to **converge.oracle.jsonxml** datasource to fetch the records from apppdb (PDB).
 
 10. Similarly, there are controller and DAO files for different datatypes like XML, SPATIAL and Analytics.  Open the code and verify the flow if interested.
 
@@ -57,23 +58,23 @@
 
     ![](./images/jdev-studio-option.png " ")
 
-2. Under **Projects**  expand **Converge**
-3. Navigate to **Web Content** and expand it
-4. Expand **resources**, Open folder **html** to see the UI tool
-5. Double click on **endPointChecker.html** (Optional)
+2. Under **Projects**  expand **Converge**.
+3. Navigate to **Web Content** and expand it.
+4. Expand **resources**, Open folder **html** to see the UI tool.
+5. Double click on **endPointChecker.html** (Optional).
 
- ***Note***: Accept certificates if prompted and proceed 
+ ***Note***: Accept certificates if prompted and proceed.
 
     ![](./images/jdev-open-tool-code.png " ")
 
-6. Click on **Source** to view code (Optional)
+6. Click on **Source** to view code (Optional).
 
 
 ## **STEP 3**: Launch the demonstrator tool
 
-1. Open the Firefox browser and navigate to `http://localhost:7101/resources/html/endPointChecker.html` OR You can use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshop** in Bookmark Toolbar
-2. Click on the drop-down to see the list of datatypes shown in workshop
-3. Select a datatype and click on **Change View** button to change 
+1. Open the Firefox browser and navigate to `http://localhost:7101/resources/html/endPointChecker.html` OR You can use the bookmark **DataType-End Point Check Utility** under **ConvergedDB-Workshop** in Bookmark Toolbar.
+2. Click on the drop-down to see the list of datatypes shown in workshop.
+3. Select a datatype and click on **Change View** button to change.
 
   ![](./images/datatype-tool.png " ")
 
@@ -85,8 +86,8 @@ In summary, you have accessed the data-type demonstration tool deployed along wi
 You may now *proceed to the next lab*.
 
 ## Acknowledgements
-- **Authors** - Pradeep Chandramouli, Nishant Kaushik, Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy, AppDev & Database Team, Oracle, October 2020
-- **Contributors** - Meghana Banka, Rene Fontcha
+- **Authors** - Pradeep Chandramouli, Nishant Kaushik, Balasubramanian Ramamoorthy, Dhananjay Kumar, AppDev & Database Team, Oracle, October 2020
+- **Contributors** - Robert Bates, Daniel Glasscock, Baba Shaik, Meghana Banka, Rene Fontcha
 - **Last Updated By/Date** - Kanika Sharma, NA Technology, October 2020
 
 ## Need Help?

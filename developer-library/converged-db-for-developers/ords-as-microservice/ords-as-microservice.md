@@ -13,12 +13,14 @@ Oracle Converged Database with ORDS – Oracle REST Data Services options enable
 - Modify JEE code to replace data from database by ORDS end-point
 
 ### Prerequisites
-
-This lab assumes you have completed the following labs:
-- Lab 1: Generate SSH Key - Cloud Shell
-- Lab 2: Setup Compute Instance
-- Lab 3: Start Services
-- Lab 4: eSHOP Application
+This lab assumes you have:
+- A Free Tier, Paid or LiveLabs Oracle Cloud account
+- SSH Private Key to access the host via SSH
+- You have completed:
+    - Lab: Generate SSH Keys
+    - Lab: Setup Compute Instance
+    - Lab: Start Services
+    - Lab: eSHOP Application
 
 ### About Oracle REST Data Services (ORDS)
 
@@ -55,7 +57,7 @@ ORDS will find and run the appropriate database workload (a query, an anonymous 
 
 4. Under **Application Sources** expand **converge.controllers**, which contains the application supporting java files.
 
-5. Open AnalyticsDao.java
+5. Open AnalyticsDao.java.
 
     ![](./images/lab10-step2-5.png)
 
@@ -67,7 +69,7 @@ ORDS will find and run the appropriate database workload (a query, an anonymous 
 
 8. Modify the function in such a way that instead of getting data by executing the SQL, it should fetch data from the provided ORDS URL.
 
-    In order to achieve that, uncomment the function call
+    In order to achieve that, uncomment the function call below:
     ````
     <copy>    
     Vector v = getProductCountByCategoryOrds();
@@ -101,7 +103,7 @@ ORDS will find and run the appropriate database workload (a query, an anonymous 
 
 1.	Go to the browser.
 
-2.	Open the eSpeedShop application by entering the URL – localhost:7101
+2.	Open the eSpeedShop application by entering the URL – localhost:7101.
 
 3.	Navigate to the analytics module by clicking the Analytics link, provided in the application navigation bar at the top.
 
@@ -123,8 +125,8 @@ You have successfully completed *Converged Database for WebLogic Developer* work
 
 
 ## Acknowledgements
-- **Authors** - Pradeep Chandramouli, Nishant Kaushik, Kanika Sharma, Laxmi Amarappanavar, Balasubramanian Ramamoorthy, AppDev & Database Team, Oracle, October 2020
-- **Contributors** - Meghana Banka, Rene Fontcha
+- **Authors** - Pradeep Chandramouli, Nishant Kaushik, Balasubramanian Ramamoorthy, Dhananjay Kumar, AppDev & Database Team, Oracle, October 2020
+- **Contributors** - Robert Bates, Daniel Glasscock, Baba Shaik, Meghana Banka, Rene Fontcha
 - **Last Updated By/Date** - Kanika Sharma, NA Technology, October 2020
 
 ## Need Help?
