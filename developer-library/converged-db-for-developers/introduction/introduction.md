@@ -1,6 +1,3 @@
-# Workshop Introduction and Overview #
-
-## Converged Database with Weblogic for Developers
 # Introduction
 
 This workshop aims at providing hands-on labs for creating an eCommerce application using JDeveloper as an IDE. The labs show the ease of handling data stored as different datatypes like JSON, XML and Spatial as multiple pluggable databases in a single converged Oracle database.
