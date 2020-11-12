@@ -112,14 +112,13 @@ It improves application performance as connections are not created/closed within
     ![](./images/create-jsonxmlds-options.png " ")
 
 6. Under the **Connection Properties** screen provide the following values. Click **Next**. 
-
-   - **Database Name**: JXLPDB
-   - **Host Name**: localhost
-   - **Port**: 1521
-   - **Database User Name**: appxml
-   - **Password**: Oracle_4U
-   - **Confirm Password**: Oracle_4U
-
+    - **Database Name**: JXLPDB
+    - **Host Name**: localhost
+    - **Port**: 1521
+    - **Database User Name**: appxml
+    - **Password**: Oracle_4U
+    - **Confirm Password**: Oracle_4U
+    
     ![](./images/create-jsonxmlds-connection-properties.png " ")
 
 7. Click on **Test Configurtion** to confirm the connection.  Once you see a successful connection, Click **Next**.
